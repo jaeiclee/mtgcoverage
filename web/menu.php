@@ -57,10 +57,10 @@
 <li><?php 
 // Workaround needs to be fixed 
 
-$dbstreams = mysql_connect("localhost", "db_username", "db_password");
-mysql_select_db("database_name", $dbstreams);
-$resultscg = mysql_query("SELECT * FROM Streams WHERE streamname = 'scglive'");
-$datascg = mysql_fetch_assoc($resultscg);
+$dbstreams = mysqli_connect("localhost", "db_username", "db_password");
+mysqli_select_db("database_name", $dbstreams);
+$resultscg = mysqli_query("SELECT * FROM Streams WHERE streamname = 'scglive'");
+$datascg = mysqli_fetch_assoc($resultscg);
 if ($datascg['online'] == '1') {
      echo "<a href='http://www.twitch.tv/scglive' target='_newtab'/> SCGLive is <img src='images/online.png' alt='Online' /></a>";
 } else {
@@ -71,8 +71,8 @@ if ($datascg['online'] == '1') {
 
 <li><?php
  
-$resultmagic = mysql_query("SELECT * FROM Streams WHERE streamname = 'magic'");
-$datamagic = mysql_fetch_assoc($resultmagic);
+$resultmagic = mysqli_query("SELECT * FROM Streams WHERE streamname = 'magic'");
+$datamagic = mysqli_fetch_assoc($resultmagic);
 if ($datamagic['online'] == '1') {
      echo "<a href='http://www.twitch.tv/magic' target='_newtab'/> Magic is <img src='images/online.png' alt='Online' /></a>";
 } else {
@@ -83,8 +83,8 @@ if ($datamagic['online'] == '1') {
 
 <li><?php
  
-$resultmagic = mysql_query("SELECT * FROM Streams WHERE streamname = 'magic2'");
-$datamagic = mysql_fetch_assoc($resultmagic);
+$resultmagic = mysqli_query("SELECT * FROM Streams WHERE streamname = 'magic2'");
+$datamagic = mysqli_fetch_assoc($resultmagic);
 if ($datamagic['online'] == '1') {
      echo "<a href='http://www.twitch.tv/magic2' target='_newtab'/> Magic2 is <img src='images/online.png' alt='Online' /></a>";
 } else {
@@ -95,8 +95,8 @@ if ($datamagic['online'] == '1') {
 
 <li><?php
  
-$resultmagic = mysql_query("SELECT * FROM Streams WHERE streamname = 'channelfireball'");
-$datamagic = mysql_fetch_assoc($resultmagic);
+$resultmagic = mysqli_query("SELECT * FROM Streams WHERE streamname = 'channelfireball'");
+$datamagic = mysqli_fetch_assoc($resultmagic);
 if ($datamagic['online'] == '1') {
      echo "<a href='http://www.twitch.tv/channelfireball' target='_newtab'/> Channel Fireball is <img src='images/online.png' alt='Online' /></a>";
 } else {
@@ -107,8 +107,8 @@ if ($datamagic['online'] == '1') {
 
 <li><?php
  
-$resultmagic = mysql_query("SELECT * FROM Streams WHERE streamname = 'tcgplayer'");
-$datamagic = mysql_fetch_assoc($resultmagic);
+$resultmagic = mysqli_query("SELECT * FROM Streams WHERE streamname = 'tcgplayer'");
+$datamagic = mysqli_fetch_assoc($resultmagic);
 if ($datamagic['online'] == '1') {
      echo "<a href='http://www.twitch.tv/tcgplayer' target='_newtab'/> TCGplayer is <img src='images/online.png' alt='Online' /></a>";
 } else {
