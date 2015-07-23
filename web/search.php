@@ -47,7 +47,7 @@
 		
         <?php
 
-$query = "SELECT DISTINCT Name FROM Players ORDER BY Name ASC";
+$query = "SELECT Name FROM Players GROUP BY Name ORDER BY Name ASC";
 
 
     try
@@ -109,7 +109,7 @@ $query = "SELECT DISTINCT Name FROM Players ORDER BY Name ASC";
 	
         <?php
 
-$query = "SELECT DISTINCT Name FROM Decks ORDER BY Name ASC";
+$query = "SELECT Name FROM Decks GROUP BY Name ORDER BY Name ASC";
 
 
     try
@@ -176,7 +176,7 @@ $query = "SELECT DISTINCT Name FROM Decks ORDER BY Name ASC";
 	
         <?php
 
-$query = "SELECT DISTINCT Name, EndDate FROM Tournament WHERE Visible = '1' ORDER BY Name ASC";
+$query = "SELECT Name, EndDate FROM Tournament WHERE Visible = '1' GROUP BY Name ORDER BY Name ASC";
 
 
     try
