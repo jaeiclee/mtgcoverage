@@ -47,7 +47,7 @@
 		
         <?php
 
-$query = "SELECT Name FROM Players ORDER BY Name ASC";
+$query = "SELECT DISTINCT Name FROM Players ORDER BY Name ASC";
 
 
     try
@@ -109,7 +109,7 @@ $query = "SELECT Name FROM Players ORDER BY Name ASC";
 	
         <?php
 
-$query = "SELECT Name FROM Decks ORDER BY Name ASC";
+$query = "SELECT DISTINCT Name FROM Decks ORDER BY Name ASC";
 
 
     try
@@ -176,7 +176,7 @@ $query = "SELECT Name FROM Decks ORDER BY Name ASC";
 	
         <?php
 
-$query = "SELECT Name, EndDate FROM Tournament WHERE Visible = '1' ORDER BY Name ASC";
+$query = "SELECT DISTINCT Name, EndDate FROM Tournament WHERE Visible = '1' ORDER BY Name ASC";
 
 
     try
@@ -207,7 +207,6 @@ $query = "SELECT Name, EndDate FROM Tournament WHERE Visible = '1' ORDER BY Name
 				<select name="tournament" class="form-control" style=width:100%>
 				<option value=""></option>
 				<?php foreach($rows as $row): ?>
-	
 				<option value="<?php echo htmlentities($row['Name'], ENT_QUOTES, 'UTF-8'); ?>"><?php echo $row['Name']; ?></option>
 				<?php endforeach; ?>   
 				</select>
