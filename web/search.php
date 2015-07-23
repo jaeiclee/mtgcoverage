@@ -109,8 +109,7 @@ $query = "SELECT Name FROM Players GROUP BY Name ORDER BY Name ASC";
 	
         <?php
 
-$query = "SELECT Name FROM Decks GROUP BY Name ORDER BY Name ASC";
-
+$query = "SELECT Name, CASE WHEN Name = 'Others' THEN 1 ELSE 0 AS Ordering FROM Decks GROUP BY Name ORDER BY Name ASC";
 
     try
     {
