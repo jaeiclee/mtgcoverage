@@ -279,7 +279,7 @@ $query = "SELECT Name, EndDate FROM Tournament WHERE Visible = '1' GROUP BY Name
 
 			
 		
-			if (count($rows) == 1) { // If one result go to player page
+			/* if (count($rows) == 1) { // If one result go to player page
 
 			foreach($rows as $row) {
 					$p_ID = $row['ID'];
@@ -287,10 +287,10 @@ $query = "SELECT Name, EndDate FROM Tournament WHERE Visible = '1' GROUP BY Name
 					echo 'One Result';
 					echo $row['Name'];
 			}
-					}
+					} */
 
 				
-			if (count($rows) > 1) { // If more results, show on right side
+			if (count($rows) >= 1) { // If one or more results, show on right side
 
 			echo '<br>';
 			echo $count;
@@ -366,7 +366,7 @@ $query = "SELECT Name, EndDate FROM Tournament WHERE Visible = '1' GROUP BY Name
 
 			
 		
-			if (count($rows) == 1) { // If one result, directly go to that deck page
+			/* if (count($rows) == 1) { // If one result, directly go to that deck page
 
 			foreach($rows as $row) {
 					$p_ID = $row['ID'];
@@ -374,11 +374,11 @@ $query = "SELECT Name, EndDate FROM Tournament WHERE Visible = '1' GROUP BY Name
 					echo 'One Result';
 					echo $row['Name'];
 			}
-					}
+					} */
 
 			
 				
-			if (count($rows) > 1) { // If more results, show on right side of the page
+			if (count($rows) >= 1) { // If one or more results, show on right side of the page
 
 
 			echo '<br>';
@@ -487,7 +487,7 @@ $query = "SELECT Name, EndDate FROM Tournament WHERE Visible = '1' GROUP BY Name
 
 			
 		
-			if (count($rows) == 1) { // If one result go to player page
+			/* if (count($rows) == 1) { // If one result go to player page
 
 			foreach($rows as $row) {
 					$t_ID = $row['ID'];
@@ -495,10 +495,10 @@ $query = "SELECT Name, EndDate FROM Tournament WHERE Visible = '1' GROUP BY Name
 					echo 'One Result';
 					echo $row['Name'];
 			}
-					}
+					} */
 
 				
-			if (count($rows) > 1) { // If more results, show on right side
+			if (count($rows) >= 1) { // If one or more results, show on right side
 
 			echo '<br>';
 			echo $count;
