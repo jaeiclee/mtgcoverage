@@ -129,16 +129,16 @@ if ($datamagic['online'] == '1') {
               <li class="dropdown active">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Contact <span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
-                  <li><a href="mailto:envi@mtgcoverage.com">envi@mtgcoverage.com</a></li>
-				  <li><a href="https://www.facebook.com/MTGCoverage" target="_newtab">Facebook</a></li>
-                  <li><a href="https://twitter.com/MTGCoverage" target="_newtab">Twitter</a></li>
-                  <li><a href="http://www.reddit.com/message/compose/?to=envibeesj" target="_newtab">Reddit</a></li>
+                  <!-- <li><a href="mailto:envi@mtgcoverage.com">envi@mtgcoverage.com</a></li> -->
+				  <!-- <li><a href="https://www.facebook.com/MTGCoverage" target="_newtab">Facebook</a></li> -->
+                  <li><a href="https://twitter.com/Ideocl4st" target="_newtab">Twitter</a></li>
+                  <li><a href="http://www.reddit.com/message/compose/?to=ideocl4st_" target="_newtab">Reddit</a></li>
 				  
                  </ul>
               </li>
 			              </ul>
 			  <ul class="nav navbar-nav navbar-right">
-			<li class="active"><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=68HG48VTFBWRU" target="_newtab">Donate</a></li>
+			<!-- <li class="active"><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=68HG48VTFBWRU" target="_newtab">Donate</a></li> -->
 			              </ul>
 
      
