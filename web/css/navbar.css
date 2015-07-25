@@ -4,5 +4,11 @@ body {
 }
 
 .navbar {
+
   margin-bottom: 20px;
+}
+
+.navbar img { 
+
+  vertical-align: middle; 
 }
