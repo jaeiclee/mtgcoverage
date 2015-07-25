@@ -52,12 +52,13 @@
 			  
 			  
 			  
-				<li class="dropdown active">
+				<!-- <li class="dropdown active">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Streams <span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
 <li><?php 
 // Workaround needs to be fixed 
 
+/* 
 $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
 
 $server = $url["host"];
@@ -120,7 +121,10 @@ if ($datamagic['online'] == '1') {
      echo "<a href='http://www.twitch.tv/tcgplayer' target='_newtab'/> TCGplayer is <img src='images/online.png' alt='Online' /></a>";
 } else {
     echo "<a href='http://www.twitch.tv/tcgplayer' target='_newtab'/> TCGplayer is <img src='images/offline.png' alt='Offline' /></a>";
-}
+} 
+
+*/
+-->
  
 ?></li>
 	  </ul>
