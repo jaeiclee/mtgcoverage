@@ -133,12 +133,18 @@ if ($datamagic['online'] == '1') {
 				  <!-- <li><a href="https://www.facebook.com/MTGCoverage" target="_newtab">Facebook</a></li> -->
                   <li><a href="https://twitter.com/Ideocl4st" target="_newtab">Twitter</a></li>
                   <li><a href="http://www.reddit.com/message/compose/?to=ideocl4st_" target="_newtab">Reddit</a></li>
+                  <li><a href="https://github.com/ideocl4st/mtgcoverage-v2-heroku" target="_newtab">Github</a></li>
 				  
                  </ul>
               </li>
 			              </ul>
 			  <ul class="nav navbar-nav navbar-right">
-			<!-- <li class="active"><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=68HG48VTFBWRU" target="_newtab">Donate</a></li> -->
+				<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+				<input type="hidden" name="cmd" value="_s-xclick">
+				<input type="hidden" name="hosted_button_id" value="F2267LQ2XS2JC">
+				<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="Donation">
+				<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+				</form>
 			              </ul>
 
      

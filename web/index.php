@@ -134,6 +134,7 @@
 				elseif (strpos ($row['Organiser'], 'SCV') !== false) { echo 'images/scv.png'; }
 				elseif (strpos ($row['Organiser'], 'CA') !== false) { echo 'images/ca.png'; }
 				elseif (strpos ($row['Organiser'], 'WORLDS') !== false) { echo 'images/worlds.png'; }
+				elseif (strpos ($row['Organiser'], 'HRRY') !== false) { echo 'images/hareruya.png'; }
 				else { echo 'images/empty.png'; }
 			echo "' width='150px' class='img-responsive'>";
 			echo '</div>';
