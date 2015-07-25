@@ -1,3 +1,5 @@
+<?php require 'config.php'; ?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -17,6 +19,11 @@
     <![endif]-->
   </head>
   <body>
+    <?php include 'menu.php'; ?>
+
+    <link href="css/navbar.css" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+    
     <h1>Hello, world!</h1>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

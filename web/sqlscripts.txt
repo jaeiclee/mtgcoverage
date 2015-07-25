@@ -1,516 +1,516 @@
-SET @updatenummer = 1;
-
-
-INSERT into envi_mtgcoveragev2.Matches (VOD, RoundName, PlayerIDA, PlayerIDB, DeckIDA, DeckIDB, Format, TournamentID) select round1, "Round 1", round1player1, round1player2, round1deck1, round1deck2, formattype, id FROM envi_mtgcoverage.events WHERE envi_mtgcoverage.events.round1 != '' AND envi_mtgcoverage.events.id = @updatenummer;
-SELECT @playername := PlayerIDA FROM envi_mtgcoveragev2.Matches;
-SELECT @playerid := ID from envi_mtgcoveragev2.Players WHERE envi_mtgcoveragev2.Players.Name = @playername;
-UPDATE envi_mtgcoveragev2.Matches SET PlayerIDA=@playerid WHERE (abs(PlayerIDA) = 0 AND PlayerIDA != '0');
-
-SELECT @playername := PlayerIDB FROM envi_mtgcoveragev2.Matches;
-SELECT @playerid := ID from envi_mtgcoveragev2.Players WHERE envi_mtgcoveragev2.Players.Name = @playername;
-UPDATE envi_mtgcoveragev2.Matches SET PlayerIDB=@playerid WHERE (abs(PlayerIDB) = 0 AND PlayerIDB != '0');
-
-SELECT @deckname := DeckIDA FROM envi_mtgcoveragev2.Matches;
-SELECT @deckid := ID from envi_mtgcoveragev2.Decks WHERE envi_mtgcoveragev2.Decks.Name = @deckname;
-UPDATE envi_mtgcoveragev2.Matches SET DeckIDA=@deckid WHERE (abs(DeckIDA) = 0 AND DeckIDA != '0');
-
-SELECT @deckname := DeckIDB FROM envi_mtgcoveragev2.Matches;
-SELECT @deckid := ID from envi_mtgcoveragev2.Decks WHERE envi_mtgcoveragev2.Decks.Name = @deckname;
-UPDATE envi_mtgcoveragev2.Matches SET DeckIDB=@deckid WHERE (abs(DeckIDB) = 0 AND DeckIDB != '0');
-INSERT into envi_mtgcoveragev2.Matches (VOD, RoundName, PlayerIDA, PlayerIDB, DeckIDA, DeckIDB, Format, TournamentID) select round2, "Round 2", round2player1, round2player2, round2deck1, round2deck2, formattype, id FROM envi_mtgcoverage.events WHERE envi_mtgcoverage.events.round1 != '' AND envi_mtgcoverage.events.id = @updatenummer;
-SELECT @playername := PlayerIDA FROM envi_mtgcoveragev2.Matches;
-SELECT @playerid := ID from envi_mtgcoveragev2.Players WHERE envi_mtgcoveragev2.Players.Name = @playername;
-UPDATE envi_mtgcoveragev2.Matches SET PlayerIDA=@playerid WHERE (abs(PlayerIDA) = 0 AND PlayerIDA != '0');
-
-SELECT @playername := PlayerIDB FROM envi_mtgcoveragev2.Matches;
-SELECT @playerid := ID from envi_mtgcoveragev2.Players WHERE envi_mtgcoveragev2.Players.Name = @playername;
-UPDATE envi_mtgcoveragev2.Matches SET PlayerIDB=@playerid WHERE (abs(PlayerIDB) = 0 AND PlayerIDB != '0');
-
-SELECT @deckname := DeckIDA FROM envi_mtgcoveragev2.Matches;
-SELECT @deckid := ID from envi_mtgcoveragev2.Decks WHERE envi_mtgcoveragev2.Decks.Name = @deckname;
-UPDATE envi_mtgcoveragev2.Matches SET DeckIDA=@deckid WHERE (abs(DeckIDA) = 0 AND DeckIDA != '0');
-
-SELECT @deckname := DeckIDB FROM envi_mtgcoveragev2.Matches;
-SELECT @deckid := ID from envi_mtgcoveragev2.Decks WHERE envi_mtgcoveragev2.Decks.Name = @deckname;
-UPDATE envi_mtgcoveragev2.Matches SET DeckIDB=@deckid WHERE (abs(DeckIDB) = 0 AND DeckIDB != '0');
-INSERT into envi_mtgcoveragev2.Matches (VOD, RoundName, PlayerIDA, PlayerIDB, DeckIDA, DeckIDB, Format, TournamentID) select round3, "Round 3", round3player1, round3player2, round3deck1, round3deck2, formattype, id FROM envi_mtgcoverage.events WHERE envi_mtgcoverage.events.round3 != '' AND envi_mtgcoverage.events.id = @updatenummer;
-SELECT @playername := PlayerIDA FROM envi_mtgcoveragev2.Matches;
-SELECT @playerid := ID from envi_mtgcoveragev2.Players WHERE envi_mtgcoveragev2.Players.Name = @playername;
-UPDATE envi_mtgcoveragev2.Matches SET PlayerIDA=@playerid WHERE (abs(PlayerIDA) = 0 AND PlayerIDA != '0');
-
-SELECT @playername := PlayerIDB FROM envi_mtgcoveragev2.Matches;
-SELECT @playerid := ID from envi_mtgcoveragev2.Players WHERE envi_mtgcoveragev2.Players.Name = @playername;
-UPDATE envi_mtgcoveragev2.Matches SET PlayerIDB=@playerid WHERE (abs(PlayerIDB) = 0 AND PlayerIDB != '0');
-
-SELECT @deckname := DeckIDA FROM envi_mtgcoveragev2.Matches;
-SELECT @deckid := ID from envi_mtgcoveragev2.Decks WHERE envi_mtgcoveragev2.Decks.Name = @deckname;
-UPDATE envi_mtgcoveragev2.Matches SET DeckIDA=@deckid WHERE (abs(DeckIDA) = 0 AND DeckIDA != '0');
-
-SELECT @deckname := DeckIDB FROM envi_mtgcoveragev2.Matches;
-SELECT @deckid := ID from envi_mtgcoveragev2.Decks WHERE envi_mtgcoveragev2.Decks.Name = @deckname;
-UPDATE envi_mtgcoveragev2.Matches SET DeckIDB=@deckid WHERE (abs(DeckIDB) = 0 AND DeckIDB != '0');
-INSERT into envi_mtgcoveragev2.Matches (VOD, RoundName, PlayerIDA, PlayerIDB, DeckIDA, DeckIDB, Format, TournamentID) select round4, "Round 4", round4player1, round4player2, round4deck1, round4deck2, formattype, id FROM envi_mtgcoverage.events WHERE envi_mtgcoverage.events.round4 != '' AND envi_mtgcoverage.events.id = @updatenummer;
-SELECT @playername := PlayerIDA FROM envi_mtgcoveragev2.Matches;
-SELECT @playerid := ID from envi_mtgcoveragev2.Players WHERE envi_mtgcoveragev2.Players.Name = @playername;
-UPDATE envi_mtgcoveragev2.Matches SET PlayerIDA=@playerid WHERE (abs(PlayerIDA) = 0 AND PlayerIDA != '0');
-
-SELECT @playername := PlayerIDB FROM envi_mtgcoveragev2.Matches;
-SELECT @playerid := ID from envi_mtgcoveragev2.Players WHERE envi_mtgcoveragev2.Players.Name = @playername;
-UPDATE envi_mtgcoveragev2.Matches SET PlayerIDB=@playerid WHERE (abs(PlayerIDB) = 0 AND PlayerIDB != '0');
-
-SELECT @deckname := DeckIDA FROM envi_mtgcoveragev2.Matches;
-SELECT @deckid := ID from envi_mtgcoveragev2.Decks WHERE envi_mtgcoveragev2.Decks.Name = @deckname;
-UPDATE envi_mtgcoveragev2.Matches SET DeckIDA=@deckid WHERE (abs(DeckIDA) = 0 AND DeckIDA != '0');
-
-SELECT @deckname := DeckIDB FROM envi_mtgcoveragev2.Matches;
-SELECT @deckid := ID from envi_mtgcoveragev2.Decks WHERE envi_mtgcoveragev2.Decks.Name = @deckname;
-UPDATE envi_mtgcoveragev2.Matches SET DeckIDB=@deckid WHERE (abs(DeckIDB) = 0 AND DeckIDB != '0');
-INSERT into envi_mtgcoveragev2.Matches (VOD, RoundName, PlayerIDA, PlayerIDB, DeckIDA, DeckIDB, Format, TournamentID) select round5, "Round 5", round5player1, round5player2, round5deck1, round5deck2, formattype, id FROM envi_mtgcoverage.events WHERE envi_mtgcoverage.events.round5 != '' AND envi_mtgcoverage.events.id = @updatenummer;
-SELECT @playername := PlayerIDA FROM envi_mtgcoveragev2.Matches;
-SELECT @playerid := ID from envi_mtgcoveragev2.Players WHERE envi_mtgcoveragev2.Players.Name = @playername;
-UPDATE envi_mtgcoveragev2.Matches SET PlayerIDA=@playerid WHERE (abs(PlayerIDA) = 0 AND PlayerIDA != '0');
-
-SELECT @playername := PlayerIDB FROM envi_mtgcoveragev2.Matches;
-SELECT @playerid := ID from envi_mtgcoveragev2.Players WHERE envi_mtgcoveragev2.Players.Name = @playername;
-UPDATE envi_mtgcoveragev2.Matches SET PlayerIDB=@playerid WHERE (abs(PlayerIDB) = 0 AND PlayerIDB != '0');
-
-SELECT @deckname := DeckIDA FROM envi_mtgcoveragev2.Matches;
-SELECT @deckid := ID from envi_mtgcoveragev2.Decks WHERE envi_mtgcoveragev2.Decks.Name = @deckname;
-UPDATE envi_mtgcoveragev2.Matches SET DeckIDA=@deckid WHERE (abs(DeckIDA) = 0 AND DeckIDA != '0');
-
-SELECT @deckname := DeckIDB FROM envi_mtgcoveragev2.Matches;
-SELECT @deckid := ID from envi_mtgcoveragev2.Decks WHERE envi_mtgcoveragev2.Decks.Name = @deckname;
-UPDATE envi_mtgcoveragev2.Matches SET DeckIDB=@deckid WHERE (abs(DeckIDB) = 0 AND DeckIDB != '0');
-INSERT into envi_mtgcoveragev2.Matches (VOD, RoundName, PlayerIDA, PlayerIDB, DeckIDA, DeckIDB, Format, TournamentID) select round6, "Round 6", round6player1, round6player2, round6deck1, round6deck2, formattype, id FROM envi_mtgcoverage.events WHERE envi_mtgcoverage.events.round6 != '' AND envi_mtgcoverage.events.id = @updatenummer;
-SELECT @playername := PlayerIDA FROM envi_mtgcoveragev2.Matches;
-SELECT @playerid := ID from envi_mtgcoveragev2.Players WHERE envi_mtgcoveragev2.Players.Name = @playername;
-UPDATE envi_mtgcoveragev2.Matches SET PlayerIDA=@playerid WHERE (abs(PlayerIDA) = 0 AND PlayerIDA != '0');
-
-SELECT @playername := PlayerIDB FROM envi_mtgcoveragev2.Matches;
-SELECT @playerid := ID from envi_mtgcoveragev2.Players WHERE envi_mtgcoveragev2.Players.Name = @playername;
-UPDATE envi_mtgcoveragev2.Matches SET PlayerIDB=@playerid WHERE (abs(PlayerIDB) = 0 AND PlayerIDB != '0');
-
-SELECT @deckname := DeckIDA FROM envi_mtgcoveragev2.Matches;
-SELECT @deckid := ID from envi_mtgcoveragev2.Decks WHERE envi_mtgcoveragev2.Decks.Name = @deckname;
-UPDATE envi_mtgcoveragev2.Matches SET DeckIDA=@deckid WHERE (abs(DeckIDA) = 0 AND DeckIDA != '0');
-
-SELECT @deckname := DeckIDB FROM envi_mtgcoveragev2.Matches;
-SELECT @deckid := ID from envi_mtgcoveragev2.Decks WHERE envi_mtgcoveragev2.Decks.Name = @deckname;
-UPDATE envi_mtgcoveragev2.Matches SET DeckIDB=@deckid WHERE (abs(DeckIDB) = 0 AND DeckIDB != '0');
-INSERT into envi_mtgcoveragev2.Matches (VOD, RoundName, PlayerIDA, PlayerIDB, DeckIDA, DeckIDB, Format, TournamentID) select round7, "Round 7", round7player1, round7player2, round7deck1, round7deck2, formattype, id FROM envi_mtgcoverage.events WHERE envi_mtgcoverage.events.round7 != '' AND envi_mtgcoverage.events.id = @updatenummer;
-SELECT @playername := PlayerIDA FROM envi_mtgcoveragev2.Matches;
-SELECT @playerid := ID from envi_mtgcoveragev2.Players WHERE envi_mtgcoveragev2.Players.Name = @playername;
-UPDATE envi_mtgcoveragev2.Matches SET PlayerIDA=@playerid WHERE (abs(PlayerIDA) = 0 AND PlayerIDA != '0');
-
-SELECT @playername := PlayerIDB FROM envi_mtgcoveragev2.Matches;
-SELECT @playerid := ID from envi_mtgcoveragev2.Players WHERE envi_mtgcoveragev2.Players.Name = @playername;
-UPDATE envi_mtgcoveragev2.Matches SET PlayerIDB=@playerid WHERE (abs(PlayerIDB) = 0 AND PlayerIDB != '0');
-
-SELECT @deckname := DeckIDA FROM envi_mtgcoveragev2.Matches;
-SELECT @deckid := ID from envi_mtgcoveragev2.Decks WHERE envi_mtgcoveragev2.Decks.Name = @deckname;
-UPDATE envi_mtgcoveragev2.Matches SET DeckIDA=@deckid WHERE (abs(DeckIDA) = 0 AND DeckIDA != '0');
-
-SELECT @deckname := DeckIDB FROM envi_mtgcoveragev2.Matches;
-SELECT @deckid := ID from envi_mtgcoveragev2.Decks WHERE envi_mtgcoveragev2.Decks.Name = @deckname;
-UPDATE envi_mtgcoveragev2.Matches SET DeckIDB=@deckid WHERE (abs(DeckIDB) = 0 AND DeckIDB != '0');
-INSERT into envi_mtgcoveragev2.Matches (VOD, RoundName, PlayerIDA, PlayerIDB, DeckIDA, DeckIDB, Format, TournamentID) select round8, "Round 8", round8player1, round8player2, round8deck1, round8deck2, formattype, id FROM envi_mtgcoverage.events WHERE envi_mtgcoverage.events.round8 != '' AND envi_mtgcoverage.events.id = @updatenummer;
-SELECT @playername := PlayerIDA FROM envi_mtgcoveragev2.Matches;
-SELECT @playerid := ID from envi_mtgcoveragev2.Players WHERE envi_mtgcoveragev2.Players.Name = @playername;
-UPDATE envi_mtgcoveragev2.Matches SET PlayerIDA=@playerid WHERE (abs(PlayerIDA) = 0 AND PlayerIDA != '0');
-
-SELECT @playername := PlayerIDB FROM envi_mtgcoveragev2.Matches;
-SELECT @playerid := ID from envi_mtgcoveragev2.Players WHERE envi_mtgcoveragev2.Players.Name = @playername;
-UPDATE envi_mtgcoveragev2.Matches SET PlayerIDB=@playerid WHERE (abs(PlayerIDB) = 0 AND PlayerIDB != '0');
-
-SELECT @deckname := DeckIDA FROM envi_mtgcoveragev2.Matches;
-SELECT @deckid := ID from envi_mtgcoveragev2.Decks WHERE envi_mtgcoveragev2.Decks.Name = @deckname;
-UPDATE envi_mtgcoveragev2.Matches SET DeckIDA=@deckid WHERE (abs(DeckIDA) = 0 AND DeckIDA != '0');
-
-SELECT @deckname := DeckIDB FROM envi_mtgcoveragev2.Matches;
-SELECT @deckid := ID from envi_mtgcoveragev2.Decks WHERE envi_mtgcoveragev2.Decks.Name = @deckname;
-UPDATE envi_mtgcoveragev2.Matches SET DeckIDB=@deckid WHERE (abs(DeckIDB) = 0 AND DeckIDB != '0');
-INSERT into envi_mtgcoveragev2.Matches (VOD, RoundName, PlayerIDA, PlayerIDB, DeckIDA, DeckIDB, Format, TournamentID) select round9, "Round 9", round9player1, round9player2, round9deck1, round9deck2, formattype, id FROM envi_mtgcoverage.events WHERE envi_mtgcoverage.events.round9 != '' AND envi_mtgcoverage.events.id = @updatenummer;
-SELECT @playername := PlayerIDA FROM envi_mtgcoveragev2.Matches;
-SELECT @playerid := ID from envi_mtgcoveragev2.Players WHERE envi_mtgcoveragev2.Players.Name = @playername;
-UPDATE envi_mtgcoveragev2.Matches SET PlayerIDA=@playerid WHERE (abs(PlayerIDA) = 0 AND PlayerIDA != '0');
-
-SELECT @playername := PlayerIDB FROM envi_mtgcoveragev2.Matches;
-SELECT @playerid := ID from envi_mtgcoveragev2.Players WHERE envi_mtgcoveragev2.Players.Name = @playername;
-UPDATE envi_mtgcoveragev2.Matches SET PlayerIDB=@playerid WHERE (abs(PlayerIDB) = 0 AND PlayerIDB != '0');
-
-SELECT @deckname := DeckIDA FROM envi_mtgcoveragev2.Matches;
-SELECT @deckid := ID from envi_mtgcoveragev2.Decks WHERE envi_mtgcoveragev2.Decks.Name = @deckname;
-UPDATE envi_mtgcoveragev2.Matches SET DeckIDA=@deckid WHERE (abs(DeckIDA) = 0 AND DeckIDA != '0');
-
-SELECT @deckname := DeckIDB FROM envi_mtgcoveragev2.Matches;
-SELECT @deckid := ID from envi_mtgcoveragev2.Decks WHERE envi_mtgcoveragev2.Decks.Name = @deckname;
-UPDATE envi_mtgcoveragev2.Matches SET DeckIDB=@deckid WHERE (abs(DeckIDB) = 0 AND DeckIDB != '0');
-INSERT into envi_mtgcoveragev2.Matches (VOD, RoundName, PlayerIDA, PlayerIDB, DeckIDA, DeckIDB, Format, TournamentID) select round10, "Round 10", round10player1, round10player2, round10deck1, round10deck2, formattype, id FROM envi_mtgcoverage.events WHERE envi_mtgcoverage.events.round10 != '' AND envi_mtgcoverage.events.id = @updatenummer;
-SELECT @playername := PlayerIDA FROM envi_mtgcoveragev2.Matches;
-SELECT @playerid := ID from envi_mtgcoveragev2.Players WHERE envi_mtgcoveragev2.Players.Name = @playername;
-UPDATE envi_mtgcoveragev2.Matches SET PlayerIDA=@playerid WHERE (abs(PlayerIDA) = 0 AND PlayerIDA != '0');
-
-SELECT @playername := PlayerIDB FROM envi_mtgcoveragev2.Matches;
-SELECT @playerid := ID from envi_mtgcoveragev2.Players WHERE envi_mtgcoveragev2.Players.Name = @playername;
-UPDATE envi_mtgcoveragev2.Matches SET PlayerIDB=@playerid WHERE (abs(PlayerIDB) = 0 AND PlayerIDB != '0');
-
-SELECT @deckname := DeckIDA FROM envi_mtgcoveragev2.Matches;
-SELECT @deckid := ID from envi_mtgcoveragev2.Decks WHERE envi_mtgcoveragev2.Decks.Name = @deckname;
-UPDATE envi_mtgcoveragev2.Matches SET DeckIDA=@deckid WHERE (abs(DeckIDA) = 0 AND DeckIDA != '0');
-
-SELECT @deckname := DeckIDB FROM envi_mtgcoveragev2.Matches;
-SELECT @deckid := ID from envi_mtgcoveragev2.Decks WHERE envi_mtgcoveragev2.Decks.Name = @deckname;
-UPDATE envi_mtgcoveragev2.Matches SET DeckIDB=@deckid WHERE (abs(DeckIDB) = 0 AND DeckIDB != '0');
-INSERT into envi_mtgcoveragev2.Matches (VOD, RoundName, PlayerIDA, PlayerIDB, DeckIDA, DeckIDB, Format, TournamentID) select round11, "Round 11", round11player1, round11player2, round11deck1, round11deck2, formattype, id FROM envi_mtgcoverage.events WHERE envi_mtgcoverage.events.round11 != '' AND envi_mtgcoverage.events.id = @updatenummer;
-SELECT @playername := PlayerIDA FROM envi_mtgcoveragev2.Matches;
-SELECT @playerid := ID from envi_mtgcoveragev2.Players WHERE envi_mtgcoveragev2.Players.Name = @playername;
-UPDATE envi_mtgcoveragev2.Matches SET PlayerIDA=@playerid WHERE (abs(PlayerIDA) = 0 AND PlayerIDA != '0');
-
-SELECT @playername := PlayerIDB FROM envi_mtgcoveragev2.Matches;
-SELECT @playerid := ID from envi_mtgcoveragev2.Players WHERE envi_mtgcoveragev2.Players.Name = @playername;
-UPDATE envi_mtgcoveragev2.Matches SET PlayerIDB=@playerid WHERE (abs(PlayerIDB) = 0 AND PlayerIDB != '0');
-
-SELECT @deckname := DeckIDA FROM envi_mtgcoveragev2.Matches;
-SELECT @deckid := ID from envi_mtgcoveragev2.Decks WHERE envi_mtgcoveragev2.Decks.Name = @deckname;
-UPDATE envi_mtgcoveragev2.Matches SET DeckIDA=@deckid WHERE (abs(DeckIDA) = 0 AND DeckIDA != '0');
-
-SELECT @deckname := DeckIDB FROM envi_mtgcoveragev2.Matches;
-SELECT @deckid := ID from envi_mtgcoveragev2.Decks WHERE envi_mtgcoveragev2.Decks.Name = @deckname;
-UPDATE envi_mtgcoveragev2.Matches SET DeckIDB=@deckid WHERE (abs(DeckIDB) = 0 AND DeckIDB != '0');
-INSERT into envi_mtgcoveragev2.Matches (VOD, RoundName, PlayerIDA, PlayerIDB, DeckIDA, DeckIDB, Format, TournamentID) select round12, "Round 12", round12player1, round12player2, round12deck1, round12deck2, formattype, id FROM envi_mtgcoverage.events WHERE envi_mtgcoverage.events.round12 != '' AND envi_mtgcoverage.events.id = @updatenummer;
-SELECT @playername := PlayerIDA FROM envi_mtgcoveragev2.Matches;
-SELECT @playerid := ID from envi_mtgcoveragev2.Players WHERE envi_mtgcoveragev2.Players.Name = @playername;
-UPDATE envi_mtgcoveragev2.Matches SET PlayerIDA=@playerid WHERE (abs(PlayerIDA) = 0 AND PlayerIDA != '0');
-
-SELECT @playername := PlayerIDB FROM envi_mtgcoveragev2.Matches;
-SELECT @playerid := ID from envi_mtgcoveragev2.Players WHERE envi_mtgcoveragev2.Players.Name = @playername;
-UPDATE envi_mtgcoveragev2.Matches SET PlayerIDB=@playerid WHERE (abs(PlayerIDB) = 0 AND PlayerIDB != '0');
-
-SELECT @deckname := DeckIDA FROM envi_mtgcoveragev2.Matches;
-SELECT @deckid := ID from envi_mtgcoveragev2.Decks WHERE envi_mtgcoveragev2.Decks.Name = @deckname;
-UPDATE envi_mtgcoveragev2.Matches SET DeckIDA=@deckid WHERE (abs(DeckIDA) = 0 AND DeckIDA != '0');
-
-SELECT @deckname := DeckIDB FROM envi_mtgcoveragev2.Matches;
-SELECT @deckid := ID from envi_mtgcoveragev2.Decks WHERE envi_mtgcoveragev2.Decks.Name = @deckname;
-UPDATE envi_mtgcoveragev2.Matches SET DeckIDB=@deckid WHERE (abs(DeckIDB) = 0 AND DeckIDB != '0');
-INSERT into envi_mtgcoveragev2.Matches (VOD, RoundName, PlayerIDA, PlayerIDB, DeckIDA, DeckIDB, Format, TournamentID) select round13, "Round 13", round13player1, round13player2, round13deck1, round13deck2, formattype, id FROM envi_mtgcoverage.events WHERE envi_mtgcoverage.events.round13 != '' AND envi_mtgcoverage.events.id = @updatenummer;
-SELECT @playername := PlayerIDA FROM envi_mtgcoveragev2.Matches;
-SELECT @playerid := ID from envi_mtgcoveragev2.Players WHERE envi_mtgcoveragev2.Players.Name = @playername;
-UPDATE envi_mtgcoveragev2.Matches SET PlayerIDA=@playerid WHERE (abs(PlayerIDA) = 0 AND PlayerIDA != '0');
-
-SELECT @playername := PlayerIDB FROM envi_mtgcoveragev2.Matches;
-SELECT @playerid := ID from envi_mtgcoveragev2.Players WHERE envi_mtgcoveragev2.Players.Name = @playername;
-UPDATE envi_mtgcoveragev2.Matches SET PlayerIDB=@playerid WHERE (abs(PlayerIDB) = 0 AND PlayerIDB != '0');
-
-SELECT @deckname := DeckIDA FROM envi_mtgcoveragev2.Matches;
-SELECT @deckid := ID from envi_mtgcoveragev2.Decks WHERE envi_mtgcoveragev2.Decks.Name = @deckname;
-UPDATE envi_mtgcoveragev2.Matches SET DeckIDA=@deckid WHERE (abs(DeckIDA) = 0 AND DeckIDA != '0');
-
-SELECT @deckname := DeckIDB FROM envi_mtgcoveragev2.Matches;
-SELECT @deckid := ID from envi_mtgcoveragev2.Decks WHERE envi_mtgcoveragev2.Decks.Name = @deckname;
-UPDATE envi_mtgcoveragev2.Matches SET DeckIDB=@deckid WHERE (abs(DeckIDB) = 0 AND DeckIDB != '0');
-INSERT into envi_mtgcoveragev2.Matches (VOD, RoundName, PlayerIDA, PlayerIDB, DeckIDA, DeckIDB, Format, TournamentID) select round14, "Round 14", round14player1, round14player2, round14deck1, round14deck2, formattype, id FROM envi_mtgcoverage.events WHERE envi_mtgcoverage.events.round14 != '' AND envi_mtgcoverage.events.id = @updatenummer;
-SELECT @playername := PlayerIDA FROM envi_mtgcoveragev2.Matches;
-SELECT @playerid := ID from envi_mtgcoveragev2.Players WHERE envi_mtgcoveragev2.Players.Name = @playername;
-UPDATE envi_mtgcoveragev2.Matches SET PlayerIDA=@playerid WHERE (abs(PlayerIDA) = 0 AND PlayerIDA != '0');
-
-SELECT @playername := PlayerIDB FROM envi_mtgcoveragev2.Matches;
-SELECT @playerid := ID from envi_mtgcoveragev2.Players WHERE envi_mtgcoveragev2.Players.Name = @playername;
-UPDATE envi_mtgcoveragev2.Matches SET PlayerIDB=@playerid WHERE (abs(PlayerIDB) = 0 AND PlayerIDB != '0');
-
-SELECT @deckname := DeckIDA FROM envi_mtgcoveragev2.Matches;
-SELECT @deckid := ID from envi_mtgcoveragev2.Decks WHERE envi_mtgcoveragev2.Decks.Name = @deckname;
-UPDATE envi_mtgcoveragev2.Matches SET DeckIDA=@deckid WHERE (abs(DeckIDA) = 0 AND DeckIDA != '0');
-
-SELECT @deckname := DeckIDB FROM envi_mtgcoveragev2.Matches;
-SELECT @deckid := ID from envi_mtgcoveragev2.Decks WHERE envi_mtgcoveragev2.Decks.Name = @deckname;
-UPDATE envi_mtgcoveragev2.Matches SET DeckIDB=@deckid WHERE (abs(DeckIDB) = 0 AND DeckIDB != '0');
-INSERT into envi_mtgcoveragev2.Matches (VOD, RoundName, PlayerIDA, PlayerIDB, DeckIDA, DeckIDB, Format, TournamentID) select round15, "Round 15", round15player1, round15player2, round15deck1, round15deck2, formattype, id FROM envi_mtgcoverage.events WHERE envi_mtgcoverage.events.round15 != '' AND envi_mtgcoverage.events.id = @updatenummer;
-SELECT @playername := PlayerIDA FROM envi_mtgcoveragev2.Matches;
-SELECT @playerid := ID from envi_mtgcoveragev2.Players WHERE envi_mtgcoveragev2.Players.Name = @playername;
-UPDATE envi_mtgcoveragev2.Matches SET PlayerIDA=@playerid WHERE (abs(PlayerIDA) = 0 AND PlayerIDA != '0');
-
-SELECT @playername := PlayerIDB FROM envi_mtgcoveragev2.Matches;
-SELECT @playerid := ID from envi_mtgcoveragev2.Players WHERE envi_mtgcoveragev2.Players.Name = @playername;
-UPDATE envi_mtgcoveragev2.Matches SET PlayerIDB=@playerid WHERE (abs(PlayerIDB) = 0 AND PlayerIDB != '0');
-
-SELECT @deckname := DeckIDA FROM envi_mtgcoveragev2.Matches;
-SELECT @deckid := ID from envi_mtgcoveragev2.Decks WHERE envi_mtgcoveragev2.Decks.Name = @deckname;
-UPDATE envi_mtgcoveragev2.Matches SET DeckIDA=@deckid WHERE (abs(DeckIDA) = 0 AND DeckIDA != '0');
-
-SELECT @deckname := DeckIDB FROM envi_mtgcoveragev2.Matches;
-SELECT @deckid := ID from envi_mtgcoveragev2.Decks WHERE envi_mtgcoveragev2.Decks.Name = @deckname;
-UPDATE envi_mtgcoveragev2.Matches SET DeckIDB=@deckid WHERE (abs(DeckIDB) = 0 AND DeckIDB != '0');
-INSERT into envi_mtgcoveragev2.Matches (VOD, RoundName, PlayerIDA, PlayerIDB, DeckIDA, DeckIDB, Format, TournamentID) select round16, "Round 16", round16player1, round16player2, round16deck1, round16deck2, formattype, id FROM envi_mtgcoverage.events WHERE envi_mtgcoverage.events.round16 != '' AND envi_mtgcoverage.events.id = @updatenummer;
-SELECT @playername := PlayerIDA FROM envi_mtgcoveragev2.Matches;
-SELECT @playerid := ID from envi_mtgcoveragev2.Players WHERE envi_mtgcoveragev2.Players.Name = @playername;
-UPDATE envi_mtgcoveragev2.Matches SET PlayerIDA=@playerid WHERE (abs(PlayerIDA) = 0 AND PlayerIDA != '0');
-
-SELECT @playername := PlayerIDB FROM envi_mtgcoveragev2.Matches;
-SELECT @playerid := ID from envi_mtgcoveragev2.Players WHERE envi_mtgcoveragev2.Players.Name = @playername;
-UPDATE envi_mtgcoveragev2.Matches SET PlayerIDB=@playerid WHERE (abs(PlayerIDB) = 0 AND PlayerIDB != '0');
-
-SELECT @deckname := DeckIDA FROM envi_mtgcoveragev2.Matches;
-SELECT @deckid := ID from envi_mtgcoveragev2.Decks WHERE envi_mtgcoveragev2.Decks.Name = @deckname;
-UPDATE envi_mtgcoveragev2.Matches SET DeckIDA=@deckid WHERE (abs(DeckIDA) = 0 AND DeckIDA != '0');
-
-SELECT @deckname := DeckIDB FROM envi_mtgcoveragev2.Matches;
-SELECT @deckid := ID from envi_mtgcoveragev2.Decks WHERE envi_mtgcoveragev2.Decks.Name = @deckname;
-UPDATE envi_mtgcoveragev2.Matches SET DeckIDB=@deckid WHERE (abs(DeckIDB) = 0 AND DeckIDB != '0');
-INSERT into envi_mtgcoveragev2.Matches (VOD, RoundName, PlayerIDA, PlayerIDB, DeckIDA, DeckIDB, Format, TournamentID) select round17, "Round 17", round17player1, round17player2, round17deck1, round17deck2, formattype, id FROM envi_mtgcoverage.events WHERE envi_mtgcoverage.events.round17 != '' AND envi_mtgcoverage.events.id = @updatenummer;
-SELECT @playername := PlayerIDA FROM envi_mtgcoveragev2.Matches;
-SELECT @playerid := ID from envi_mtgcoveragev2.Players WHERE envi_mtgcoveragev2.Players.Name = @playername;
-UPDATE envi_mtgcoveragev2.Matches SET PlayerIDA=@playerid WHERE (abs(PlayerIDA) = 0 AND PlayerIDA != '0');
-
-SELECT @playername := PlayerIDB FROM envi_mtgcoveragev2.Matches;
-SELECT @playerid := ID from envi_mtgcoveragev2.Players WHERE envi_mtgcoveragev2.Players.Name = @playername;
-UPDATE envi_mtgcoveragev2.Matches SET PlayerIDB=@playerid WHERE (abs(PlayerIDB) = 0 AND PlayerIDB != '0');
-
-SELECT @deckname := DeckIDA FROM envi_mtgcoveragev2.Matches;
-SELECT @deckid := ID from envi_mtgcoveragev2.Decks WHERE envi_mtgcoveragev2.Decks.Name = @deckname;
-UPDATE envi_mtgcoveragev2.Matches SET DeckIDA=@deckid WHERE (abs(DeckIDA) = 0 AND DeckIDA != '0');
-
-SELECT @deckname := DeckIDB FROM envi_mtgcoveragev2.Matches;
-SELECT @deckid := ID from envi_mtgcoveragev2.Decks WHERE envi_mtgcoveragev2.Decks.Name = @deckname;
-UPDATE envi_mtgcoveragev2.Matches SET DeckIDB=@deckid WHERE (abs(DeckIDB) = 0 AND DeckIDB != '0');
-INSERT into envi_mtgcoveragev2.Matches (VOD, RoundName, PlayerIDA, PlayerIDB, DeckIDA, DeckIDB, Format, TournamentID) select round18, "Round 18", round18player1, round18player2, round18deck1, round18deck2, formattype, id FROM envi_mtgcoverage.events WHERE envi_mtgcoverage.events.round18 != '' AND envi_mtgcoverage.events.id = @updatenummer;
-SELECT @playername := PlayerIDA FROM envi_mtgcoveragev2.Matches;
-SELECT @playerid := ID from envi_mtgcoveragev2.Players WHERE envi_mtgcoveragev2.Players.Name = @playername;
-UPDATE envi_mtgcoveragev2.Matches SET PlayerIDA=@playerid WHERE (abs(PlayerIDA) = 0 AND PlayerIDA != '0');
-
-SELECT @playername := PlayerIDB FROM envi_mtgcoveragev2.Matches;
-SELECT @playerid := ID from envi_mtgcoveragev2.Players WHERE envi_mtgcoveragev2.Players.Name = @playername;
-UPDATE envi_mtgcoveragev2.Matches SET PlayerIDB=@playerid WHERE (abs(PlayerIDB) = 0 AND PlayerIDB != '0');
-
-SELECT @deckname := DeckIDA FROM envi_mtgcoveragev2.Matches;
-SELECT @deckid := ID from envi_mtgcoveragev2.Decks WHERE envi_mtgcoveragev2.Decks.Name = @deckname;
-UPDATE envi_mtgcoveragev2.Matches SET DeckIDA=@deckid WHERE (abs(DeckIDA) = 0 AND DeckIDA != '0');
-
-SELECT @deckname := DeckIDB FROM envi_mtgcoveragev2.Matches;
-SELECT @deckid := ID from envi_mtgcoveragev2.Decks WHERE envi_mtgcoveragev2.Decks.Name = @deckname;
-UPDATE envi_mtgcoveragev2.Matches SET DeckIDB=@deckid WHERE (abs(DeckIDB) = 0 AND DeckIDB != '0');
-INSERT into envi_mtgcoveragev2.Matches (VOD, RoundName, PlayerIDA, PlayerIDB, DeckIDA, DeckIDB, Format, TournamentID) select round19, "Round 19", round19player1, round19player2, round19deck1, round19deck2, formattype, id FROM envi_mtgcoverage.events WHERE envi_mtgcoverage.events.round19 != '' AND envi_mtgcoverage.events.id = @updatenummer;
-SELECT @playername := PlayerIDA FROM envi_mtgcoveragev2.Matches;
-SELECT @playerid := ID from envi_mtgcoveragev2.Players WHERE envi_mtgcoveragev2.Players.Name = @playername;
-UPDATE envi_mtgcoveragev2.Matches SET PlayerIDA=@playerid WHERE (abs(PlayerIDA) = 0 AND PlayerIDA != '0');
-
-SELECT @playername := PlayerIDB FROM envi_mtgcoveragev2.Matches;
-SELECT @playerid := ID from envi_mtgcoveragev2.Players WHERE envi_mtgcoveragev2.Players.Name = @playername;
-UPDATE envi_mtgcoveragev2.Matches SET PlayerIDB=@playerid WHERE (abs(PlayerIDB) = 0 AND PlayerIDB != '0');
-
-SELECT @deckname := DeckIDA FROM envi_mtgcoveragev2.Matches;
-SELECT @deckid := ID from envi_mtgcoveragev2.Decks WHERE envi_mtgcoveragev2.Decks.Name = @deckname;
-UPDATE envi_mtgcoveragev2.Matches SET DeckIDA=@deckid WHERE (abs(DeckIDA) = 0 AND DeckIDA != '0');
-
-SELECT @deckname := DeckIDB FROM envi_mtgcoveragev2.Matches;
-SELECT @deckid := ID from envi_mtgcoveragev2.Decks WHERE envi_mtgcoveragev2.Decks.Name = @deckname;
-UPDATE envi_mtgcoveragev2.Matches SET DeckIDB=@deckid WHERE (abs(DeckIDB) = 0 AND DeckIDB != '0');
-INSERT into envi_mtgcoveragev2.Matches (VOD, RoundName, PlayerIDA, PlayerIDB, DeckIDA, DeckIDB, Format, TournamentID) select round20, "Round 20", round20player1, round20player2, round20deck1, round20deck2, formattype, id FROM envi_mtgcoverage.events WHERE envi_mtgcoverage.events.round20 != '' AND envi_mtgcoverage.events.id = @updatenummer;
-SELECT @playername := PlayerIDA FROM envi_mtgcoveragev2.Matches;
-SELECT @playerid := ID from envi_mtgcoveragev2.Players WHERE envi_mtgcoveragev2.Players.Name = @playername;
-UPDATE envi_mtgcoveragev2.Matches SET PlayerIDA=@playerid WHERE (abs(PlayerIDA) = 0 AND PlayerIDA != '0');
-
-SELECT @playername := PlayerIDB FROM envi_mtgcoveragev2.Matches;
-SELECT @playerid := ID from envi_mtgcoveragev2.Players WHERE envi_mtgcoveragev2.Players.Name = @playername;
-UPDATE envi_mtgcoveragev2.Matches SET PlayerIDB=@playerid WHERE (abs(PlayerIDB) = 0 AND PlayerIDB != '0');
-
-SELECT @deckname := DeckIDA FROM envi_mtgcoveragev2.Matches;
-SELECT @deckid := ID from envi_mtgcoveragev2.Decks WHERE envi_mtgcoveragev2.Decks.Name = @deckname;
-UPDATE envi_mtgcoveragev2.Matches SET DeckIDA=@deckid WHERE (abs(DeckIDA) = 0 AND DeckIDA != '0');
-
-SELECT @deckname := DeckIDB FROM envi_mtgcoveragev2.Matches;
-SELECT @deckid := ID from envi_mtgcoveragev2.Decks WHERE envi_mtgcoveragev2.Decks.Name = @deckname;
-UPDATE envi_mtgcoveragev2.Matches SET DeckIDB=@deckid WHERE (abs(DeckIDB) = 0 AND DeckIDB != '0');
-INSERT into envi_mtgcoveragev2.Matches (VOD, RoundName, PlayerIDA, PlayerIDB, DeckIDA, DeckIDB, Format, TournamentID) select quarter, "Quarter Finals", quarterplayer1, quarterplayer2, quarterdeck1, quarterdeck2, formattype, id FROM envi_mtgcoverage.events WHERE envi_mtgcoverage.events.quarter != '' AND envi_mtgcoverage.events.id = @updatenummer;
-SELECT @playername := PlayerIDA FROM envi_mtgcoveragev2.Matches;
-SELECT @playerid := ID from envi_mtgcoveragev2.Players WHERE envi_mtgcoveragev2.Players.Name = @playername;
-UPDATE envi_mtgcoveragev2.Matches SET PlayerIDA=@playerid WHERE (abs(PlayerIDA) = 0 AND PlayerIDA != '0');
-
-SELECT @playername := PlayerIDB FROM envi_mtgcoveragev2.Matches;
-SELECT @playerid := ID from envi_mtgcoveragev2.Players WHERE envi_mtgcoveragev2.Players.Name = @playername;
-UPDATE envi_mtgcoveragev2.Matches SET PlayerIDB=@playerid WHERE (abs(PlayerIDB) = 0 AND PlayerIDB != '0');
-
-SELECT @deckname := DeckIDA FROM envi_mtgcoveragev2.Matches;
-SELECT @deckid := ID from envi_mtgcoveragev2.Decks WHERE envi_mtgcoveragev2.Decks.Name = @deckname;
-UPDATE envi_mtgcoveragev2.Matches SET DeckIDA=@deckid WHERE (abs(DeckIDA) = 0 AND DeckIDA != '0');
-
-SELECT @deckname := DeckIDB FROM envi_mtgcoveragev2.Matches;
-SELECT @deckid := ID from envi_mtgcoveragev2.Decks WHERE envi_mtgcoveragev2.Decks.Name = @deckname;
-UPDATE envi_mtgcoveragev2.Matches SET DeckIDB=@deckid WHERE (abs(DeckIDB) = 0 AND DeckIDB != '0');
-INSERT into envi_mtgcoveragev2.Matches (VOD, RoundName, PlayerIDA, PlayerIDB, DeckIDA, DeckIDB, Format, TournamentID) select quarter2, "Quarter Finals 2", quarter2player1, quarter2player2, quarter2deck1, quarter2deck2, formattype, id FROM envi_mtgcoverage.events WHERE envi_mtgcoverage.events.quarter2 != '' AND envi_mtgcoverage.events.id = @updatenummer;
-SELECT @playername := PlayerIDA FROM envi_mtgcoveragev2.Matches;
-SELECT @playerid := ID from envi_mtgcoveragev2.Players WHERE envi_mtgcoveragev2.Players.Name = @playername;
-UPDATE envi_mtgcoveragev2.Matches SET PlayerIDA=@playerid WHERE (abs(PlayerIDA) = 0 AND PlayerIDA != '0');
-
-SELECT @playername := PlayerIDB FROM envi_mtgcoveragev2.Matches;
-SELECT @playerid := ID from envi_mtgcoveragev2.Players WHERE envi_mtgcoveragev2.Players.Name = @playername;
-UPDATE envi_mtgcoveragev2.Matches SET PlayerIDB=@playerid WHERE (abs(PlayerIDB) = 0 AND PlayerIDB != '0');
-
-SELECT @deckname := DeckIDA FROM envi_mtgcoveragev2.Matches;
-SELECT @deckid := ID from envi_mtgcoveragev2.Decks WHERE envi_mtgcoveragev2.Decks.Name = @deckname;
-UPDATE envi_mtgcoveragev2.Matches SET DeckIDA=@deckid WHERE (abs(DeckIDA) = 0 AND DeckIDA != '0');
-
-SELECT @deckname := DeckIDB FROM envi_mtgcoveragev2.Matches;
-SELECT @deckid := ID from envi_mtgcoveragev2.Decks WHERE envi_mtgcoveragev2.Decks.Name = @deckname;
-UPDATE envi_mtgcoveragev2.Matches SET DeckIDB=@deckid WHERE (abs(DeckIDB) = 0 AND DeckIDB != '0');
-INSERT into envi_mtgcoveragev2.Matches (VOD, RoundName, PlayerIDA, PlayerIDB, DeckIDA, DeckIDB, Format, TournamentID) select quarter3, "Quarter Finals 3", quarter3player1, quarter3player2, quarter3deck1, quarter3deck2, formattype, id FROM envi_mtgcoverage.events WHERE envi_mtgcoverage.events.quarter3 != '' AND envi_mtgcoverage.events.id = @updatenummer;
-SELECT @playername := PlayerIDA FROM envi_mtgcoveragev2.Matches;
-SELECT @playerid := ID from envi_mtgcoveragev2.Players WHERE envi_mtgcoveragev2.Players.Name = @playername;
-UPDATE envi_mtgcoveragev2.Matches SET PlayerIDA=@playerid WHERE (abs(PlayerIDA) = 0 AND PlayerIDA != '0');
-
-SELECT @playername := PlayerIDB FROM envi_mtgcoveragev2.Matches;
-SELECT @playerid := ID from envi_mtgcoveragev2.Players WHERE envi_mtgcoveragev2.Players.Name = @playername;
-UPDATE envi_mtgcoveragev2.Matches SET PlayerIDB=@playerid WHERE (abs(PlayerIDB) = 0 AND PlayerIDB != '0');
-
-SELECT @deckname := DeckIDA FROM envi_mtgcoveragev2.Matches;
-SELECT @deckid := ID from envi_mtgcoveragev2.Decks WHERE envi_mtgcoveragev2.Decks.Name = @deckname;
-UPDATE envi_mtgcoveragev2.Matches SET DeckIDA=@deckid WHERE (abs(DeckIDA) = 0 AND DeckIDA != '0');
-
-SELECT @deckname := DeckIDB FROM envi_mtgcoveragev2.Matches;
-SELECT @deckid := ID from envi_mtgcoveragev2.Decks WHERE envi_mtgcoveragev2.Decks.Name = @deckname;
-UPDATE envi_mtgcoveragev2.Matches SET DeckIDB=@deckid WHERE (abs(DeckIDB) = 0 AND DeckIDB != '0');
-INSERT into envi_mtgcoveragev2.Matches (VOD, RoundName, PlayerIDA, PlayerIDB, DeckIDA, DeckIDB, Format, TournamentID) select quarter4, "Quarter Finals 4", quarter4player1, quarter4player2, quarter4deck1, quarter4deck2, formattype, id FROM envi_mtgcoverage.events WHERE envi_mtgcoverage.events.quarter4 != '' AND envi_mtgcoverage.events.id = @updatenummer;
-SELECT @playername := PlayerIDA FROM envi_mtgcoveragev2.Matches;
-SELECT @playerid := ID from envi_mtgcoveragev2.Players WHERE envi_mtgcoveragev2.Players.Name = @playername;
-UPDATE envi_mtgcoveragev2.Matches SET PlayerIDA=@playerid WHERE (abs(PlayerIDA) = 0 AND PlayerIDA != '0');
-
-SELECT @playername := PlayerIDB FROM envi_mtgcoveragev2.Matches;
-SELECT @playerid := ID from envi_mtgcoveragev2.Players WHERE envi_mtgcoveragev2.Players.Name = @playername;
-UPDATE envi_mtgcoveragev2.Matches SET PlayerIDB=@playerid WHERE (abs(PlayerIDB) = 0 AND PlayerIDB != '0');
-
-SELECT @deckname := DeckIDA FROM envi_mtgcoveragev2.Matches;
-SELECT @deckid := ID from envi_mtgcoveragev2.Decks WHERE envi_mtgcoveragev2.Decks.Name = @deckname;
-UPDATE envi_mtgcoveragev2.Matches SET DeckIDA=@deckid WHERE (abs(DeckIDA) = 0 AND DeckIDA != '0');
-
-SELECT @deckname := DeckIDB FROM envi_mtgcoveragev2.Matches;
-SELECT @deckid := ID from envi_mtgcoveragev2.Decks WHERE envi_mtgcoveragev2.Decks.Name = @deckname;
-UPDATE envi_mtgcoveragev2.Matches SET DeckIDB=@deckid WHERE (abs(DeckIDB) = 0 AND DeckIDB != '0');
-INSERT into envi_mtgcoveragev2.Matches (VOD, RoundName, PlayerIDA, PlayerIDB, DeckIDA, DeckIDB, Format, TournamentID) select semi, "Semi Finals", semiplayer1, semiplayer2, semideck1, semideck2, formattype, id FROM envi_mtgcoverage.events WHERE envi_mtgcoverage.events.semi != '' AND envi_mtgcoverage.events.id = @updatenummer;
-SELECT @playername := PlayerIDA FROM envi_mtgcoveragev2.Matches;
-SELECT @playerid := ID from envi_mtgcoveragev2.Players WHERE envi_mtgcoveragev2.Players.Name = @playername;
-UPDATE envi_mtgcoveragev2.Matches SET PlayerIDA=@playerid WHERE (abs(PlayerIDA) = 0 AND PlayerIDA != '0');
-
-SELECT @playername := PlayerIDB FROM envi_mtgcoveragev2.Matches;
-SELECT @playerid := ID from envi_mtgcoveragev2.Players WHERE envi_mtgcoveragev2.Players.Name = @playername;
-UPDATE envi_mtgcoveragev2.Matches SET PlayerIDB=@playerid WHERE (abs(PlayerIDB) = 0 AND PlayerIDB != '0');
-
-SELECT @deckname := DeckIDA FROM envi_mtgcoveragev2.Matches;
-SELECT @deckid := ID from envi_mtgcoveragev2.Decks WHERE envi_mtgcoveragev2.Decks.Name = @deckname;
-UPDATE envi_mtgcoveragev2.Matches SET DeckIDA=@deckid WHERE (abs(DeckIDA) = 0 AND DeckIDA != '0');
-
-SELECT @deckname := DeckIDB FROM envi_mtgcoveragev2.Matches;
-SELECT @deckid := ID from envi_mtgcoveragev2.Decks WHERE envi_mtgcoveragev2.Decks.Name = @deckname;
-UPDATE envi_mtgcoveragev2.Matches SET DeckIDB=@deckid WHERE (abs(DeckIDB) = 0 AND DeckIDB != '0');
-INSERT into envi_mtgcoveragev2.Matches (VOD, RoundName, PlayerIDA, PlayerIDB, DeckIDA, DeckIDB, Format, TournamentID) select semi2, "Semi Finals 2", semi2player1, semi2player2, semi2deck1, semi2deck2, formattype, id FROM envi_mtgcoverage.events WHERE envi_mtgcoverage.events.semi2 != '' AND envi_mtgcoverage.events.id = @updatenummer;
-SELECT @playername := PlayerIDA FROM envi_mtgcoveragev2.Matches;
-SELECT @playerid := ID from envi_mtgcoveragev2.Players WHERE envi_mtgcoveragev2.Players.Name = @playername;
-UPDATE envi_mtgcoveragev2.Matches SET PlayerIDA=@playerid WHERE (abs(PlayerIDA) = 0 AND PlayerIDA != '0');
-
-SELECT @playername := PlayerIDB FROM envi_mtgcoveragev2.Matches;
-SELECT @playerid := ID from envi_mtgcoveragev2.Players WHERE envi_mtgcoveragev2.Players.Name = @playername;
-UPDATE envi_mtgcoveragev2.Matches SET PlayerIDB=@playerid WHERE (abs(PlayerIDB) = 0 AND PlayerIDB != '0');
-
-SELECT @deckname := DeckIDA FROM envi_mtgcoveragev2.Matches;
-SELECT @deckid := ID from envi_mtgcoveragev2.Decks WHERE envi_mtgcoveragev2.Decks.Name = @deckname;
-UPDATE envi_mtgcoveragev2.Matches SET DeckIDA=@deckid WHERE (abs(DeckIDA) = 0 AND DeckIDA != '0');
-
-SELECT @deckname := DeckIDB FROM envi_mtgcoveragev2.Matches;
-SELECT @deckid := ID from envi_mtgcoveragev2.Decks WHERE envi_mtgcoveragev2.Decks.Name = @deckname;
-UPDATE envi_mtgcoveragev2.Matches SET DeckIDB=@deckid WHERE (abs(DeckIDB) = 0 AND DeckIDB != '0');
-INSERT into envi_mtgcoveragev2.Matches (VOD, RoundName, PlayerIDA, PlayerIDB, DeckIDA, DeckIDB, Format, TournamentID) select final, "Finals", finalplayer1, finalplayer2, finaldeck1, finaldeck2, formattype, id FROM envi_mtgcoverage.events WHERE envi_mtgcoverage.events.final != '' AND envi_mtgcoverage.events.id = @updatenummer;
-SELECT @playername := PlayerIDA FROM envi_mtgcoveragev2.Matches;
-SELECT @playerid := ID from envi_mtgcoveragev2.Players WHERE envi_mtgcoveragev2.Players.Name = @playername;
-UPDATE envi_mtgcoveragev2.Matches SET PlayerIDA=@playerid WHERE (abs(PlayerIDA) = 0 AND PlayerIDA != '0');
-
-SELECT @playername := PlayerIDB FROM envi_mtgcoveragev2.Matches;
-SELECT @playerid := ID from envi_mtgcoveragev2.Players WHERE envi_mtgcoveragev2.Players.Name = @playername;
-UPDATE envi_mtgcoveragev2.Matches SET PlayerIDB=@playerid WHERE (abs(PlayerIDB) = 0 AND PlayerIDB != '0');
-
-SELECT @deckname := DeckIDA FROM envi_mtgcoveragev2.Matches;
-SELECT @deckid := ID from envi_mtgcoveragev2.Decks WHERE envi_mtgcoveragev2.Decks.Name = @deckname;
-UPDATE envi_mtgcoveragev2.Matches SET DeckIDA=@deckid WHERE (abs(DeckIDA) = 0 AND DeckIDA != '0');
-
-SELECT @deckname := DeckIDB FROM envi_mtgcoveragev2.Matches;
-SELECT @deckid := ID from envi_mtgcoveragev2.Decks WHERE envi_mtgcoveragev2.Decks.Name = @deckname;
-UPDATE envi_mtgcoveragev2.Matches SET DeckIDB=@deckid WHERE (abs(DeckIDB) = 0 AND DeckIDB != '0');
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-SELECT @playername := PlayerIDA FROM envi_mtgcoveragev2.Matches;
-SELECT @playerid := ID from envi_mtgcoveragev2.Players WHERE envi_mtgcoveragev2.Players.Name = @playername;
-UPDATE envi_mtgcoveragev2.Matches SET PlayerIDA=@playerid WHERE (abs(PlayerIDA) = 0 AND PlayerIDA != '0');
-
-SELECT @playername := PlayerIDB FROM envi_mtgcoveragev2.Matches;
-SELECT @playerid := ID from envi_mtgcoveragev2.Players WHERE envi_mtgcoveragev2.Players.Name = @playername;
-UPDATE envi_mtgcoveragev2.Matches SET PlayerIDB=@playerid WHERE (abs(PlayerIDB) = 0 AND PlayerIDB != '0');
-
-SELECT @deckname := DeckIDA FROM envi_mtgcoveragev2.Matches;
-SELECT @deckid := ID from envi_mtgcoveragev2.Decks WHERE envi_mtgcoveragev2.Decks.Name = @deckname;
-UPDATE envi_mtgcoveragev2.Matches SET DeckIDA=@deckid WHERE (abs(DeckIDA) = 0 AND DeckIDA != '0');
-
-SELECT @deckname := DeckIDB FROM envi_mtgcoveragev2.Matches;
-SELECT @deckid := ID from envi_mtgcoveragev2.Decks WHERE envi_mtgcoveragev2.Decks.Name = @deckname;
-UPDATE envi_mtgcoveragev2.Matches SET DeckIDB=@deckid WHERE (abs(DeckIDB) = 0 AND DeckIDB != '0');
+SET @updatenummer = 4;
+
+INSERT into Matches (VOD, RoundName, PlayerIDA, PlayerIDB, DeckIDA, DeckIDB, Format, TournamentID) select round1, "Round 1", round1player1, round1player2, round1deck1, round1deck2, formattype, id FROM v1_events WHERE v1_events.round1 != '' AND v1_events.id = @updatenummer;
+SELECT @playername := PlayerIDA FROM Matches;
+SELECT @playerid := ID from Players WHERE Players.Name = @playername;
+UPDATE Matches SET PlayerIDA=@playerid WHERE (TournamentID = @updatenummer AND RoundName = 'Round 1');
+
+SELECT @playername := PlayerIDB FROM Matches;
+SELECT @playerid := ID from Players WHERE Players.Name = @playername;
+UPDATE Matches SET PlayerIDB=@playerid WHERE (TournamentID = @updatenummer AND RoundName = 'Round 1');
+
+SELECT @deckname := DeckIDA FROM Matches;
+SELECT @deckid := ID from Decks WHERE Decks.Name = @deckname;
+UPDATE Matches SET DeckIDA=@deckid WHERE (TournamentID = @updatenummer AND RoundName = 'Round 1');
+
+SELECT @deckname := DeckIDB FROM Matches;
+SELECT @deckid := ID from Decks WHERE Decks.Name = @deckname;
+UPDATE Matches SET DeckIDB=@deckid WHERE (TournamentID = @updatenummer AND RoundName = 'Round 1');
+
+INSERT into Matches (VOD, RoundName, PlayerIDA, PlayerIDB, DeckIDA, DeckIDB, Format, TournamentID) select round2, "Round 2", round2player1, round2player2, round2deck1, round2deck2, formattype, id FROM v1_events WHERE v1_events.round1 != '' AND v1_events.id = @updatenummer;
+SELECT @playername := PlayerIDA FROM Matches;
+SELECT @playerid := ID from Players WHERE Players.Name = @playername;
+UPDATE Matches SET PlayerIDA=@playerid WHERE (TournamentID = @updatenummer AND RoundName = 'Round 2');
+
+SELECT @playername := PlayerIDB FROM Matches;
+SELECT @playerid := ID from Players WHERE Players.Name = @playername;
+UPDATE Matches SET PlayerIDB=@playerid WHERE (TournamentID = @updatenummer AND RoundName = 'Round 2');
+
+SELECT @deckname := DeckIDA FROM Matches;
+SELECT @deckid := ID from Decks WHERE Decks.Name = @deckname;
+UPDATE Matches SET DeckIDA=@deckid WHERE (TournamentID = @updatenummer AND RoundName = 'Round 2');
+
+SELECT @deckname := DeckIDB FROM Matches;
+SELECT @deckid := ID from Decks WHERE Decks.Name = @deckname;
+UPDATE Matches SET DeckIDB=@deckid WHERE (TournamentID = @updatenummer AND RoundName = 'Round 2');
+INSERT into Matches (VOD, RoundName, PlayerIDA, PlayerIDB, DeckIDA, DeckIDB, Format, TournamentID) select round3, "Round 3", round3player1, round3player2, round3deck1, round3deck2, formattype, id FROM v1_events WHERE v1_events.round3 != '' AND v1_events.id = @updatenummer;
+SELECT @playername := PlayerIDA FROM Matches;
+SELECT @playerid := ID from Players WHERE Players.Name = @playername;
+UPDATE Matches SET PlayerIDA=@playerid WHERE (TournamentID = @updatenummer AND RoundName = 'Round 3');
+
+SELECT @playername := PlayerIDB FROM Matches;
+SELECT @playerid := ID from Players WHERE Players.Name = @playername;
+UPDATE Matches SET PlayerIDB=@playerid WHERE (TournamentID = @updatenummer AND RoundName = 'Round 3');
+
+SELECT @deckname := DeckIDA FROM Matches;
+SELECT @deckid := ID from Decks WHERE Decks.Name = @deckname;
+UPDATE Matches SET DeckIDA=@deckid WHERE (TournamentID = @updatenummer AND RoundName = 'Round 3');
+
+SELECT @deckname := DeckIDB FROM Matches;
+SELECT @deckid := ID from Decks WHERE Decks.Name = @deckname;
+UPDATE Matches SET DeckIDB=@deckid WHERE (TournamentID = @updatenummer AND RoundName = 'Round 3');
+INSERT into Matches (VOD, RoundName, PlayerIDA, PlayerIDB, DeckIDA, DeckIDB, Format, TournamentID) select round4, "Round 4", round4player1, round4player2, round4deck1, round4deck2, formattype, id FROM v1_events WHERE v1_events.round4 != '' AND v1_events.id = @updatenummer;
+SELECT @playername := PlayerIDA FROM Matches;
+SELECT @playerid := ID from Players WHERE Players.Name = @playername;
+UPDATE Matches SET PlayerIDA=@playerid WHERE (TournamentID = @updatenummer AND RoundName = 'Round 4');
+
+SELECT @playername := PlayerIDB FROM Matches;
+SELECT @playerid := ID from Players WHERE Players.Name = @playername;
+UPDATE Matches SET PlayerIDB=@playerid WHERE (TournamentID = @updatenummer AND RoundName = 'Round 4');
+
+SELECT @deckname := DeckIDA FROM Matches;
+SELECT @deckid := ID from Decks WHERE Decks.Name = @deckname;
+UPDATE Matches SET DeckIDA=@deckid WHERE (TournamentID = @updatenummer AND RoundName = 'Round 4');
+
+SELECT @deckname := DeckIDB FROM Matches;
+SELECT @deckid := ID from Decks WHERE Decks.Name = @deckname;
+UPDATE Matches SET DeckIDB=@deckid WHERE (TournamentID = @updatenummer AND RoundName = 'Round 4');
+INSERT into Matches (VOD, RoundName, PlayerIDA, PlayerIDB, DeckIDA, DeckIDB, Format, TournamentID) select round5, "Round 5", round5player1, round5player2, round5deck1, round5deck2, formattype, id FROM v1_events WHERE v1_events.round5 != '' AND v1_events.id = @updatenummer;
+SELECT @playername := PlayerIDA FROM Matches;
+SELECT @playerid := ID from Players WHERE Players.Name = @playername;
+UPDATE Matches SET PlayerIDA=@playerid WHERE (TournamentID = @updatenummer AND RoundName = 'Round 5');
+
+SELECT @playername := PlayerIDB FROM Matches;
+SELECT @playerid := ID from Players WHERE Players.Name = @playername;
+UPDATE Matches SET PlayerIDB=@playerid WHERE (TournamentID = @updatenummer AND RoundName = 'Round 5');
+
+SELECT @deckname := DeckIDA FROM Matches;
+SELECT @deckid := ID from Decks WHERE Decks.Name = @deckname;
+UPDATE Matches SET DeckIDA=@deckid WHERE (TournamentID = @updatenummer AND RoundName = 'Round 5');
+
+SELECT @deckname := DeckIDB FROM Matches;
+SELECT @deckid := ID from Decks WHERE Decks.Name = @deckname;
+UPDATE Matches SET DeckIDB=@deckid WHERE (TournamentID = @updatenummer AND RoundName = 'Round 5');
+INSERT into Matches (VOD, RoundName, PlayerIDA, PlayerIDB, DeckIDA, DeckIDB, Format, TournamentID) select round6, "Round 6", round6player1, round6player2, round6deck1, round6deck2, formattype, id FROM v1_events WHERE v1_events.round6 != '' AND v1_events.id = @updatenummer;
+SELECT @playername := PlayerIDA FROM Matches;
+SELECT @playerid := ID from Players WHERE Players.Name = @playername;
+UPDATE Matches SET PlayerIDA=@playerid WHERE (TournamentID = @updatenummer AND RoundName = 'Round 6');
+
+SELECT @playername := PlayerIDB FROM Matches;
+SELECT @playerid := ID from Players WHERE Players.Name = @playername;
+UPDATE Matches SET PlayerIDB=@playerid WHERE (TournamentID = @updatenummer AND RoundName = 'Round 6');
+
+SELECT @deckname := DeckIDA FROM Matches;
+SELECT @deckid := ID from Decks WHERE Decks.Name = @deckname;
+UPDATE Matches SET DeckIDA=@deckid WHERE (TournamentID = @updatenummer AND RoundName = 'Round 6');
+
+SELECT @deckname := DeckIDB FROM Matches;
+SELECT @deckid := ID from Decks WHERE Decks.Name = @deckname;
+UPDATE Matches SET DeckIDB=@deckid WHERE (TournamentID = @updatenummer AND RoundName = 'Round 6');
+INSERT into Matches (VOD, RoundName, PlayerIDA, PlayerIDB, DeckIDA, DeckIDB, Format, TournamentID) select round7, "Round 7", round7player1, round7player2, round7deck1, round7deck2, formattype, id FROM v1_events WHERE v1_events.round7 != '' AND v1_events.id = @updatenummer;
+SELECT @playername := PlayerIDA FROM Matches;
+SELECT @playerid := ID from Players WHERE Players.Name = @playername;
+UPDATE Matches SET PlayerIDA=@playerid WHERE (TournamentID = @updatenummer AND RoundName = 'Round 7');
+
+SELECT @playername := PlayerIDB FROM Matches;
+SELECT @playerid := ID from Players WHERE Players.Name = @playername;
+UPDATE Matches SET PlayerIDB=@playerid WHERE (TournamentID = @updatenummer AND RoundName = 'Round 7');
+
+SELECT @deckname := DeckIDA FROM Matches;
+SELECT @deckid := ID from Decks WHERE Decks.Name = @deckname;
+UPDATE Matches SET DeckIDA=@deckid WHERE (TournamentID = @updatenummer AND RoundName = 'Round 7');
+
+SELECT @deckname := DeckIDB FROM Matches;
+SELECT @deckid := ID from Decks WHERE Decks.Name = @deckname;
+UPDATE Matches SET DeckIDB=@deckid WHERE (TournamentID = @updatenummer AND RoundName = 'Round 7');
+INSERT into Matches (VOD, RoundName, PlayerIDA, PlayerIDB, DeckIDA, DeckIDB, Format, TournamentID) select round8, "Round 8", round8player1, round8player2, round8deck1, round8deck2, formattype, id FROM v1_events WHERE v1_events.round8 != '' AND v1_events.id = @updatenummer;
+SELECT @playername := PlayerIDA FROM Matches;
+SELECT @playerid := ID from Players WHERE Players.Name = @playername;
+UPDATE Matches SET PlayerIDA=@playerid WHERE (TournamentID = @updatenummer AND RoundName = 'Round 8');
+
+SELECT @playername := PlayerIDB FROM Matches;
+SELECT @playerid := ID from Players WHERE Players.Name = @playername;
+UPDATE Matches SET PlayerIDB=@playerid WHERE (TournamentID = @updatenummer AND RoundName = 'Round 8');
+
+SELECT @deckname := DeckIDA FROM Matches;
+SELECT @deckid := ID from Decks WHERE Decks.Name = @deckname;
+UPDATE Matches SET DeckIDA=@deckid WHERE (TournamentID = @updatenummer AND RoundName = 'Round 8');
+
+SELECT @deckname := DeckIDB FROM Matches;
+SELECT @deckid := ID from Decks WHERE Decks.Name = @deckname;
+UPDATE Matches SET DeckIDB=@deckid WHERE (TournamentID = @updatenummer AND RoundName = 'Round 8');
+INSERT into Matches (VOD, RoundName, PlayerIDA, PlayerIDB, DeckIDA, DeckIDB, Format, TournamentID) select round9, "Round 9", round9player1, round9player2, round9deck1, round9deck2, formattype, id FROM v1_events WHERE v1_events.round9 != '' AND v1_events.id = @updatenummer;
+SELECT @playername := PlayerIDA FROM Matches;
+SELECT @playerid := ID from Players WHERE Players.Name = @playername;
+UPDATE Matches SET PlayerIDA=@playerid WHERE (TournamentID = @updatenummer AND RoundName = 'Round 9');
+
+SELECT @playername := PlayerIDB FROM Matches;
+SELECT @playerid := ID from Players WHERE Players.Name = @playername;
+UPDATE Matches SET PlayerIDB=@playerid WHERE (TournamentID = @updatenummer AND RoundName = 'Round 9');
+
+SELECT @deckname := DeckIDA FROM Matches;
+SELECT @deckid := ID from Decks WHERE Decks.Name = @deckname;
+UPDATE Matches SET DeckIDA=@deckid WHERE (TournamentID = @updatenummer AND RoundName = 'Round 9');
+
+SELECT @deckname := DeckIDB FROM Matches;
+SELECT @deckid := ID from Decks WHERE Decks.Name = @deckname;
+UPDATE Matches SET DeckIDB=@deckid WHERE (TournamentID = @updatenummer AND RoundName = 'Round 9');
+INSERT into Matches (VOD, RoundName, PlayerIDA, PlayerIDB, DeckIDA, DeckIDB, Format, TournamentID) select round10, "Round 10", round10player1, round10player2, round10deck1, round10deck2, formattype, id FROM v1_events WHERE v1_events.round10 != '' AND v1_events.id = @updatenummer;
+SELECT @playername := PlayerIDA FROM Matches;
+SELECT @playerid := ID from Players WHERE Players.Name = @playername;
+UPDATE Matches SET PlayerIDA=@playerid WHERE (TournamentID = @updatenummer AND RoundName = 'Round 10');
+
+SELECT @playername := PlayerIDB FROM Matches;
+SELECT @playerid := ID from Players WHERE Players.Name = @playername;
+UPDATE Matches SET PlayerIDB=@playerid WHERE (TournamentID = @updatenummer AND RoundName = 'Round 10');
+
+SELECT @deckname := DeckIDA FROM Matches;
+SELECT @deckid := ID from Decks WHERE Decks.Name = @deckname;
+UPDATE Matches SET DeckIDA=@deckid WHERE (TournamentID = @updatenummer AND RoundName = 'Round 10');
+
+SELECT @deckname := DeckIDB FROM Matches;
+SELECT @deckid := ID from Decks WHERE Decks.Name = @deckname;
+UPDATE Matches SET DeckIDB=@deckid WHERE (TournamentID = @updatenummer AND RoundName = 'Round 10');
+INSERT into Matches (VOD, RoundName, PlayerIDA, PlayerIDB, DeckIDA, DeckIDB, Format, TournamentID) select round11, "Round 11", round11player1, round11player2, round11deck1, round11deck2, formattype, id FROM v1_events WHERE v1_events.round11 != '' AND v1_events.id = @updatenummer;
+SELECT @playername := PlayerIDA FROM Matches;
+SELECT @playerid := ID from Players WHERE Players.Name = @playername;
+UPDATE Matches SET PlayerIDA=@playerid WHERE (TournamentID = @updatenummer AND RoundName = 'Round 11');
+
+SELECT @playername := PlayerIDB FROM Matches;
+SELECT @playerid := ID from Players WHERE Players.Name = @playername;
+UPDATE Matches SET PlayerIDB=@playerid WHERE (TournamentID = @updatenummer AND RoundName = 'Round 11');
+
+SELECT @deckname := DeckIDA FROM Matches;
+SELECT @deckid := ID from Decks WHERE Decks.Name = @deckname;
+UPDATE Matches SET DeckIDA=@deckid WHERE (TournamentID = @updatenummer AND RoundName = 'Round 11');
+
+SELECT @deckname := DeckIDB FROM Matches;
+SELECT @deckid := ID from Decks WHERE Decks.Name = @deckname;
+UPDATE Matches SET DeckIDB=@deckid WHERE (TournamentID = @updatenummer AND RoundName = 'Round 11');
+INSERT into Matches (VOD, RoundName, PlayerIDA, PlayerIDB, DeckIDA, DeckIDB, Format, TournamentID) select round12, "Round 12", round12player1, round12player2, round12deck1, round12deck2, formattype, id FROM v1_events WHERE v1_events.round12 != '' AND v1_events.id = @updatenummer;
+SELECT @playername := PlayerIDA FROM Matches;
+SELECT @playerid := ID from Players WHERE Players.Name = @playername;
+UPDATE Matches SET PlayerIDA=@playerid WHERE (TournamentID = @updatenummer AND RoundName = 'Round 12');
+
+SELECT @playername := PlayerIDB FROM Matches;
+SELECT @playerid := ID from Players WHERE Players.Name = @playername;
+UPDATE Matches SET PlayerIDB=@playerid WHERE (TournamentID = @updatenummer AND RoundName = 'Round 12');
+
+SELECT @deckname := DeckIDA FROM Matches;
+SELECT @deckid := ID from Decks WHERE Decks.Name = @deckname;
+UPDATE Matches SET DeckIDA=@deckid WHERE (TournamentID = @updatenummer AND RoundName = 'Round 12');
+
+SELECT @deckname := DeckIDB FROM Matches;
+SELECT @deckid := ID from Decks WHERE Decks.Name = @deckname;
+UPDATE Matches SET DeckIDB=@deckid WHERE (TournamentID = @updatenummer AND RoundName = 'Round 12');
+INSERT into Matches (VOD, RoundName, PlayerIDA, PlayerIDB, DeckIDA, DeckIDB, Format, TournamentID) select round13, "Round 13", round13player1, round13player2, round13deck1, round13deck2, formattype, id FROM v1_events WHERE v1_events.round13 != '' AND v1_events.id = @updatenummer;
+SELECT @playername := PlayerIDA FROM Matches;
+SELECT @playerid := ID from Players WHERE Players.Name = @playername;
+UPDATE Matches SET PlayerIDA=@playerid WHERE (TournamentID = @updatenummer AND RoundName = 'Round 13');
+
+SELECT @playername := PlayerIDB FROM Matches;
+SELECT @playerid := ID from Players WHERE Players.Name = @playername;
+UPDATE Matches SET PlayerIDB=@playerid WHERE (TournamentID = @updatenummer AND RoundName = 'Round 13');
+
+SELECT @deckname := DeckIDA FROM Matches;
+SELECT @deckid := ID from Decks WHERE Decks.Name = @deckname;
+UPDATE Matches SET DeckIDA=@deckid WHERE (TournamentID = @updatenummer AND RoundName = 'Round 13');
+
+SELECT @deckname := DeckIDB FROM Matches;
+SELECT @deckid := ID from Decks WHERE Decks.Name = @deckname;
+UPDATE Matches SET DeckIDB=@deckid WHERE (TournamentID = @updatenummer AND RoundName = 'Round 13');
+INSERT into Matches (VOD, RoundName, PlayerIDA, PlayerIDB, DeckIDA, DeckIDB, Format, TournamentID) select round14, "Round 14", round14player1, round14player2, round14deck1, round14deck2, formattype, id FROM v1_events WHERE v1_events.round14 != '' AND v1_events.id = @updatenummer;
+SELECT @playername := PlayerIDA FROM Matches;
+SELECT @playerid := ID from Players WHERE Players.Name = @playername;
+UPDATE Matches SET PlayerIDA=@playerid WHERE (TournamentID = @updatenummer AND RoundName = 'Round 14');
+
+SELECT @playername := PlayerIDB FROM Matches;
+SELECT @playerid := ID from Players WHERE Players.Name = @playername;
+UPDATE Matches SET PlayerIDB=@playerid WHERE (TournamentID = @updatenummer AND RoundName = 'Round 14');
+
+SELECT @deckname := DeckIDA FROM Matches;
+SELECT @deckid := ID from Decks WHERE Decks.Name = @deckname;
+UPDATE Matches SET DeckIDA=@deckid WHERE (TournamentID = @updatenummer AND RoundName = 'Round 14');
+
+SELECT @deckname := DeckIDB FROM Matches;
+SELECT @deckid := ID from Decks WHERE Decks.Name = @deckname;
+UPDATE Matches SET DeckIDB=@deckid WHERE (TournamentID = @updatenummer AND RoundName = 'Round 14');
+INSERT into Matches (VOD, RoundName, PlayerIDA, PlayerIDB, DeckIDA, DeckIDB, Format, TournamentID) select round15, "Round 15", round15player1, round15player2, round15deck1, round15deck2, formattype, id FROM v1_events WHERE v1_events.round15 != '' AND v1_events.id = @updatenummer;
+SELECT @playername := PlayerIDA FROM Matches;
+SELECT @playerid := ID from Players WHERE Players.Name = @playername;
+UPDATE Matches SET PlayerIDA=@playerid WHERE (TournamentID = @updatenummer AND RoundName = 'Round 15');
+
+SELECT @playername := PlayerIDB FROM Matches;
+SELECT @playerid := ID from Players WHERE Players.Name = @playername;
+UPDATE Matches SET PlayerIDB=@playerid WHERE (TournamentID = @updatenummer AND RoundName = 'Round 15');
+
+SELECT @deckname := DeckIDA FROM Matches;
+SELECT @deckid := ID from Decks WHERE Decks.Name = @deckname;
+UPDATE Matches SET DeckIDA=@deckid WHERE (TournamentID = @updatenummer AND RoundName = 'Round 15');
+
+SELECT @deckname := DeckIDB FROM Matches;
+SELECT @deckid := ID from Decks WHERE Decks.Name = @deckname;
+UPDATE Matches SET DeckIDB=@deckid WHERE (TournamentID = @updatenummer AND RoundName = 'Round 15');
+INSERT into Matches (VOD, RoundName, PlayerIDA, PlayerIDB, DeckIDA, DeckIDB, Format, TournamentID) select round16, "Round 16", round16player1, round16player2, round16deck1, round16deck2, formattype, id FROM v1_events WHERE v1_events.round16 != '' AND v1_events.id = @updatenummer;
+SELECT @playername := PlayerIDA FROM Matches;
+SELECT @playerid := ID from Players WHERE Players.Name = @playername;
+UPDATE Matches SET PlayerIDA=@playerid WHERE (TournamentID = @updatenummer AND RoundName = 'Round 16');
+
+SELECT @playername := PlayerIDB FROM Matches;
+SELECT @playerid := ID from Players WHERE Players.Name = @playername;
+UPDATE Matches SET PlayerIDB=@playerid WHERE (TournamentID = @updatenummer AND RoundName = 'Round 16');
+
+SELECT @deckname := DeckIDA FROM Matches;
+SELECT @deckid := ID from Decks WHERE Decks.Name = @deckname;
+UPDATE Matches SET DeckIDA=@deckid WHERE (TournamentID = @updatenummer AND RoundName = 'Round 16');
+
+SELECT @deckname := DeckIDB FROM Matches;
+SELECT @deckid := ID from Decks WHERE Decks.Name = @deckname;
+UPDATE Matches SET DeckIDB=@deckid WHERE (TournamentID = @updatenummer AND RoundName = 'Round 16');
+INSERT into Matches (VOD, RoundName, PlayerIDA, PlayerIDB, DeckIDA, DeckIDB, Format, TournamentID) select round17, "Round 17", round17player1, round17player2, round17deck1, round17deck2, formattype, id FROM v1_events WHERE v1_events.round17 != '' AND v1_events.id = @updatenummer;
+SELECT @playername := PlayerIDA FROM Matches;
+SELECT @playerid := ID from Players WHERE Players.Name = @playername;
+UPDATE Matches SET PlayerIDA=@playerid WHERE (TournamentID = @updatenummer AND RoundName = 'Round 17');
+
+SELECT @playername := PlayerIDB FROM Matches;
+SELECT @playerid := ID from Players WHERE Players.Name = @playername;
+UPDATE Matches SET PlayerIDB=@playerid WHERE (TournamentID = @updatenummer AND RoundName = 'Round 17');
+
+SELECT @deckname := DeckIDA FROM Matches;
+SELECT @deckid := ID from Decks WHERE Decks.Name = @deckname;
+UPDATE Matches SET DeckIDA=@deckid WHERE (TournamentID = @updatenummer AND RoundName = 'Round 17');
+
+SELECT @deckname := DeckIDB FROM Matches;
+SELECT @deckid := ID from Decks WHERE Decks.Name = @deckname;
+UPDATE Matches SET DeckIDB=@deckid WHERE (TournamentID = @updatenummer AND RoundName = 'Round 17');
+INSERT into Matches (VOD, RoundName, PlayerIDA, PlayerIDB, DeckIDA, DeckIDB, Format, TournamentID) select round18, "Round 18", round18player1, round18player2, round18deck1, round18deck2, formattype, id FROM v1_events WHERE v1_events.round18 != '' AND v1_events.id = @updatenummer;
+SELECT @playername := PlayerIDA FROM Matches;
+SELECT @playerid := ID from Players WHERE Players.Name = @playername;
+UPDATE Matches SET PlayerIDA=@playerid WHERE (TournamentID = @updatenummer AND RoundName = 'Round 18');
+
+SELECT @playername := PlayerIDB FROM Matches;
+SELECT @playerid := ID from Players WHERE Players.Name = @playername;
+UPDATE Matches SET PlayerIDB=@playerid WHERE (TournamentID = @updatenummer AND RoundName = 'Round 18');
+
+SELECT @deckname := DeckIDA FROM Matches;
+SELECT @deckid := ID from Decks WHERE Decks.Name = @deckname;
+UPDATE Matches SET DeckIDA=@deckid WHERE (TournamentID = @updatenummer AND RoundName = 'Round 18');
+
+SELECT @deckname := DeckIDB FROM Matches;
+SELECT @deckid := ID from Decks WHERE Decks.Name = @deckname;
+UPDATE Matches SET DeckIDB=@deckid WHERE (TournamentID = @updatenummer AND RoundName = 'Round 18');
+INSERT into Matches (VOD, RoundName, PlayerIDA, PlayerIDB, DeckIDA, DeckIDB, Format, TournamentID) select round19, "Round 19", round19player1, round19player2, round19deck1, round19deck2, formattype, id FROM v1_events WHERE v1_events.round19 != '' AND v1_events.id = @updatenummer;
+SELECT @playername := PlayerIDA FROM Matches;
+SELECT @playerid := ID from Players WHERE Players.Name = @playername;
+UPDATE Matches SET PlayerIDA=@playerid WHERE (TournamentID = @updatenummer AND RoundName = 'Round 19');
+
+SELECT @playername := PlayerIDB FROM Matches;
+SELECT @playerid := ID from Players WHERE Players.Name = @playername;
+UPDATE Matches SET PlayerIDB=@playerid WHERE (TournamentID = @updatenummer AND RoundName = 'Round 19');
+
+SELECT @deckname := DeckIDA FROM Matches;
+SELECT @deckid := ID from Decks WHERE Decks.Name = @deckname;
+UPDATE Matches SET DeckIDA=@deckid WHERE (TournamentID = @updatenummer AND RoundName = 'Round 19');
+
+SELECT @deckname := DeckIDB FROM Matches;
+SELECT @deckid := ID from Decks WHERE Decks.Name = @deckname;
+UPDATE Matches SET DeckIDB=@deckid WHERE (TournamentID = @updatenummer AND RoundName = 'Round 19');
+INSERT into Matches (VOD, RoundName, PlayerIDA, PlayerIDB, DeckIDA, DeckIDB, Format, TournamentID) select round20, "Round 20", round20player1, round20player2, round20deck1, round20deck2, formattype, id FROM v1_events WHERE v1_events.round20 != '' AND v1_events.id = @updatenummer;
+SELECT @playername := PlayerIDA FROM Matches;
+SELECT @playerid := ID from Players WHERE Players.Name = @playername;
+UPDATE Matches SET PlayerIDA=@playerid WHERE (TournamentID = @updatenummer AND RoundName = 'Round 20');
+
+SELECT @playername := PlayerIDB FROM Matches;
+SELECT @playerid := ID from Players WHERE Players.Name = @playername;
+UPDATE Matches SET PlayerIDB=@playerid WHERE (TournamentID = @updatenummer AND RoundName = 'Round 20');
+
+SELECT @deckname := DeckIDA FROM Matches;
+SELECT @deckid := ID from Decks WHERE Decks.Name = @deckname;
+UPDATE Matches SET DeckIDA=@deckid WHERE (TournamentID = @updatenummer AND RoundName = 'Round 20');
+
+SELECT @deckname := DeckIDB FROM Matches;
+SELECT @deckid := ID from Decks WHERE Decks.Name = @deckname;
+UPDATE Matches SET DeckIDB=@deckid WHERE (TournamentID = @updatenummer AND RoundName = 'Round 20');
+INSERT into Matches (VOD, RoundName, PlayerIDA, PlayerIDB, DeckIDA, DeckIDB, Format, TournamentID) select quarter, "Quarter Finals", quarterplayer1, quarterplayer2, quarterdeck1, quarterdeck2, formattype, id FROM v1_events WHERE v1_events.quarter != '' AND v1_events.id = @updatenummer;
+SELECT @playername := PlayerIDA FROM Matches;
+SELECT @playerid := ID from Players WHERE Players.Name = @playername;
+UPDATE Matches SET PlayerIDA=@playerid WHERE (TournamentID = @updatenummer AND RoundName = 'Quarter Finals');
+
+SELECT @playername := PlayerIDB FROM Matches;
+SELECT @playerid := ID from Players WHERE Players.Name = @playername;
+UPDATE Matches SET PlayerIDB=@playerid WHERE (TournamentID = @updatenummer AND RoundName = 'Quarter Finals');
+
+SELECT @deckname := DeckIDA FROM Matches;
+SELECT @deckid := ID from Decks WHERE Decks.Name = @deckname;
+UPDATE Matches SET DeckIDA=@deckid WHERE (TournamentID = @updatenummer AND RoundName = 'Quarter Finals');
+
+SELECT @deckname := DeckIDB FROM Matches;
+SELECT @deckid := ID from Decks WHERE Decks.Name = @deckname;
+UPDATE Matches SET DeckIDB=@deckid WHERE (TournamentID = @updatenummer AND RoundName = 'Quarter Finals');
+INSERT into Matches (VOD, RoundName, PlayerIDA, PlayerIDB, DeckIDA, DeckIDB, Format, TournamentID) select quarter2, "Quarter Finals 2", quarter2player1, quarter2player2, quarter2deck1, quarter2deck2, formattype, id FROM v1_events WHERE v1_events.quarter2 != '' AND v1_events.id = @updatenummer;
+SELECT @playername := PlayerIDA FROM Matches;
+SELECT @playerid := ID from Players WHERE Players.Name = @playername;
+UPDATE Matches SET PlayerIDA=@playerid WHERE (TournamentID = @updatenummer AND RoundName = 'Quarter Finals 2');
+
+SELECT @playername := PlayerIDB FROM Matches;
+SELECT @playerid := ID from Players WHERE Players.Name = @playername;
+UPDATE Matches SET PlayerIDB=@playerid WHERE (TournamentID = @updatenummer AND RoundName = 'Quarter Finals 2');
+
+SELECT @deckname := DeckIDA FROM Matches;
+SELECT @deckid := ID from Decks WHERE Decks.Name = @deckname;
+UPDATE Matches SET DeckIDA=@deckid WHERE (TournamentID = @updatenummer AND RoundName = 'Quarter Finals 2');
+
+SELECT @deckname := DeckIDB FROM Matches;
+SELECT @deckid := ID from Decks WHERE Decks.Name = @deckname;
+UPDATE Matches SET DeckIDB=@deckid WHERE (TournamentID = @updatenummer AND RoundName = 'Quarter Finals 2');
+INSERT into Matches (VOD, RoundName, PlayerIDA, PlayerIDB, DeckIDA, DeckIDB, Format, TournamentID) select quarter3, "Quarter Finals 3", quarter3player1, quarter3player2, quarter3deck1, quarter3deck2, formattype, id FROM v1_events WHERE v1_events.quarter3 != '' AND v1_events.id = @updatenummer;
+SELECT @playername := PlayerIDA FROM Matches;
+SELECT @playerid := ID from Players WHERE Players.Name = @playername;
+UPDATE Matches SET PlayerIDA=@playerid WHERE (TournamentID = @updatenummer AND RoundName = 'Quarter Finals 3');
+
+SELECT @playername := PlayerIDB FROM Matches;
+SELECT @playerid := ID from Players WHERE Players.Name = @playername;
+UPDATE Matches SET PlayerIDB=@playerid WHERE (TournamentID = @updatenummer AND RoundName = 'Quarter Finals 3');
+
+SELECT @deckname := DeckIDA FROM Matches;
+SELECT @deckid := ID from Decks WHERE Decks.Name = @deckname;
+UPDATE Matches SET DeckIDA=@deckid WHERE (TournamentID = @updatenummer AND RoundName = 'Quarter Finals 3');
+
+SELECT @deckname := DeckIDB FROM Matches;
+SELECT @deckid := ID from Decks WHERE Decks.Name = @deckname;
+UPDATE Matches SET DeckIDB=@deckid WHERE (TournamentID = @updatenummer AND RoundName = 'Quarter Finals 3');
+INSERT into Matches (VOD, RoundName, PlayerIDA, PlayerIDB, DeckIDA, DeckIDB, Format, TournamentID) select quarter4, "Quarter Finals 4", quarter4player1, quarter4player2, quarter4deck1, quarter4deck2, formattype, id FROM v1_events WHERE v1_events.quarter4 != '' AND v1_events.id = @updatenummer;
+SELECT @playername := PlayerIDA FROM Matches;
+SELECT @playerid := ID from Players WHERE Players.Name = @playername;
+UPDATE Matches SET PlayerIDA=@playerid WHERE (TournamentID = @updatenummer AND RoundName = 'Quarter Finals 4');
+
+SELECT @playername := PlayerIDB FROM Matches;
+SELECT @playerid := ID from Players WHERE Players.Name = @playername;
+UPDATE Matches SET PlayerIDB=@playerid WHERE (TournamentID = @updatenummer AND RoundName = 'Quarter Finals 4');
+
+SELECT @deckname := DeckIDA FROM Matches;
+SELECT @deckid := ID from Decks WHERE Decks.Name = @deckname;
+UPDATE Matches SET DeckIDA=@deckid WHERE (TournamentID = @updatenummer AND RoundName = 'Quarter Finals 4');
+
+SELECT @deckname := DeckIDB FROM Matches;
+SELECT @deckid := ID from Decks WHERE Decks.Name = @deckname;
+UPDATE Matches SET DeckIDB=@deckid WHERE (TournamentID = @updatenummer AND RoundName = 'Quarter Finals 4');
+INSERT into Matches (VOD, RoundName, PlayerIDA, PlayerIDB, DeckIDA, DeckIDB, Format, TournamentID) select semi, "Semi Finals", semiplayer1, semiplayer2, semideck1, semideck2, formattype, id FROM v1_events WHERE v1_events.semi != '' AND v1_events.id = @updatenummer;
+SELECT @playername := PlayerIDA FROM Matches;
+SELECT @playerid := ID from Players WHERE Players.Name = @playername;
+UPDATE Matches SET PlayerIDA=@playerid WHERE (TournamentID = @updatenummer AND RoundName = 'Semi Finals');
+
+SELECT @playername := PlayerIDB FROM Matches;
+SELECT @playerid := ID from Players WHERE Players.Name = @playername;
+UPDATE Matches SET PlayerIDB=@playerid WHERE (TournamentID = @updatenummer AND RoundName = 'Semi Finals');
+
+SELECT @deckname := DeckIDA FROM Matches;
+SELECT @deckid := ID from Decks WHERE Decks.Name = @deckname;
+UPDATE Matches SET DeckIDA=@deckid WHERE (TournamentID = @updatenummer AND RoundName = 'Semi Finals');
+
+SELECT @deckname := DeckIDB FROM Matches;
+SELECT @deckid := ID from Decks WHERE Decks.Name = @deckname;
+UPDATE Matches SET DeckIDB=@deckid WHERE (TournamentID = @updatenummer AND RoundName = 'Semi Finals');
+INSERT into Matches (VOD, RoundName, PlayerIDA, PlayerIDB, DeckIDA, DeckIDB, Format, TournamentID) select semi2, "Semi Finals 2", semi2player1, semi2player2, semi2deck1, semi2deck2, formattype, id FROM v1_events WHERE v1_events.semi2 != '' AND v1_events.id = @updatenummer;
+SELECT @playername := PlayerIDA FROM Matches;
+SELECT @playerid := ID from Players WHERE Players.Name = @playername;
+UPDATE Matches SET PlayerIDA=@playerid WHERE (TournamentID = @updatenummer AND RoundName = 'Semi Finals 2');
+
+SELECT @playername := PlayerIDB FROM Matches;
+SELECT @playerid := ID from Players WHERE Players.Name = @playername;
+UPDATE Matches SET PlayerIDB=@playerid WHERE (TournamentID = @updatenummer AND RoundName = 'Semi Finals 2');
+
+SELECT @deckname := DeckIDA FROM Matches;
+SELECT @deckid := ID from Decks WHERE Decks.Name = @deckname;
+UPDATE Matches SET DeckIDA=@deckid WHERE (TournamentID = @updatenummer AND RoundName = 'Semi Finals 2');
+
+SELECT @deckname := DeckIDB FROM Matches;
+SELECT @deckid := ID from Decks WHERE Decks.Name = @deckname;
+UPDATE Matches SET DeckIDB=@deckid WHERE (TournamentID = @updatenummer AND RoundName = 'Semi Finals 2');
+INSERT into Matches (VOD, RoundName, PlayerIDA, PlayerIDB, DeckIDA, DeckIDB, Format, TournamentID) select final, "Finals", finalplayer1, finalplayer2, finaldeck1, finaldeck2, formattype, id FROM v1_events WHERE v1_events.final != '' AND v1_events.id = @updatenummer;
+SELECT @playername := PlayerIDA FROM Matches;
+SELECT @playerid := ID from Players WHERE Players.Name = @playername;
+UPDATE Matches SET PlayerIDA=@playerid WHERE (TournamentID = @updatenummer AND RoundName = 'Finals');
+
+SELECT @playername := PlayerIDB FROM Matches;
+SELECT @playerid := ID from Players WHERE Players.Name = @playername;
+UPDATE Matches SET PlayerIDB=@playerid WHERE (TournamentID = @updatenummer AND RoundName = 'Finals');
+
+SELECT @deckname := DeckIDA FROM Matches;
+SELECT @deckid := ID from Decks WHERE Decks.Name = @deckname;
+UPDATE Matches SET DeckIDA=@deckid WHERE (TournamentID = @updatenummer AND RoundName = 'Finals');
+
+SELECT @deckname := DeckIDB FROM Matches;
+SELECT @deckid := ID from Decks WHERE Decks.Name = @deckname;
+UPDATE Matches SET DeckIDB=@deckid WHERE (TournamentID = @updatenummer AND RoundName = 'Finals');
+
+
+// Updater infinia
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SELECT @playername := PlayerIDA FROM Matches;
+SELECT @playerid := ID from Players WHERE Players.Name = @playername;
+UPDATE Matches SET PlayerIDA=@playerid WHERE (abs(PlayerIDA) = 0 AND PlayerIDA != '0');
+
+SELECT @playername := PlayerIDB FROM Matches;
+SELECT @playerid := ID from Players WHERE Players.Name = @playername;
+UPDATE Matches SET PlayerIDB=@playerid WHERE (abs(PlayerIDB) = 0 AND PlayerIDB != '0');
+
+SELECT @deckname := DeckIDA FROM Matches;
+SELECT @deckid := ID from Decks WHERE Decks.Name = @deckname;
+UPDATE Matches SET DeckIDA=@deckid WHERE (abs(DeckIDA) = 0 AND DeckIDA != '0');
+
+SELECT @deckname := DeckIDB FROM Matches;
+SELECT @deckid := ID from Decks WHERE Decks.Name = @deckname;
+UPDATE Matches SET DeckIDB=@deckid WHERE (abs(DeckIDB) = 0 AND DeckIDB != '0');
 
 
 declare @playername varchar(255), @playerid varchar(255);
 
-SELECT @playername = PlayerIDA from envi_mtgcoveragev2.Matches
+SELECT @playername = PlayerIDA from Matches
 
 
 declare @playername varchar(255), @playerid varchar(255);
-SELECT @playerid = id from envi_mtgcoveragev2.Players WHERE Name = @playername
+SELECT @playerid = id from Players WHERE Name = @playername
 
-UPDATE envi_mtgcoveragev2.Matches SET PlayerIDA = @playerid
+UPDATE Matches SET PlayerIDA = @playerid
 
 
 
 // Find ID from real name. 
 
-SELECT @playername := PlayerIDA FROM envi_mtgcoveragev2.Matches;
-SELECT @playerid := ID from envi_mtgcoveragev2.Players WHERE envi_mtgcoveragev2.Players.Name = @playername;
-UPDATE envi_mtgcoveragev2.Matches SET PlayerIDA=@playerid WHERE (abs(PlayerIDA) = 0 AND PlayerIDA != '0');
+SELECT @playername := PlayerIDA FROM Matches;
+SELECT @playerid := ID from Players WHERE Players.Name = @playername;
+UPDATE Matches SET PlayerIDA=@playerid WHERE (abs(PlayerIDA) = 0 AND PlayerIDA != '0');
 
-SELECT @playername := PlayerIDB FROM envi_mtgcoveragev2.Matches;
-SELECT @playerid := ID from envi_mtgcoveragev2.Players WHERE envi_mtgcoveragev2.Players.Name = @playername;
-UPDATE envi_mtgcoveragev2.Matches SET PlayerIDB=@playerid WHERE (abs(PlayerIDB) = 0 AND PlayerIDB != '0');
+SELECT @playername := PlayerIDB FROM Matches;
+SELECT @playerid := ID from Players WHERE Players.Name = @playername;
+UPDATE Matches SET PlayerIDB=@playerid WHERE (abs(PlayerIDB) = 0 AND PlayerIDB != '0');
 
-SELECT @deckname := DeckIDA FROM envi_mtgcoveragev2.Matches;
-SELECT @deckid := ID from envi_mtgcoveragev2.Decks WHERE envi_mtgcoveragev2.Decks.Name = @deckname;
-UPDATE envi_mtgcoveragev2.Matches SET DeckIDA=@deckid WHERE (abs(DeckIDA) = 0 AND DeckIDA != '0');
+SELECT @deckname := DeckIDA FROM Matches;
+SELECT @deckid := ID from Decks WHERE Decks.Name = @deckname;
+UPDATE Matches SET DeckIDA=@deckid WHERE (abs(DeckIDA) = 0 AND DeckIDA != '0');
 
-SELECT @deckname := DeckIDB FROM envi_mtgcoveragev2.Matches;
-SELECT @deckid := ID from envi_mtgcoveragev2.Decks WHERE envi_mtgcoveragev2.Decks.Name = @deckname;
-UPDATE envi_mtgcoveragev2.Matches SET DeckIDB=@deckid WHERE (abs(DeckIDB) = 0 AND DeckIDB != '0');
+SELECT @deckname := DeckIDB FROM Matches;
+SELECT @deckid := ID from Decks WHERE Decks.Name = @deckname;
+UPDATE Matches SET DeckIDB=@deckid WHERE (abs(DeckIDB) = 0 AND DeckIDB != '0');
 
 
 
 
 // Copy events from old database to Tournament in new database
 
-INSERT into envi_mtgcoveragev2.Tournament (ID, Name, Visible, Finished, Format, Organiser, Location, StartDate, EndDate, InfoLink, ResultLink) SELECT id, name, visible, finished, formattype, organiser, location, startdate, enddate, infolink, results FROM envi_mtgcoverage.events
+INSERT into Tournament (ID, Name, Visible, Finished, Format, Organiser, Location, StartDate, EndDate, InfoLink, ResultLink) SELECT id, name, visible, finished, formattype, organiser, location, startdate, enddate, infolink, results FROM v1_events
 
 
 // Copy decks from old database to Decks in new database
 
-INSERT into envi_mtgcoveragev2.Decks (Name) SELECT deckname from envi_mtgcoverage.decks
+INSERT into Decks (Name) SELECT deckname from v1_decks
 
 
 // Copy players from old database to Players in new database
 
-INSERT into envi_mtgcoveragev2.Players (Name) SELECT playername from envi_mtgcoverage.players
+INSERT into Players (Name) SELECT playername from v1_players
