@@ -52,13 +52,12 @@
 			  
 			  
 			  
-				<!-- <li class="dropdown active">
+				<li class="dropdown active">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Streams <span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
 <li><?php 
 // Workaround needs to be fixed 
 
-/* 
 $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
 
 $server = $url["host"];
@@ -72,7 +71,8 @@ $datascg = mysqli_fetch_assoc($resultscg);
 if ($datascg['online'] == '1') {
      echo "<a href='http://www.twitch.tv/scglive' target='_newtab'/> SCGLive is <img src='images/online.png' alt='Online' /></a>";
 } else {
-    echo "<a href='http://www.twitch.tv/scglive' target='_newtab'/> SCGLive is <img src='images/offline.png' alt='Offline' /></a>";
+    //echo "<a href='http://www.twitch.tv/scglive' target='_newtab'/> SCGLive is <img src='images/offline.png' alt='Offline' /></a>";
+    echo "<a href='http://www.twitch.tv/scglive' target='_newtab'/> SCGLive</a>";
 }
 
 ?></li>
@@ -84,7 +84,8 @@ $datamagic = mysqli_fetch_assoc($resultmagic);
 if ($datamagic['online'] == '1') {
      echo "<a href='http://www.twitch.tv/magic' target='_newtab'/> Magic is <img src='images/online.png' alt='Online' /></a>";
 } else {
-    echo "<a href='http://www.twitch.tv/magic' target='_newtab'/> Magic is <img src='images/offline.png' alt='Offline' /></a>";
+    //echo "<a href='http://www.twitch.tv/magic' target='_newtab'/> Magic is <img src='images/offline.png' alt='Offline' /></a>";
+    echo "<a href='http://www.twitch.tv/magic' target='_newtab'/> Magic</a>";
 }
  
 ?></li>
@@ -96,7 +97,8 @@ $datamagic = mysqli_fetch_assoc($resultmagic);
 if ($datamagic['online'] == '1') {
      echo "<a href='http://www.twitch.tv/magic2' target='_newtab'/> Magic2 is <img src='images/online.png' alt='Online' /></a>";
 } else {
-    echo "<a href='http://www.twitch.tv/magic2' target='_newtab'/> Magic2 is <img src='images/offline.png' alt='Offline' /></a>";
+    //echo "<a href='http://www.twitch.tv/magic2' target='_newtab'/> Magic2 is <img src='images/offline.png' alt='Offline' /></a>";
+    echo "<a href='http://www.twitch.tv/magic2' target='_newtab'/> Magic2</a>";
 }
  
 ?></li>
@@ -108,7 +110,8 @@ $datamagic = mysqli_fetch_assoc($resultmagic);
 if ($datamagic['online'] == '1') {
      echo "<a href='http://www.twitch.tv/channelfireball' target='_newtab'/> Channel Fireball is <img src='images/online.png' alt='Online' /></a>";
 } else {
-    echo "<a href='http://www.twitch.tv/channelfireball' target='_newtab'/> Channel Fireball is <img src='images/offline.png' alt='Offline' /></a>";
+    //echo "<a href='http://www.twitch.tv/channelfireball' target='_newtab'/> Channel Fireball is <img src='images/offline.png' alt='Offline' /></a>";
+    echo "<a href='http://www.twitch.tv/channelfireball' target='_newtab'/> Channel Fireball</a>";
 }
  
 ?></li>
@@ -120,11 +123,9 @@ $datamagic = mysqli_fetch_assoc($resultmagic);
 if ($datamagic['online'] == '1') {
      echo "<a href='http://www.twitch.tv/tcgplayer' target='_newtab'/> TCGplayer is <img src='images/online.png' alt='Online' /></a>";
 } else {
-    echo "<a href='http://www.twitch.tv/tcgplayer' target='_newtab'/> TCGplayer is <img src='images/offline.png' alt='Offline' /></a>";
-} 
-
-*/
--->
+    //echo "<a href='http://www.twitch.tv/tcgplayer' target='_newtab'/> TCGplayer is <img src='images/offline.png' alt='Offline' /></a>";
+    echo "<a href='http://www.twitch.tv/tcgplayer' target='_newtab'/> TCGplayer</a>";
+}
  
 ?></li>
 	  </ul>
