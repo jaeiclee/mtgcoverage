@@ -241,7 +241,7 @@
          							
          							eventObject.end = event.EndDate
          							eventObject.title = event.Name
-         							eventObject.imageurl = event.Organiser.toLowerCase()+".png"
+         							//eventObject.imageurl = event.Organiser.toLowerCase()+".png"
          							if (event.Finished == "1") 
          								{
          								if (event.Visible == "1")
