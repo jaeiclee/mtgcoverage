@@ -16,8 +16,7 @@
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
               <li class="active"><?php if ($SD == '0' OR $SD == '') { echo '<a href ="index.php?SD=0">Home</a>'; } else { echo '<a href="index.php?SD=1">Home</a>';  } ?></li>
-              <!-- <li class="active"><a href="calendar.php">Calendar</a></li> -->
-              <li><a href="#">Calendar</a></li>
+              <li><a href="calendar.php">Calendar</a></li>
               <li class="active"><a href="search.php">Search</a></li>
 			  <li class="active">
 								<?php 	if ($formattype != '') {
