@@ -209,13 +209,13 @@
 			$D_NameA = $row4A['Name'];
 			?>
 			
-			<?php echo $D_NameA; ?>
+			<?php echo "($D_NameA)"; ?>
 			
 			<?php endforeach; ?>  
 			
 			
 			
-			
+			<?php echo " VS "; ?>
 			
 			
 			
@@ -284,7 +284,7 @@
 			$D_NameB = $row4B['Name'];
 			?>
 			
-			<?php echo $D_NameB; ?>
+			<?php echo "($D_NameB)"; ?>
 			
 			<?php endforeach; ?>  
 		<br>
