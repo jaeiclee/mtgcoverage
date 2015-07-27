@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Search</title>
+      <title>Calendar</title>
       <!-- Bootstrap -->
       <link href="css/bootstrap.css" rel="stylesheet">
       <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.3.2/fullcalendar.min.css">
@@ -163,7 +163,7 @@
 			$('#month4').css("background-color","#bdbdbd")
 			
 			
-			var next = moment().add(sOffset, 'months')
+			var next = moment().add(sOffset+2, 'months')
 			//Fill the Empty Column
 			weekly_month('#month4', next.month(), next.year())
 						
@@ -187,7 +187,7 @@
 			$('#month1').html("")
 			$('#month1').css("background-color","#bdbdbd")
 			
-			var next = moment().add(sOffset-4, 'months')
+			var next = moment().add(sOffset-1, 'months')
 			
 			weekly_month('#month1', next.month(), next.year())
 				
@@ -234,7 +234,7 @@
          				
          							//[{"ID":"1","Name":"Grand Prix Dallas \/ Forth Worth","Visible":"1","Finished":"1","Format":"Standard","Organiser":"GP","Location":"Dallas \/ Forth Worth, USA","StartDate":"2013-12-06","EndDate":"2013-12-08","InfoLink":"","ResultLink":"http:\/\/www.wizards.com\/magic\/magazine\/article.aspx?x=mtg\/daily\/eventcoverage\/gpdfw13\/welcome#1","ExtraText":""
          							var eventObject = {}
-         							eventObject.id = event.id
+         							eventObject.id = event.ID
          							eventObject.allDay = true
          							eventObject.start = event.StartDate
          							
@@ -243,11 +243,20 @@
          							eventObject.title = event.Name
          							eventObject.imageurl = event.Organiser.toLowerCase().replace("scg","scglive")+".png"
          							if (event.Finished == "1") 
+         								{
          								if (event.Visible == "1")
-         									{eventObject.url = "<a href=index.php?id=".event.ID.">"}
+         									{
+         									eventObject.url = "index.php?id="+event.ID
+         									}
          								else
-         									{eventObject.url = event.ResultLink}	
-         							else {eventObject.url = event.InfoLink}
+         									{
+         									eventObject.url = event.ResultLink
+         									}	
+         								}
+         							else 
+         							{
+         							eventObject.url = event.InfoLink
+         							}
          							
          							return eventObject;
          						},
