@@ -246,7 +246,7 @@
          								{
          								if (event.Visible == "1")
          									{
-         									if ($SD == '1' OR $SD == '') 
+         									if ($SD == '1' || $SD == '')
          										{
          										eventObject.url = "index.php?SD=1&"+"id="+event.ID
          										}

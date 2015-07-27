@@ -20,11 +20,11 @@
               <li class="active"><a href="search.php">Search</a></li>
 			  <li class="active">
 								<?php 	if ($formattype != '') {
-								if ($SD == '1' OR $SD == '') { echo '<a href ="index.php?formattype='. $formattype . '&SD=0">Spoilers ON</a>'; }
-								else { echo '<a href ="index.php?formattype='. $formattype . '&SD=1">Spoilers OFF</a>'; }
+								if ($SD == '1' OR $SD == '') { echo '<a href ="index.php?formattype='. $formattype . '&SD=0">Spoilers OFF</a>'; }
+								else { echo '<a href ="index.php?formattype='. $formattype . '&SD=1">Spoilers ON</a>'; }
 								} else {
-								if ($SD == '1' OR $SD == '') { echo '<a href ="index.php?SD=0">Spoilers ON</a>'; }
-								else { echo '<a href ="index.php?SD=1">Spoilers OFF</a>'; }
+								if ($SD == '1' OR $SD == '') { echo '<a href ="index.php?SD=0">Spoilers OFF</a>'; }
+								else { echo '<a href ="index.php?SD=1">Spoilers ON</a>'; }
 								}
 								?>
 			  </li>
