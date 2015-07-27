@@ -125,16 +125,16 @@
 			echo '<div class="col-md-3 vcenter">';
 			echo "<img src='";
 				if (strpos ($row['Organiser'], 'GP') !== false) { echo 'images/gp.png'; }
-				elseif (strpos ($row['Organiser'], 'SCG') !== false) { echo 'images/scglive.png'; }
+				elseif (strpos ($row['Organiser'], 'SCG') !== false) { echo 'images/scg.png'; }
 				elseif (strpos ($row['Organiser'], 'PT') !== false) { echo 'images/pt.png'; }
 				elseif (strpos ($row['Organiser'], 'BOM') !== false) { echo 'images/bom.png'; }
 				elseif (strpos ($row['Organiser'], 'CFB') !== false) { echo 'images/cfb.png'; }
 				elseif (strpos ($row['Organiser'], 'TCG') !== false) { echo 'images/tcg.png'; }
-				elseif (strpos ($row['Organiser'], 'CT') !== false) { echo 'images/cardtitan.png'; }
+				elseif (strpos ($row['Organiser'], 'CT') !== false) { echo 'images/ct.png'; }
 				elseif (strpos ($row['Organiser'], 'SCV') !== false) { echo 'images/scv.png'; }
 				elseif (strpos ($row['Organiser'], 'CA') !== false) { echo 'images/ca.png'; }
 				elseif (strpos ($row['Organiser'], 'WORLDS') !== false) { echo 'images/worlds.png'; }
-				elseif (strpos ($row['Organiser'], 'HRRY') !== false) { echo 'images/hareruya.png'; }
+				elseif (strpos ($row['Organiser'], 'HRRY') !== false) { echo 'images/hrry.png'; }
 				else { echo 'images/empty.png'; }
 			echo "' width='150px' class='img-responsive'>";
 			echo '</div>';
