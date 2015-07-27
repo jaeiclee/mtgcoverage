@@ -437,7 +437,7 @@
 			?>
 
 			<?php include 'i-decktechs.php'; ?>
-			<?php // include 'i-extra.php'; ?>
+			<?php include 'i-extra.php'; ?>
 				
 
 	
