@@ -246,7 +246,8 @@
          								{
          								if (event.Visible == "1")
          									{
-         									if ($SD == '1' || $SD == '')
+         									var spoiler = '<?php echo $SD ?>';
+         									if (spoiler == '1' || spoiler == '')
          										{
          										eventObject.url = "index.php?SD=1&"+"id="+event.ID
          										}
