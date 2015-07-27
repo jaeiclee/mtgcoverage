@@ -242,8 +242,12 @@
          							eventObject.end = event.EndDate
          							eventObject.title = event.Name
          							eventObject.imageurl = event.Organiser.toLowerCase().replace("scg","scglive")+".png"
-         							//if (event.ResultLink.length > 5) eventObject.url = event.ResultLink
-         							eventObject.url = event.InfoLink
+         							if (event.Finished == "1") 
+         								if (event.Visible == "1")
+         									{eventObject.url = "<a href=index.php?id=".event.ID.">"}
+         								else
+         									{eventObject.url = event.ResultLink}	
+         							else {eventObject.url = event.InfoLink}
          							
          							return eventObject;
          						},
