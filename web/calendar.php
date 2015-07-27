@@ -6,7 +6,7 @@
       <title>Calendar</title>
       <!-- Bootstrap -->
       <link href="css/bootstrap.css" rel="stylesheet">
-      <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.3.2/fullcalendar.min.css">
+      <link rel="stylesheet" href="css/fullcalendar.min.css">
       <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
       <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
       <!--[if lt IE 9]>
