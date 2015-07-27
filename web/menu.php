@@ -11,11 +11,11 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <?php if ($SD == '0' OR $SD == '') { echo '<a href ="index.php?SD=0"><img src="logo-sq.png" height="50px" width="50px"></a>'; } else { echo '<a href="index.php?SD=1"><img src="logo-sq.png" height="50px" width="50px"></a>'; } ?>
+            <?php if ($SD == '1' OR $SD == '') { echo '<a href ="index.php?SD=1"><img src="logo-sq.png" height="50px" width="50px"></a>'; } else { echo '<a href="index.php?SD=0"><img src="logo-sq.png" height="50px" width="50px"></a>'; } ?>
           </div>
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-              <li class="active"><?php if ($SD == '0' OR $SD == '') { echo '<a href ="index.php?SD=0">Home</a>'; } else { echo '<a href="index.php?SD=1">Home</a>';  } ?></li>
+              <li class="active"><?php if ($SD == '1' OR $SD == '') { echo '<a href ="index.php?SD=0">Home</a>'; } else { echo '<a href="index.php?SD=1">Home</a>';  } ?></li>
               <li class="active">
                 <?php if ($SD == '1' OR $SD == '') { echo '<a href ="calendar.php?&SD=1">Calendar</a>';}
                       else { echo '<a href ="calendar.php?&SD=0">Calendar</a>';}
