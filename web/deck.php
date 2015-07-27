@@ -175,7 +175,7 @@
 			$P_NameA = $row3A['Name'];
 			?>
 			
-			<a href=player.php?id=<?php echo $P_IDA; ?>><?php echo $P_NameA; ?></a>
+			<a href="player.php?id=<?php echo $P_IDA; ?>"><?php echo $P_NameA; ?></a>
 			
 			<?php endforeach; ?>  
 			
@@ -207,9 +207,9 @@
 			// Declare values from Tournament Table	
 			$D_IDA = $row4A['ID'];
 			$D_NameA = $row4A['Name'];
-			?>
 			
-			<?php echo "($D_NameA)"; ?>
+			echo ' (<a href=deck.php?id=' . $D_IDA . '>' . $D_NameA . '</a>)';
+			?>
 			
 			<?php endforeach; ?>  
 			
@@ -252,7 +252,7 @@
 			?>
 			
 		
-			<a href=player.php?id=<?php echo $P_IDB; ?>><?php echo $P_NameB; ?></a>
+			<a href="player.php?id=<?php echo $P_IDB; ?>"><?php echo $P_NameB; ?></a>
 			<?php endforeach; ?>  
 			
 			<?php
@@ -282,10 +282,10 @@
 			// Declare values from Tournament Table	
 			$D_IDB = $row4B['ID'];
 			$D_NameB = $row4B['Name'];
+			
+			echo ' (<a href=deck.php?id=' . $D_IDA . '>' . $D_NameA . '</a>)';
 			?>
-			
-			<?php echo "($D_NameB)"; ?>
-			
+
 			<?php endforeach; ?>  
 		<br>
 		
