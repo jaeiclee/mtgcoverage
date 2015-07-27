@@ -47,10 +47,11 @@
 	
 	
 <div class="container">
+	<div class="jumbotron" style="padding-bottom: 20px">
 	<div class="row">
 	
 		<div class="col-md-4">
-			<div class="cliente">
+			<div class="cliente" style="border: none;">
 				<h2><?php echo $rowdeck['Name']; ?></h2>
 				<br>
 				
@@ -97,7 +98,7 @@
 		</div>
 
 		<div class="col-md-8">
-			<div class="cliente">
+			<div class="cliente" style="border: none;">
 				<h2>Games:</h2>
 	
 	<?php 
@@ -395,7 +396,7 @@
 	
 			</div>
 		</div>
-		
+	</div>
     </div>
 </div>
 
@@ -403,5 +404,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+
+    <?php include 'footer.php'; ?>
   </body>
 </html>

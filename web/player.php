@@ -58,10 +58,11 @@
 	
 	
 <div class="container">
+	<div class="jumbotron" style="padding-bottom: 20px">
 	<div class="row">
 	
 		<div class="col-md-3">
-			<div class="cliente">
+			<div class="cliente" style="border: none;">
 			<center>
 				<h2><?php echo $rowplayer['Name']; ?></h2>
 				
@@ -103,7 +104,7 @@
 		</div>
 
 		<div class="col-md-9">
-			<div class="cliente">
+			<div class="cliente" style="border: none;">
 				<h2>Games:</h2>
 
 	<?php 
@@ -410,7 +411,7 @@
 				</div>
 			</div>
 		</div>
-		
+	</div>	
     </div>
 </div>
 
@@ -418,5 +419,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+
+    <?php include 'footer.php'; ?>
   </body>
 </html>
