@@ -141,7 +141,7 @@
 		}
 		
 		//Do this every 500ms to prevent any shenanigans
-		setInterval(equalize, 500);
+		//setInterval(equalize, 500);
 		
 		//Advances the Calendar by one month
 		function next_month(){
