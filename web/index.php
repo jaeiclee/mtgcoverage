@@ -254,7 +254,7 @@
 	
 	// Check if spoilerprotection are enabled
 	
-	if ($SD == '1') {
+	if ($SD == '0') {
 	}
 	else {
 	
