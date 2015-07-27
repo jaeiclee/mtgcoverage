@@ -80,7 +80,7 @@
 		}
 	  
 		
-		//Basic Calendar initialization, 2 Months in the Past and 1 Month Future
+		//Basic Calendar initialization, Current Month and 3 Month Future
 		function fillMonths(){
 					
 			//Clear any possible gunk
@@ -91,12 +91,12 @@
 			var k = 1;
 			
 			
-			for (z = -1; z < -1+4; z++){
+			for (z = 0; z < 4; z++){
 				//Curent Calendar based on today
 				var mom = moment().add(z, 'months')
 				var id = "#month"+k
 				//Create the Calendar
-				weekly_month(id,mom.month()-1,mom.year())
+				weekly_month(id,mom.month(),mom.year())
 				k++;
 			}	
 			
