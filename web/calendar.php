@@ -87,6 +87,7 @@
 			$(".col-sm-3").html("")
 			//Set Background Color
 			$(".col-sm-3").css("background-color","#bdbdbd")
+			$(".button").css("background-color","rgb(101, 99, 103)")
 			
 			var k = 1;
 			
@@ -259,11 +260,13 @@
          								else
          									{
          									eventObject.url = event.ResultLink
+         									eventObject.color = "#828282"
          									}	
          								}
          							else 
          							{
          							eventObject.url = event.InfoLink
+         							eventObject.color = "#821110"
          							}
          							
          							return eventObject;
