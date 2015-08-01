@@ -186,7 +186,7 @@
 		
 		echo '<div class="col-md-2 col-sm-2 col-xs-3 text-center">';
 	
-		if (strpos($row['VOD'], 'youtube') !== false) { echo '<img src="images/youtube.png"> '; }
+		if (strpos($row['VOD'], 'youtu') !== false) { echo '<img src="images/youtube.png"> '; }
 		elseif (strpos($row['VOD'], 'twitch') !== false) { echo '<img src="images/twitch.png"> '; }
 		echo '<a href=" ' .htmlentities($row["VOD"], ENT_QUOTES,"UTF-8"). '" target="_newtab" ">VOD</a>';
 		

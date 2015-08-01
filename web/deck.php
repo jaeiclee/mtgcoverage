@@ -143,7 +143,7 @@
 		$M_Format = $row['Format'];
 		$M_TournamentID = $row['TournamentID'];
 	
-		if (strpos($row['VOD'], 'youtube') !== false) { echo '<img src="images/youtube.png"> '; }
+		if (strpos($row['VOD'], 'youtu') !== false) { echo '<img src="images/youtube.png"> '; }
 		elseif (strpos($row['VOD'], 'twitch') !== false) { echo '<img src="images/twitch.png"> '; }
 		echo '<a href=" ' .htmlentities($row["VOD"], ENT_QUOTES,"UTF-8"). '" target="_newtab" ">VOD</a>';
 		
