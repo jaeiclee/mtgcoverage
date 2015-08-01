@@ -137,8 +137,8 @@ if ($datamagic['online'] == '1') {
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Contact <span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
                   <!-- <li><a href="mailto:envi@mtgcoverage.com">envi@mtgcoverage.com</a></li> -->
-				  <!-- <li><a href="https://www.facebook.com/MTGCoverage" target="_newtab">Facebook</a></li> -->
-                  <li><a href="https://twitter.com/Ideocl4st" target="_newtab">Twitter</a></li>
+				          <li><a href="https://www.facebook.com/MTGCoverage" target="_newtab">Facebook</a></li>
+                  <li><a href="https://twitter.com/MTGCoverage" target="_newtab">Twitter</a></li>
                   <li><a href="http://www.reddit.com/message/compose/?to=ideocl4st_" target="_newtab">Reddit</a></li>
                   <li><a href="https://github.com/ideocl4st/mtgcoverage-v2-heroku" target="_newtab">Github</a></li>
 				  

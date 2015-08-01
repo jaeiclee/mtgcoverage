@@ -241,7 +241,7 @@
 	<tr>		
 	<td>
 		<?php 
-		if (strpos($row2['VOD'], 'youtube') !== false) { echo '<img src="images/youtube.png"> '; }
+		if (strpos($row2['VOD'], 'youtu') !== false) { echo '<img src="images/youtube.png"> '; }
 		elseif (strpos($row2['VOD'], 'twitch') !== false) { echo '<img src="images/twitch.png"> '; }
 		echo '<a href=" ' .htmlentities($row2["VOD"], ENT_QUOTES,"UTF-8"). '" target="_newtab" ">' .htmlentities($row2["RoundName"], ENT_QUOTES,"UTF-8"). '</a><br>';
 		?>
