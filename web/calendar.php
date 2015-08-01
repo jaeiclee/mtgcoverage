@@ -238,8 +238,6 @@
          							eventObject.id = event.ID
          							eventObject.allDay = true
          							eventObject.start = event.StartDate
-         							
-         							
          							eventObject.end = event.EndDate
          							eventObject.title = event.Name
          							//eventObject.imageurl = event.Organiser.toLowerCase()+".png"
@@ -275,10 +273,11 @@
          			firstDay : 1,
 					//Ignore all useless days
          			eventRender: function(event, eventElement) {
-         				if (event.imageurl)
-         				{
-         					eventElement.find("span.fc-title").prepend("<img src='/images/" + event.imageurl +"' style='max-width: 70px; max-height: 25px'>");
-         				}
+         				/*	if (event.imageurl)
+         					{
+         						eventElement.find("span.fc-title").prepend("<img src='/images/" + event.imageurl +"' style='max-width: 70px; max-height: 25px'>");
+         					}
+         				*/
          				
          				var jEvent = $(eventElement);
          				var week = jEvent.parent().parent();

@@ -4,7 +4,7 @@
 	 
 
         // These two statements run the query against your database table.
-        $stmt = $db->prepare("SELECT * FROM Tournament WHERE StartDate between ? and ?");
+        $stmt = $db->prepare("SELECT * FROM Tournament WHERE EndDate between ? and ?");
 			
 		$stmt->bindParam(1, $_GET['start'], PDO::PARAM_STR);
 		$stmt->bindParam(2, $_GET['end']  , PDO::PARAM_STR);	
