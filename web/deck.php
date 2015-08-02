@@ -284,7 +284,7 @@
 			$D_IDB = $row4B['ID'];
 			$D_NameB = $row4B['Name'];
 			
-			echo ' (<a href=deck.php?id=' . $D_IDA . '>' . $D_NameA . '</a>)';
+			echo ' (<a href=deck.php?id=' . $D_IDB . '>' . $D_NameB . '</a>)';
 			?>
 
 			<?php endforeach; ?>  
