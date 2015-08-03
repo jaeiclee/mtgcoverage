@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Calendar</title>
+      <title>MTGCoverage - Calendar</title>
       <!-- Bootstrap -->
       <link href="css/bootstrap.css" rel="stylesheet">
       <link rel="stylesheet" href="css/fullcalendar.min.css">
@@ -241,32 +241,38 @@
          							eventObject.end = event.EndDate
          							eventObject.title = event.Name
          							//eventObject.imageurl = event.Organiser.toLowerCase()+".png"
-         							if (event.Finished == "1") 
+         							if (event.Calendar == "1")
          								{
-         								if (event.Visible == "1")
+         								eventObject.color = "#51C759"
+         								}
+         							else
+         								{
+         								if (event.Finished == "1") 
          									{
-         									var spoiler = '<?php echo $SD ?>';
-         									if (spoiler == '1' || spoiler == '')
+         									if (event.Visible == "1")
          										{
-         										eventObject.url = "index.php?SD=1&"+"id="+event.ID
+         										var spoiler = '<?php echo $SD ?>';
+         										if (spoiler == '1' || spoiler == '')
+         											{
+         											eventObject.url = "index.php?SD=1&"+"id="+event.ID
+      	   											}
+         										else
+        	 										{
+         											eventObject.url = "index.php?SD=0&"+"id="+event.ID	
+         											}	
          										}
          									else
          										{
-         										eventObject.url = "index.php?SD=0&"+"id="+event.ID	
+         										eventObject.url = event.ResultLink
+         										eventObject.color = "#828282"
          										}	
-         									}
-         								else
+        	 								}
+         								else 
          									{
-         									eventObject.url = event.ResultLink
-         									eventObject.color = "#828282"
-         									}	
+         									eventObject.url = event.InfoLink
+         									eventObject.color = "#821110"
+         									}
          								}
-         							else 
-         							{
-         							eventObject.url = event.InfoLink
-         							eventObject.color = "#821110"
-         							}
-         							
          							return eventObject;
          						},
 								
