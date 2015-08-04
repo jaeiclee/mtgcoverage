@@ -15,6 +15,7 @@
       <![endif]-->
       <link href="css/navbar.css" rel="stylesheet">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+      <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
    </head>
    <body>
       <?php

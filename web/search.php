@@ -30,7 +30,7 @@
 		$overviewformattypelimited == 0;
 		$overviewformattypeunknown == 0;
 		?>
-		
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />	
  </head>
  <body>
       <?php include 'menu.php'; ?>
