@@ -67,6 +67,7 @@
 				<h2><?php echo $rowplayer['Name']; ?></h2>
 				
 				<?php 	
+					/*
 					$playerimagepng = "images/players/" . $rowplayer['ID'] . ".png";
 					$playerimagejpg = "images/players/" . $rowplayer['ID'] . ".jpg";
 				
@@ -82,9 +83,10 @@
 							echo '" width="200px" class="img-rounded"><br>';
 							echo '&copy; Wizards of the Coast'; 
 						}
-						else {
+						else { 
+					*/
 							echo '<img src="images/players/unknown.png" width="200px" class="img-rounded"><br>';
-						}
+					//	}
 				?>
 				
 				<br><br><br>
