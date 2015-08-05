@@ -386,7 +386,7 @@
 		// Finally, we can retrieve all of the found rows into an array using fetchAll
 		$DTtournament = $stmt->fetch();
 	
-		echo " at " . $DTtournament['Name'] . "";
+		echo " at " . $DTtournament['Name'] . "<br>";
 		}
 		
 		
