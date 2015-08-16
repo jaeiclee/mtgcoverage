@@ -44,7 +44,7 @@
 	echo '<tr>';	
 	echo '<td class="col-md-2">';
 
-		if (strpos($rowdt['VOD'], 'youtube') !== false) { echo '<img src="images/youtube.png"> '; }
+		if (strpos($rowdt['VOD'], 'youtu') !== false) { echo '<img src="images/youtube.png"> '; }
 		elseif (strpos($rowdt['VOD'], 'twitch') !== false) { echo '<img src="images/twitch.png"> '; }
 		
 		echo '<a href=" ' .htmlentities($rowdt["VOD"], ENT_QUOTES,"UTF-8"). '" target="_newtab" ">VOD</a><br>';
