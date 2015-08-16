@@ -432,14 +432,14 @@
 			?>
 			</center>
 			
+			<?php include 'i-decktechs.php'; ?>
+			<?php include 'i-extra.php'; ?>
+
 			<?php 
 			if ($T_ExtraText == '') {echo '';} else { echo $T_ExtraText;} 
 			?>
 
-			<?php include 'i-decktechs.php'; ?>
-			<?php include 'i-extra.php'; ?>
 				
-
 	
 	<!--  Closing Expand Button DIV -->
 	</div>

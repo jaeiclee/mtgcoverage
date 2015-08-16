@@ -260,8 +260,8 @@
          								}
          							else if (event.Finished == "1")
          								{
-         									eventObject.url = event.ResultLink
-         									eventObject.color = "#828282"
+         								eventObject.url = event.ResultLink
+         								eventObject.color = "#828282"
          								}	
          							else 
          								{
