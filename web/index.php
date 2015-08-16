@@ -423,7 +423,7 @@
 	</tbody>
 	</table>
 	
-	<br><br>
+	<br>
 	
 	
 			<center>
@@ -436,10 +436,10 @@
 			<?php include 'i-extra.php'; ?>
 
 			<?php 
-			if ($T_ExtraText == '') {echo '';} else { echo $T_ExtraText;} 
+			if ($T_ExtraText == '') {echo '';} else { echo 'Notes: '.$T_ExtraText;} 
 			?>
 
-				
+			<br><br>
 	
 	<!--  Closing Expand Button DIV -->
 	</div>

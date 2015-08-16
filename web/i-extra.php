@@ -127,6 +127,6 @@
 			
 			echo '</tbody>';
 			echo '</table>';
-			echo '<br><br>';
+			echo '<br><';
 }
 ?>
