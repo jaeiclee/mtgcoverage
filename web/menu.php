@@ -1,4 +1,5 @@
-	<?php include 'header.php'; ?>   
+	<?php include 'header.php'; ?>  
+	<?php if ($SD == '') { $SD = 3; } ?>
    <div class="container">
 
       <!-- Static navbar -->
@@ -11,43 +12,47 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <?php if ($SD == '1' OR $SD == '') { echo '<a href ="index.php?SD=1"><img src="logo-sq.png" height="50px" width="50px"></a>'; } else { echo '<a href="index.php?SD=0"><img src="logo-sq.png" height="50px" width="50px"></a>'; } ?>
+            <?php if ($SD == '1' OR $SD == '') { echo '<a href ="index.php?SD='.$SD.'"><img src="logo-sq.png" height="50px" width="50px"></a>'; } else { echo '<a href="index.php?SD=0"><img src="logo-sq.png" height="50px" width="50px"></a>'; } ?>
           </div>
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-              <li class="active"><?php if ($SD == '1' OR $SD == '') { echo '<a href ="index.php?SD=1">Home</a>'; } else { echo '<a href="index.php?SD=0">Home</a>';  } ?></li>
+              <li class="active"><?php if ($SD == '1' OR $SD == '') { echo '<a href ="index.php?SD='.$SD.'">Home</a>'; } else { echo '<a href="index.php?SD=0">Home</a>';  } ?></li>
               <li class="active">
-                <?php if ($SD == '1' OR $SD == '') { echo '<a href ="calendar.php?&SD=1">Calendar</a>';}
-                      else { echo '<a href ="calendar.php?&SD=0">Calendar</a>';}
+                <?php if ($SD == '1' OR $SD == '') { echo '<a href ="calendar.php?&SD='.$SD.'">Calendar</a>';}
+                      else { echo '<a href ="calendar.php?SD='.$SD.'">Calendar</a>';}
                 ?>
-              <li class="active"><a href="search.php">Search</a></li>
-			  <li class="active">
-								<?php 	if ($formattype != '') {
-								if ($SD == '1' OR $SD == '') { echo '<a href ="index.php?formattype='. $formattype . '&SD=0">Spoilers ON</a>'; }
-								else { echo '<a href ="index.php?formattype='. $formattype . '&SD=1">Spoilers OFF</a>'; }
-								} else {
-								if ($SD == '1' OR $SD == '') { echo '<a href ="index.php?SD=0">Spoilers ON</a>'; }
-								else { echo '<a href ="index.php?SD=1">Spoilers OFF</a>'; }
-								}
-								?>
-			  </li>
+              <li class="active"><?php echo '<a href="search.php?SD='.$SD.'">Search</a></li>'; ?>
+			  <li class="dropdown active">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                	<?php if ($SD == '0') { echo 'No Spoilers'; } ?>
+                	<?php if ($SD == '1') { echo 'Deck Names Only'; } ?>
+                	<?php if ($SD == '2') { echo 'Player Names Only'; } ?>
+                	<?php if ($SD == '3') { echo 'Full Spoilers'; } ?>
+                <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+					<li><?php echo '<a href ="index.php?SD=0">No Spoilers</a>'; ?></li>
+					<li><?php echo '<a href ="index.php?SD=1">Deck Names Only</a>'; ?></li>
+					<li><?php echo '<a href ="index.php?SD=2">Player Names Only</a>'; ?></li>
+					<li><?php echo '<a href ="index.php?SD=3">All Spoilers</a>'; ?></li>
+				</ul>
+              </li>
 			    <li class="dropdown active">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Formats <span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
-					<li><?php if ($SD == '1' OR $SD == '') { echo '<a href ="index.php?formattype=standard&SD=1">Standard</a>'; }
-					else { echo '<a href="index.php?formattype=standard&SD=0">Standard</a>'; } ?></li>
-					<li><?php if ($SD == '1' OR $SD == '') { echo '<a href ="index.php?formattype=modern&SD=1">Modern</a>'; }
-					else { echo '<a href="index.php?formattype=modern&SD=0">Modern</a>'; } ?></li>
-					<li><?php if ($SD == '1' OR $SD == '') { echo '<a href ="index.php?formattype=legacy&SD=1">Legacy</a>'; }
-					else { echo '<a href="index.php?formattype=legacy&SD=0">Legacy</a>'; } ?></li>
-					<li><?php if ($SD == '1' OR $SD == '') { echo '<a href ="index.php?formattype=vintage&SD=1">Vintage</a>'; }
-					else { echo '<a href="index.php?formattype=vintage&SD=0">Vintage</a>'; } ?></li>
-					<li><?php if ($SD == '1' OR $SD == '') { echo '<a href ="index.php?formattype=limited&SD=1">Limited</a>'; }
-					else { echo '<a href="index.php?formattype=limited&SD=0">Limited</a>'; } ?></li>
-					<li><?php if ($SD == '1' OR $SD == '') { echo '<a href ="index.php?formattype=block&SD=1">Block</a>'; }
-					else { echo '<a href="index.php?formattype=block&SD=0">Block</a>'; } ?></li>
-					<li><?php if ($SD == '1' OR $SD == '') { echo '<a href ="index.php?formattype=mixed&SD=1">Mixed</a>'; }
-					else { echo '<a href="index.php?formattype=mixed&SD=0">Mixed</a>'; } ?></li>
+					<li><?php if ($SD == '1' OR $SD == '') { echo '<a href ="index.php?formattype=standard&SD='.$SD.'">Standard</a>'; }
+					else { echo '<a href="index.php?formattype=standard&SD='.$SD.'">Standard</a>'; } ?></li>
+					<li><?php if ($SD == '1' OR $SD == '') { echo '<a href ="index.php?formattype=modern&SD='.$SD.'">Modern</a>'; }
+					else { echo '<a href="index.php?formattype=modern&SD='.$SD.'">Modern</a>'; } ?></li>
+					<li><?php if ($SD == '1' OR $SD == '') { echo '<a href ="index.php?formattype=legacy&SD='.$SD.'">Legacy</a>'; }
+					else { echo '<a href="index.php?formattype=legacy&SD='.$SD.'">Legacy</a>'; } ?></li>
+					<li><?php if ($SD == '1' OR $SD == '') { echo '<a href ="index.php?formattype=vintage&SD='.$SD.'">Vintage</a>'; }
+					else { echo '<a href="index.php?formattype=vintage&SD='.$SD.'">Vintage</a>'; } ?></li>
+					<li><?php if ($SD == '1' OR $SD == '') { echo '<a href ="index.php?formattype=limited&SD='.$SD.'">Limited</a>'; }
+					else { echo '<a href="index.php?formattype=limited&SD='.$SD.'">Limited</a>'; } ?></li>
+					<li><?php if ($SD == '1' OR $SD == '') { echo '<a href ="index.php?formattype=block&SD='.$SD.'">Block</a>'; }
+					else { echo '<a href="index.php?formattype=block&SD='.$SD.'">Block</a>'; } ?></li>
+					<li><?php if ($SD == '1' OR $SD == '') { echo '<a href ="index.php?formattype=mixed&SD='.$SD.'">Mixed</a>'; }
+					else { echo '<a href="index.php?formattype=mixed&SD='.$SD.'">Mixed</a>'; } ?></li>
 				  
                  </ul>
               </li>

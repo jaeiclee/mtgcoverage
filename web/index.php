@@ -140,8 +140,9 @@
 			echo '</div>';
 			
 			echo '<div class="col-md-9 vcenter">';
-			echo '<h3><b>' . $T_Name . '</b></h3>';
-			echo '<p>' . $nice_format_startdate .' - '. $nice_format_enddate . '<br>';
+			if ($T_InfoLink == '') {echo '<h3><b>' . $T_Name . '</b></h3>';} else { echo '<a href=" ' .htmlentities($T_InfoLink, ENT_QUOTES,"UTF-8"). '" target="_newtab"><h3><b>' . $T_Name . '</b></h3></a>' ;}
+			if ($row['StartDate'] == $row['EndDate']) {echo '<p>' . $nice_format_enddate . '<br>';}
+			else {echo '<p>' . $nice_format_startdate .' - '. $nice_format_enddate . '<br>';}
 			echo 'Format: ' . $T_Format . '</p>';
 			echo '</div>';
 		
@@ -184,11 +185,12 @@
 		<tr>
 			<th>Link</th>
 			<th></th>
-			<th class="text-right">Player</th>
-			<th class="text-left">Player</th>
-			<th class="text-right">Deck</th>
-			<th class="text-left">Deck</th>
-			
+			<?php if ($SD != 1 AND $SD != 0 ) {
+				echo '<th class="text-right">Player</th><th class="text-left">Player</th>';
+			} ?>
+			<?php if ($SD != 2 AND $SD != 0 ) {
+				echo '<th class="text-right">Deck</th><th class="text-left">Deck</th>';
+			} ?>
 			
 		</tr>
 	</thead>
@@ -260,6 +262,15 @@
 	
 	?>
 	
+	<?php 
+	
+	// Check if spoilerprotection are enabled
+	
+	if ($SD == '1') {
+	}
+	else {
+	
+	?>			
 			<?php 
 			
 			// GET Player A Things loop
@@ -335,9 +346,19 @@
 	
 			<?php endforeach; ?>   
 			
+			<?php // End Spoiler tag
+			}
+			?>
 			
-			
-			
+	<?php 
+	
+	// Check if spoilerprotection are enabled
+	
+	if ($SD == '2') {
+	}
+	else {
+	
+	?>		
 			
 			<?php
 			// GET Deck A
@@ -411,7 +432,9 @@
 			<?php endforeach; ?>  
 			
 			
-			
+			<?php // End Spoiler tag
+			}
+			?>			
 
 
 		<?php // End Spoiler tag
@@ -423,23 +446,23 @@
 	</tbody>
 	</table>
 	
-	<br>
+	<br><br>
 	
 	
 			<center>
 			<?php 
-			if ($T_ResultLink == '') {echo 'Results<br><br>';} else { echo '<a href=" ' .htmlentities($T_ResultLink, ENT_QUOTES,"UTF-8"). '" target="_newtab">Results</a><br><br>' ;}
+			if ($T_ResultLink == '') {echo 'Text Coverage<br><br>';} else { echo '<a href=" ' .htmlentities($T_ResultLink, ENT_QUOTES,"UTF-8"). '" target="_newtab"><b>Text Coverage</b></a><br><br>' ;}
 			?>
 			</center>
 			
-			<?php include 'i-decktechs.php'; ?>
-			<?php include 'i-extra.php'; ?>
-
 			<?php 
-			if ($T_ExtraText == '') {echo '';} else { echo 'Notes: '.$T_ExtraText;} 
+			if ($T_ExtraText == '') {echo '';} else { echo $T_ExtraText;} 
 			?>
 
-			<br><br>
+			<?php include 'i-decktechs.php'; ?>
+			<?php include 'i-extra.php'; ?>
+				
+
 	
 	<!--  Closing Expand Button DIV -->
 	</div>
