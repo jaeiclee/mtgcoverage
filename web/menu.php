@@ -43,9 +43,7 @@
 					<li><?php echo '<a href ="index.php?formattype=vintage&SD='.$SD.'">Vintage</a>'; ?></li>
 					<li><?php echo '<a href ="index.php?formattype=limited&SD='.$SD.'">Limited</a>'; ?></li>
 					<li><?php echo '<a href ="index.php?formattype=block&SD='.$SD.'">Block</a>'; ?></li>
-					<li><?php echo '<a href ="index.php?formattype=mixed&SD='.$SD.'">Mixed</a>'; }
-					else { echo '<a href="index.php?formattype=mixed&SD='.$SD.'">Mixed</a>'; } ?></li>
-				  
+					<li><?php echo '<a href ="index.php?formattype=mixed&SD='.$SD.'">Mixed</a>'; ?></li>
                  </ul>
               </li>
 			  
