@@ -249,14 +249,7 @@
          							else if (event.Visible == "1") 
          								{
          								var spoiler = '<?php echo $SD ?>';
-         								if (spoiler == '1' || spoiler == '')
-         									{
-         									eventObject.url = "index.php?SD=1&"+"id="+event.ID
-      	   									}
-         								else
-        	 								{
-         									eventObject.url = "index.php?SD=0&"+"id="+event.ID	
-         									}	
+         								eventObject.url = "index.php?SD="+spoiler+"&id="+event.ID
          								}
          							else if (event.Finished == "1")
          								{
