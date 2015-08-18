@@ -22,16 +22,16 @@
               <li class="active"><?php echo '<a href="search.php?SD='.$SD.'">Search</a></li>'; ?>
 			  <li class="dropdown active">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                	<?php if ($SD == '0') { echo 'No Spoilers'; } ?>
-                	<?php if ($SD == '1') { echo 'Deck Names Only'; } ?>
-                	<?php if ($SD == '2') { echo 'Player Names Only'; } ?>
-                	<?php if ($SD == '3') { echo 'Full Spoilers'; } ?>
+                	<?php if ($SD == '0') { echo 'Spoilers OFF'; } ?>
+                	<?php if ($SD == '1') { echo 'Spoilers ON*'; } ?>
+                	<?php if ($SD == '2') { echo 'Spoilers ON*'; } ?>
+                	<?php if ($SD == '3') { echo 'Spoilers ON'; } ?>
                 <span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
-					<li><?php echo '<a href ="index.php?SD=0">No Spoilers</a>'; ?></li>
-					<li><?php echo '<a href ="index.php?SD=1">Deck Names Only</a>'; ?></li>
-					<li><?php echo '<a href ="index.php?SD=2">Player Names Only</a>'; ?></li>
-					<li><?php echo '<a href ="index.php?SD=3">All Spoilers</a>'; ?></li>
+					<li><?php if ($SD == '0') { echo '<a href ="index.php?SD=0">No Spoilers - Chosen</a>'; } else { echo '<a href ="index.php?SD=0">No Spoilers</a>'; } ?></li>
+					<li><?php if ($SD == '1') { echo '<a href ="index.php?SD=1">Deck Names Only - Chosen</a>'; } else { echo '<a href ="index.php?SD=1">Deck Names Only</a>'; } ?></li>
+					<li><?php if ($SD == '2') { echo '<a href ="index.php?SD=2">Player Names Only - Chosen</a>'; } else { echo '<a href ="index.php?SD=2">Player Names Only</a>'; } ?></li>
+					<li><?php if ($SD == '3') { echo '<a href ="index.php?SD=3">All Spoilers - Chosen</a>'; } else { echo '<a href ="index.php?SD=3">All Spilers</a>'; } ?></li>
 				</ul>
               </li>
 			    <li class="dropdown active">
