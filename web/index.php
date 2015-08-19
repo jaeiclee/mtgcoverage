@@ -450,7 +450,7 @@
 	
 			<center>
 			<?php 
-			if ($T_ResultLink == '') {echo 'Link to Official Coverage';} else { echo '<a href=" ' .htmlentities($T_ResultLink, ENT_QUOTES,"UTF-8"). '" target="_newtab"><b>Link to Official Coverage</b></a><br>' ;}
+			if ($T_ResultLink == '') {echo 'Link to Official Coverage';} else { echo '<a href=" ' .htmlentities($T_ResultLink, ENT_QUOTES,"UTF-8"). '" target="_newtab"><b>Link to Official Coverage</b></a><br><br>' ;}
 			?>
 			</center>
 		
@@ -458,10 +458,10 @@
 			<?php include 'i-extra.php'; ?>
 		
 			<?php 
-			if ($T_ExtraText == '') {echo '';} else { echo $T_ExtraText;} 
+			if ($T_ExtraText == '') {echo '';} else { echo "Note: ".$T_ExtraText;} 
 			?>
 
-	<br>
+	<br><br>
 
 	<!--  Closing Expand Button DIV -->
 	</div>
