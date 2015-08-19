@@ -451,7 +451,7 @@
 	
 			<center>
 			<?php 
-			if ($T_ResultLink == '') {echo 'Text Coverage<br><br>';} else { echo '<a href=" ' .htmlentities($T_ResultLink, ENT_QUOTES,"UTF-8"). '" target="_newtab"><b>Text Coverage</b></a><br><br>' ;}
+			if ($T_ResultLink == '') {echo 'Link to Official Coverage<br><br>';} else { echo '<a href=" ' .htmlentities($T_ResultLink, ENT_QUOTES,"UTF-8"). '" target="_newtab"><b>Text Coverage</b></a><br><br>' ;}
 			?>
 			</center>
 			
