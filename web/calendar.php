@@ -244,6 +244,7 @@
          							//eventObject.imageurl = event.Organiser.toLowerCase()+".png"
          							if (event.Calendar == "1")
          								{
+         								eventObject.url = event.InfoLink
          								eventObject.color = "#51C759"
          								}
          							else if (event.Visible == "1") 
