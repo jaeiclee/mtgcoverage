@@ -318,10 +318,15 @@
          			defaultDate: currentStartOfWeek,
          			height: "auto",
          			hiddenDays: [ 1,2,3,4,5,0 ],
-         			columnFormat: 'M' 				
-         		
+         			columnFormat: 'M' 	
+
+         			eventClick: function(event) {
+        				if (event.url) {
+            				window.open(event.url);
+            				return false;
+			        	}
+    				}			
          		});	
-         	
          }
          
          
