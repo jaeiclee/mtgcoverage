@@ -1,5 +1,7 @@
 <?php
-    $con = mysqli_connect("localhost", "db_username", "db_password", "database_name");
+    $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+
+    $con = mysqli_connect($url["host"], $url["user"], $url["pass"], substr($url["path"], 1));
 if (mysqli_connect_errno())
   {
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
