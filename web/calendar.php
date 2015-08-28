@@ -267,7 +267,7 @@
          						},
 								
         			eventClick: function(event) {
-        				if (event.url && !(event.url.indexOf("index.php?SD="))) {
+        				if (event.url && ((event.url.indexOf("index.php?SD=")) == '-1')) {
             				window.open(event.url);
             				return false;
 			        	}
