@@ -266,6 +266,13 @@
          							return eventObject;
          						},
 								
+        			eventClick: function(event) {
+        				if (event.url) {
+            				window.open(event.url);
+            				return false;
+			        	}
+    				},
+
          			firstDay : 1,
 					//Ignore all useless days
          			eventRender: function(event, eventElement) {
@@ -315,13 +322,6 @@
 					eventAfterAllRender : function( view ) { 
 						equalize();
 					},
-
-        			eventClick: function(event) {
-        				if (eventObject.url) {
-            				window.open(eventObject.url);
-            				return false;
-			        	}
-    				},
 
          			defaultDate: currentStartOfWeek,
          			height: "auto",
