@@ -3,7 +3,7 @@
 
       <!-- Static navbar -->
       <nav class="footer" role="footer">
-        <div class="container-fluid">
+        <div class="container-footer">
         Special Thanks to Envi, the original MTGCoverage.com admin, and Kane, the maker of Calendar.<br>
         Wizards of the Coast, Magic: The Gathering, and their logos are trademarks of Wizards of the Coast LLC in the United States and other countries. 
         © 2015 Wizards. All Rights Reserved. This website is not affiliated with, endorsed, sponsored, or specifically approved by Wizards of the Coast LLC. 
