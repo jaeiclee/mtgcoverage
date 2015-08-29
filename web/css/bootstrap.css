@@ -906,7 +906,7 @@ body {
   font-size: 13px;
   line-height: 1.42857143;
   color: #333;
-  background-color: #cccccc;
+  background-color: #333333;
 }
 input,
 button,
@@ -1415,6 +1415,8 @@ pre code {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+  background-color: #fff;
+  border-radius: 4px;
 }
 .row {
   margin-right: -15px;
@@ -4625,7 +4627,7 @@ a.badge:focus {
   padding: 30px 15px;
   margin-bottom: 15px;
   color: inherit;
-  background-color: #bdbdbd;
+  background-color: #fff;
 }
 .jumbotron h1,
 .jumbotron .h1 {
