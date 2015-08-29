@@ -87,7 +87,7 @@
 			//Clear any possible gunk
 			$(".col-sm-3").html("")
 			//Set Background Color
-			$(".col-sm-3").css("background-color","#bdbdbd")
+			$(".col-sm-3").css("background-color","#ffffff")
 			$(".button").css("background-color","rgb(101, 99, 103)")
 			
 			var k = 1;
@@ -162,7 +162,7 @@
 			$('#month3').css("background-color",$('#month4').css("background-color"))
 			$('#month3').append($('#month4').html())
 			$('#month4').html("")
-			$('#month4').css("background-color","#bdbdbd")
+			$('#month4').css("background-color","#ffffff")
 			
 			
 			var next = moment().add(sOffset+2, 'months')
@@ -187,7 +187,7 @@
 			$('#month2').css("background-color",$('#month1').css("background-color"))
 			$('#month2').append($('#month1').html())
 			$('#month1').html("")
-			$('#month1').css("background-color","#bdbdbd")
+			$('#month1').css("background-color","#ffffff")
 			
 			var next = moment().add(sOffset-1, 'months')
 			
@@ -204,8 +204,8 @@
 			
 			//Highlight the current month / Week			
 			if (moment().month() == _month && moment().year() == _year) {
-				element.append('<h3 style="text-align:center; background-color: #fff">'+start.format("MMMM YYYY")+'</h3>')
-				element.css("background-color","#fff")
+				element.append('<h3 style="text-align:center; background-color: #C8C8C8">'+start.format("MMMM YYYY")+'</h3>')
+				element.css("background-color","#C8C8C8")
 			}
 				else element.append('<h3 style="text-align:center;">'+start.format("MMMM YYYY")+'</h3>')
 			
