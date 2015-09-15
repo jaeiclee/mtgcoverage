@@ -519,8 +519,7 @@ $query = "SELECT Name, EndDate FROM Tournament WHERE Visible = '1' GROUP BY Name
    
    /* No rows matched -- do something else */
 				else {
-					echo '<br>';
-					print "No Results.";
+					echo '<br>No results.';
 					}
 
 
@@ -532,7 +531,7 @@ $query = "SELECT Name, EndDate FROM Tournament WHERE Visible = '1' GROUP BY Name
 	}
 	elseif(strlen($query) < $min_length){ // if query length is less than minimum
 	
-		echo "too short";
+		echo "<br>Your query is too short.";
 	}
     else{ 
     }

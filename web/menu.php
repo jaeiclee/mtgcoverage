@@ -1,4 +1,4 @@
-	<?php include 'header.php'; ?>  
+	<?php include 'header.php'; ?>
 	<?php if ($SD == '') { $SD = 3; } ?>
    <div class="container">
 
@@ -44,15 +44,15 @@
 					<li><?php echo '<a href ="index.php?formattype=limited&SD='.$SD.'">Limited</a>'; ?></li>
 					<li><?php echo '<a href ="index.php?formattype=block&SD='.$SD.'">Block</a>'; ?></li>
 					<li><?php echo '<a href ="index.php?formattype=mixed&SD='.$SD.'">Mixed</a>'; ?></li>
-				  
+
                  </ul>
               </li>
-		
+
 				<li class="dropdown active">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Streams <span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
-<li><?php 
-// Workaround needs to be fixed 
+<li><?php
+// Workaround needs to be fixed
 
 $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
 
@@ -73,7 +73,7 @@ if ($datascg['online'] == '1') {
 ?></li>
 
 <li><?php
- 
+
 $resultmagic = mysqli_query($dbstreams, "SELECT * FROM Streams WHERE streamname = 'magic'");
 $datamagic = mysqli_fetch_assoc($resultmagic);
 if ($datamagic['online'] == '1') {
@@ -81,11 +81,11 @@ if ($datamagic['online'] == '1') {
 } else {
     echo "<a href='http://www.twitch.tv/magic' target='_newtab'/> Magic is <img src='images/offline.png' alt='Offline' /></a>";
 }
- 
+
 ?></li>
 
 <li><?php
- 
+
 $resultmagic = mysqli_query($dbstreams, "SELECT * FROM Streams WHERE streamname = 'magic2'");
 $datamagic = mysqli_fetch_assoc($resultmagic);
 if ($datamagic['online'] == '1') {
@@ -93,11 +93,11 @@ if ($datamagic['online'] == '1') {
 } else {
     echo "<a href='http://www.twitch.tv/magic2' target='_newtab'/> Magic2 is <img src='images/offline.png' alt='Offline' /></a>";
 }
- 
+
 ?></li>
 
 <li><?php
- 
+
 $resultmagic = mysqli_query($dbstreams, "SELECT * FROM Streams WHERE streamname = 'channelfireball'");
 $datamagic = mysqli_fetch_assoc($resultmagic);
 if ($datamagic['online'] == '1') {
@@ -105,11 +105,11 @@ if ($datamagic['online'] == '1') {
 } else {
     echo "<a href='http://www.twitch.tv/channelfireball' target='_newtab'/> Channel Fireball is <img src='images/offline.png' alt='Offline' /></a>";
 }
- 
+
 ?></li>
 
 <li><?php
- 
+
 $resultmagic = mysqli_query($dbstreams, "SELECT * FROM Streams WHERE streamname = 'tcgplayer'");
 $datamagic = mysqli_fetch_assoc($resultmagic);
 if ($datamagic['online'] == '1') {
@@ -117,20 +117,20 @@ if ($datamagic['online'] == '1') {
 } else {
     echo "<a href='http://www.twitch.tv/tcgplayer' target='_newtab'/> TCGplayer is <img src='images/offline.png' alt='Offline' /></a>";
 }
- 
+
 ?></li>
 	  </ul>
-			  
-			  
+
+
               <li class="dropdown active">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Contact <span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
 				          <li><a href="https://www.facebook.com/MTGCoverage" target="_newtab">Facebook</a></li>
                   <li><a href="https://twitter.com/MTGCoverage" target="_newtab">Twitter</a></li>
-                  <li><a href="http://www.reddit.com/message/compose/?to=ideocl4st_" target="_newtab">Reddit PM</a></li>
+                  <li><a href="http://www.reddit.com/message/compose/?to=MTGCoverage" target="_newtab">Reddit PM</a></li>
                   <li><a href="https://github.com/ideocl4st/mtgcoverage-v2-heroku" target="_newtab">Github Repo</a></li>
                   <li><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=8UP3Y4CE4W95Y" target="_newtab">Donate via Paypal</a></li>
-				  
+
                  </ul>
               </li>
 			       </ul>
