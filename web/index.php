@@ -15,19 +15,19 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-	
+
 	<?php require 'config.php'; ?>
-	
+
 	<link href="css/navbar.css" rel="stylesheet">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
   </head>
   <body>
     <?php include 'menu.php'; ?>
-	
-	
-	<?php 
-	
+
+
+	<?php
+
 	if ($formattype != '') {
 		if ($formattype == 'standard') {
 			$query = "SELECT * FROM Tournament WHERE Format = 'Standard' AND Visible = '1' ORDER BY EndDate DESC";
@@ -49,15 +49,15 @@
 			}
 		elseif ($formattype == 'mixed') {
 			$query = "SELECT * FROM Tournament WHERE Format = 'Mixed' AND Visible = '1' ORDER BY EndDate DESC";
-			}		
+			}
 	}
 	else {
-	
+
 		if 	($id != '') {
-			// $ids = join(',',$id); 
+			// $ids = join(',',$id);
 			$query = "SELECT * FROM Tournament WHERE ID = " . $id . " AND Visible = '1' ORDER BY EndDate DESC";
 			}
-	
+
 		else 	{ $query = "SELECT * FROM Tournament WHERE Visible = '1' ORDER BY EndDate DESC LIMIT 10";
 			}
 	}
@@ -78,25 +78,25 @@
     $rows = $stmt->fetchAll();
 
 	// For each Row in Tournament post that Row
-	foreach($rows as $row): 
+	foreach($rows as $row):
 
 	// Declare values from Tournament Table
-	$T_ID = $row['ID']; 
+	$T_ID = $row['ID'];
 	$T_Name = $row['Name'];
-	$T_Visible = $row['Visible']; 
+	$T_Visible = $row['Visible'];
 	$T_Finished = $row['Finished'];
 	$T_Format = $row['Format'];
-	$T_Organiser = $row['Organiser']; 
-	$T_Location = $row['Location']; 
-	$T_StartDate = $row['StartDate']; 
-	$T_EndDate = $row['EndDate']; 
-	$T_InfoLink = $row['InfoLink']; 
-	$T_ResultLink = $row['ResultLink']; 
-	$T_ExtraText = $row['ExtraText']; 
-	
-	
+	$T_Organiser = $row['Organiser'];
+	$T_Location = $row['Location'];
+	$T_StartDate = $row['StartDate'];
+	$T_EndDate = $row['EndDate'];
+	$T_InfoLink = $row['InfoLink'];
+	$T_ResultLink = $row['ResultLink'];
+	$T_ExtraText = $row['ExtraText'];
+
+
 	// Reformat dates to look pretty
-	
+
 
 	$check_format_startdate = date("F", strtotime($row['StartDate']));
 	$check_format_enddate = date("F", strtotime($row['EndDate']));
@@ -109,18 +109,18 @@
 	elseif ($row['StartDate'] == $row['EndDate']) {
 
 	$nice_format_enddate = date("jS F Y", strtotime($row['EndDate']));
-	// echo htmlentities($nice_format_enddate, ENT_QUOTES, 'UTF-8'); 
+	// echo htmlentities($nice_format_enddate, ENT_QUOTES, 'UTF-8');
 	}
 	else {
 	$nice_format_startdate = date("jS", strtotime($row['StartDate']));
 	$nice_format_enddate = date("jS F Y", strtotime($row['EndDate']));
 		}
-	
-	
+
+
 	// Opening Jumbotron
 	echo '<div class="container" id="jumbo">';
     echo '<div class="jumbotron">';
-	
+
 		echo '<div class="row">';
 			echo '<div class="col-md-3 vcenter">';
 			echo "<img src='";
@@ -138,21 +138,21 @@
 				else { echo 'images/empty.png'; }
 			echo "' width='150px' class='img-responsive'>";
 			echo '</div>';
-			
+
 			echo '<div class="col-md-9 vcenter">';
 			if ($T_InfoLink == '') {echo '<h3><b>' . $T_Name . '</b></h3>';} else { echo '<a href=" ' .htmlentities($T_InfoLink, ENT_QUOTES,"UTF-8"). '" target="_newtab"><h3><b>' . $T_Name . '</b></h3></a>' ;}
 			if ($row['StartDate'] == $row['EndDate']) {echo '<p>' . $nice_format_enddate . '<br>';}
 			else {echo '<p>' . $nice_format_startdate .' - '. $nice_format_enddate . '<br>';}
 			echo 'Format: ' . $T_Format . '</p>';
 			echo '</div>';
-		
+
 
 		echo '</div>';
 	echo '<div>';
 	?>
 
 	<!-- POPDOWN FOR EACH EVENT -->
-	
+
     <script type="text/javascript">
 	$(document).ready(function(){
 	$("#expanderHead<?php echo htmlentities($row['ID'], ENT_QUOTES, 'UTF-8'); ?>").click(function(){
@@ -166,20 +166,20 @@
 	});
 	});
 	</script>
-	
+
 	<div>
 	<center><b><span id="expanderHead<?php echo htmlentities($row['ID'], ENT_QUOTES, 'UTF-8'); ?>" style="cursor:pointer;">
 	Click to Expand <span id="expanderSign<?php echo htmlentities($row['ID'], ENT_QUOTES, 'UTF-8'); ?>">+</span></span></b></center>
 	</div>
-	
-	
+
+
 	<div id="expanderContent<?php echo htmlentities($row['ID'], ENT_QUOTES, 'UTF-8'); ?>" style="display:none;">
 
-		
+
 
 	<!-- Open table  -->
 
-	
+
 	<table class="table">
 	<thead>
 		<tr>
@@ -191,25 +191,17 @@
 			<?php if ($SD != 2 AND $SD != 0 ) {
 				echo '<th class="text-right">Deck</th><th class="text-left">Deck</th>';
 			} ?>
-			
+
 		</tr>
 	</thead>
 	<tbody>
-	
-		<?php 
-	
+
+		<?php
+
 		// Get Values from Matches loop
-		// 
-	
-		$querymatches = 'SELECT * FROM Matches WHERE TournamentID = "' . $T_ID . '" ORDER BY 
-						(CASE WHEN RoundName = "Finals" THEN 2 ELSE 1 END),
-						(CASE WHEN RoundName = "Semi Finals 2" THEN 2 ELSE 1 END), 
-						(CASE WHEN RoundName = "Semi Finals" THEN 2 ELSE 1 END),
-						(CASE WHEN RoundName = "Quarter Finals 4" THEN 2 ELSE 1 END),
-						(CASE WHEN RoundName = "Quarter Finals 3" THEN 2 ELSE 1 END),
-						(CASE WHEN RoundName = "Quarter Finals 2" THEN 2 ELSE 1 END),
-						(CASE WHEN RoundName = "Quarter Finals" THEN 2 ELSE 1 END), 
-						SUBSTRING_INDEX(RoundName, " ", 1) ASC, CAST(SUBSTRING_INDEX(RoundName, " ", -1) AS SIGNED)';
+		//
+
+		$querymatches = 'SELECT * FROM Matches WHERE TournamentID = "' . $T_ID . '" ORDER BY ID ASC';
 		try
 		{
 			// These two statements run the query against your database table.
@@ -225,10 +217,10 @@
 
 		// Finally, we can retrieve all of the found rows into an array using fetchAll
 		$rows2 = $stmt2->fetchAll();
-	
+
 		// For each Row in Matches that matches TournamentID post those rows
 		foreach($rows2 as $row2):
-		// Declare values from Tournament Table	
+		// Declare values from Tournament Table
 		$M_ID = $row2['ID'];
 		$M_VOD = $row2['VOD'];
 		$M_RoundName = $row2['RoundName'];
@@ -239,10 +231,10 @@
 		$M_Format = $row2['Format'];
 		$M_TournamentID = $row2['TournamentID'];
 		?>
-		
-	<tr>		
+
+	<tr>
 	<td>
-		<?php 
+		<?php
 		if (strpos($row2['VOD'], 'youtu') !== false) { echo '<img src="images/youtube.png"> '; }
 		elseif (strpos($row2['VOD'], 'twitch') !== false) { echo '<img src="images/twitch.png"> '; }
 		echo '<a href=" ' .htmlentities($row2["VOD"], ENT_QUOTES,"UTF-8"). '" target="_newtab" ">' .htmlentities($row2["RoundName"], ENT_QUOTES,"UTF-8"). '</a><br>';
@@ -250,32 +242,32 @@
 	</td>
 	<td>
 		<?php if ($T_Format == "Mixed") { echo $M_Format; } ?></td>
-	
-	
-	<?php 
-	
+
+
+	<?php
+
 	// Check if spoilerprotection are enabled
-	
+
 	if ($SD == '0') {
 	}
 	else {
-	
+
 	?>
-	
-	<?php 
-	
+
+	<?php
+
 	// Check if spoilerprotection are enabled
-	
+
 	if ($SD == '1') {
 	}
 	else {
-	
-	?>			
-			<?php 
-			
+
+	?>
+			<?php
+
 			// GET Player A Things loop
-			
-			
+
+
 			$queryplayersA = 'SELECT ID, Name FROM Players WHERE ID = "' . $M_PlayerIDA . '"' ;
 			try
 			{
@@ -293,26 +285,26 @@
 			// Finally, we can retrieve all of the found rows into an array using fetchAll
 			$rows3A = $stmt3A->fetchAll();
 			?>
-			<?php 
-	
+			<?php
+
 			// For each Row in Matches that matches TournamentID post those rows
 			foreach($rows3A as $row3A):
-			
-			// Declare values from Tournament Table	
+
+			// Declare values from Tournament Table
 			$P_IDA = $row3A['ID'];
 			$P_NameA = $row3A['Name'];
 			?>
-			
+
 			<td class="text-right"><a href=player.php?id=<?php echo $P_IDA; ?>><?php echo $P_NameA; ?></a></td>
-			
-			<?php endforeach; ?>  
-			
-			
-			
-			<?php 
-			
+
+			<?php endforeach; ?>
+
+
+
+			<?php
+
 			// GET Player B Things Loop
-			
+
 			$queryplayersB = 'SELECT ID, Name FROM Players WHERE ID = "' . $M_PlayerIDB . '"';
 			try
 			{
@@ -330,40 +322,40 @@
 			// Finally, we can retrieve all of the found rows into an array using fetchAll
 			$rows3B = $stmt3B->fetchAll();
 			?>
-			<?php 
-	
+			<?php
+
 			// For each Row in Matches that matches TournamentID post those rows
 			foreach($rows3B as $row3B):
-			
-			// Declare values from Tournament Table	
+
+			// Declare values from Tournament Table
 			$P_IDB = $row3B['ID'];
 			$P_NameB = $row3B['Name'];
 			?>
-			
-		
+
+
 			<td><a href=player.php?id=<?php echo $P_IDB; ?>><?php echo $P_NameB; ?></a></td>
-			
-	
-			<?php endforeach; ?>   
-			
+
+
+			<?php endforeach; ?>
+
 			<?php // End Spoiler tag
 			}
 			?>
-			
-	<?php 
-	
+
+	<?php
+
 	// Check if spoilerprotection are enabled
-	
+
 	if ($SD == '2') {
 	}
 	else {
-	
-	?>		
-			
+
+	?>
+
 			<?php
 			// GET Deck A
-			
-			
+
+
 			$querydecksA = 'SELECT ID, Name FROM Decks WHERE ID = "' . $M_DeckIDA . '"' ;
 			try
 			{
@@ -381,25 +373,25 @@
 			// Finally, we can retrieve all of the found rows into an array using fetchAll
 			$rows4A = $stmt4A->fetchAll();
 			?>
-			<?php 
-	
+			<?php
+
 			// For each Row in Matches that matches TournamentID post those rows
 			foreach($rows4A as $row4A):
-			
-			// Declare values from Tournament Table	
+
+			// Declare values from Tournament Table
 			$D_IDA = $row4A['ID'];
 			$D_DeckA = $row4A['Name'];
 			?>
-			
+
 			<td class="text-right"><a href=deck.php?id=<?php echo $D_IDA; ?>><?php echo $D_DeckA; ?></a></td>
-			
-			<?php endforeach; ?>  
-			
-			
+
+			<?php endforeach; ?>
+
+
 			<?php
 			// GET Deck B
-			
-			
+
+
 			$querydecksB = 'SELECT ID, Name FROM Decks WHERE ID = "' . $M_DeckIDB . '"' ;
 			try
 			{
@@ -417,48 +409,48 @@
 			// Finally, we can retrieve all of the found rows into an array using fetchAll
 			$rows4B = $stmt4B->fetchAll();
 			?>
-			<?php 
-	
+			<?php
+
 			// For each Row in Matches that matches TournamentID post those rows
 			foreach($rows4B as $row4B):
-			
-			// Declare values from Tournament Table	
+
+			// Declare values from Tournament Table
 			$D_IDB = $row4B['ID'];
 			$D_DeckB = $row4B['Name'];
 			?>
-			
+
 			<td><a href=deck.php?id=<?php echo $D_IDB; ?>><?php echo $D_DeckB; ?></a></td></tr>
-			
-			<?php endforeach; ?>  
-			
-			
+
+			<?php endforeach; ?>
+
+
 			<?php // End Spoiler tag
 			}
-			?>			
+			?>
 
 
 		<?php // End Spoiler tag
 		}
 		?>
-		
-		<?php endforeach; ?> 
-		
+
+		<?php endforeach; ?>
+
 	</tbody>
 	</table>
-	
+
 	<br>
-	
+
 			<center>
-			<?php 
+			<?php
 			if ($T_ResultLink == '') {echo 'Link to Official Coverage';} else { echo '<a href=" ' .htmlentities($T_ResultLink, ENT_QUOTES,"UTF-8"). '" target="_newtab"><b>Link to Official Coverage</b></a><br><br>' ;}
 			?>
 			</center>
-		
+
 			<?php include 'i-decktechs.php'; ?>
 			<?php include 'i-extra.php'; ?>
-		
-			<?php 
-			if ($T_ExtraText == '') {echo '';} else { echo "Note: ".$T_ExtraText;} 
+
+			<?php
+			if ($T_ExtraText == '') {echo '';} else { echo "Note: ".$T_ExtraText;}
 			?>
 
 	<br><br>
@@ -470,8 +462,8 @@
 	</div>
 	</div>
 
-	<?php endforeach; ?>   
-	
+	<?php endforeach; ?>
+
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
