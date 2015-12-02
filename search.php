@@ -60,7 +60,8 @@ $query = "SELECT Name FROM Players GROUP BY Name ORDER BY Name ASC";
     {
         // Note: On a production website, you should not output $ex->getMessage().
         // It may provide an attacker with helpful information about your code.
-        die("Failed to run query: " . $ex->getMessage());
+        // die("Failed to run query: " . $ex->getMessage());
+        die("That's a weird name.");
     }
 
     // Finally, we can retrieve all of the found rows into an array using fetchAll
@@ -345,7 +346,7 @@ $query = "SELECT Name, EndDate FROM Tournament WHERE Visible = '1' GROUP BY Name
 
     if(strlen($query) >= $min_length){ // if query length is more or equal minimum length then
 
-        $query = htmlspecialchars($query);
+     $query = htmlspecialchars($query);
 
 		 $sql = "SELECT * FROM Decks WHERE Name LIKE '%".$query."%' ORDER BY Standard DESC, Modern DESC, Legacy DESC, Vintage DESC, Block DESC, Limited DESC, Name ASC";
 			try
@@ -481,7 +482,8 @@ $query = "SELECT Name, EndDate FROM Tournament WHERE Visible = '1' GROUP BY Name
 			{
 				// Note: On a production website, you should not output $ex->getMessage().
 				// It may provide an attacker with helpful information about your code.
-				die("Failed to run query: " . $ex->getMessage());
+				// die("Failed to run query: " . $ex->getMessage());
+        die("That's a weird name.");
 			}
 
 			// Finally, we can retrieve all of the found rows into an array using fetchAll
