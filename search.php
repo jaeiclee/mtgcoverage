@@ -326,7 +326,7 @@ $query = "SELECT Name, EndDate FROM Tournament WHERE Visible = '1' GROUP BY Name
 	}
 	elseif(strlen($query) < $min_length){ // if query length is less than minimum
 
-		echo "too short";
+		echo "<br>Your query is too short.";
 	}
     else{
     }
@@ -449,7 +449,7 @@ $query = "SELECT Name, EndDate FROM Tournament WHERE Visible = '1' GROUP BY Name
 
 	elseif(strlen($query) < $min_length){ // if query length is less than minimum
 
-		echo "too short";
+		echo "<br>Your query is too short.";
 	}
     else{
     }
