@@ -1,0 +1,19 @@
+# Some useful SQL Statements
+
+# Remove Players/Decks without VODs.
+
+DELETE p FROM Players p
+  LEFT JOIN Matches m1 ON m1.PlayerIDA = p.id
+  LEFT JOIN Matches m2 ON m2.PlayerIDB = p.id
+  LEFT JOIN Extra e ON e.PlayerID = p.id
+  LEFT JOIN Decktechs dt ON dt.PlayerID = p.id
+  WHERE m1.PlayerIDA IS NULL AND m2.PlayerIDB IS NULL AND e.PlayerID IS NULL AND dt.PlayerID is NULL;
+
+DELETE d FROM Decks d
+  LEFT JOIN Matches m1 ON m1.DeckIDA = d.id
+  LEFT JOIN Matches m2 ON m2.DeckIDB = d.id
+  LEFT JOIN Extra e ON e.DeckID = d.id
+  LEFT JOIN Decktechs dt ON dt.DeckID = d.id
+  WHERE m1.DeckIDA IS NULL AND m2.DeckIDB IS NULL AND e.DeckID IS NULL AND dt.DeckID is NULL;
+
+# Check if decks in matches are in those of correct format

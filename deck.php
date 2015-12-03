@@ -57,7 +57,7 @@
 
 
 
-				<?
+<!--				<?
 				echo '<b>Format: </b>';
 				if ($rowdeck['Standard'] == 1) {
 					echo 'Standard';
@@ -89,7 +89,7 @@
 				}
 				?>
 
-				<br>
+				<br> -->
 				<b>Info:</b><br><br>
 				<?php echo $rowdeck['Info']; ?>
 				<br>
