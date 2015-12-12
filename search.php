@@ -18,7 +18,7 @@
 		<?php require 'config.php'; ?>
 
 		<link href="css/navbar.css" rel="stylesheet">
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
 
 
 		<?php

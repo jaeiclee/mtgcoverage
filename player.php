@@ -18,7 +18,7 @@
 	<?php require 'config.php'; ?>
 
 		<link href="css/navbar.css" rel="stylesheet">
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
   </head>
   <body>
@@ -96,7 +96,7 @@
 
 				<?php
 				if ($rowplayer['Twitter'] != '') {
-				echo "<img src='images/twitter.png'> <a href='http://www.twitter.com/" . $rowplayer['Twitter'] . "' target='_newtab'>@" . $rowplayer['Twitter'] . "</a><br><br>";
+				echo "<img src='images/twitter.png'> <a href='https://www.twitter.com/" . $rowplayer['Twitter'] . "' target='_newtab'>@" . $rowplayer['Twitter'] . "</a><br><br>";
 				}  ?>
 				</center>
 				<br><br>
