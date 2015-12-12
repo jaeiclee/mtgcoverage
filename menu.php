@@ -65,9 +65,9 @@ $dbstreams = mysqli_connect($server, $username, $password, $database);
 $resultmagic = mysqli_query($dbstreams, "SELECT * FROM Streams WHERE streamname = 'magic'");
 $datamagic = mysqli_fetch_assoc($resultmagic);
 if ($datamagic['online'] == '1') {
-    echo "<a href='https://www.twitch.tv/magic' target='_newtab'/> Magic is <img src='images/online.png' alt='Online' /></a>";
+    echo "<a href='http://www.twitch.tv/magic' target='_newtab'/> Magic is <img src='images/online.png' alt='Online' /></a>";
 } else {
-    echo "<a href='https://www.twitch.tv/magic' target='_newtab'/> Magic is <img src='images/offline.png' alt='Offline' /></a>";
+    echo "<a href='http://www.twitch.tv/magic' target='_newtab'/> Magic is <img src='images/offline.png' alt='Offline' /></a>";
 }
 
 ?></li>
@@ -77,9 +77,9 @@ if ($datamagic['online'] == '1') {
 $resultmagic2 = mysqli_query($dbstreams, "SELECT * FROM Streams WHERE streamname = 'magic2'");
 $datamagic2 = mysqli_fetch_assoc($resultmagic2);
 if ($datamagic2['online'] == '1') {
-    echo "<a href='https://www.twitch.tv/magic2' target='_newtab'/> Magic2 is <img src='images/online.png' alt='Online' /></a>";
+    echo "<a href='http://www.twitch.tv/magic2' target='_newtab'/> Magic2 is <img src='images/online.png' alt='Online' /></a>";
 } else {
-    echo "<a href='https://www.twitch.tv/magic2' target='_newtab'/> Magic2 is <img src='images/offline.png' alt='Offline' /></a>";
+    echo "<a href='http://www.twitch.tv/magic2' target='_newtab'/> Magic2 is <img src='images/offline.png' alt='Offline' /></a>";
 }
 
 ?></li>
@@ -89,9 +89,9 @@ if ($datamagic2['online'] == '1') {
 $resultscg = mysqli_query($dbstreams, "SELECT * FROM Streams WHERE streamname = 'scglive'");
 $datascg = mysqli_fetch_assoc($resultscg);
 if ($datascg['online'] == '1') {
-    echo "<a href='https://www.twitch.tv/scglive' target='_newtab'/> SCGLive is <img src='images/online.png' alt='Online' /></a>";
+    echo "<a href='http://www.twitch.tv/scglive' target='_newtab'/> SCGLive is <img src='images/online.png' alt='Online' /></a>";
 } else {
-    echo "<a href='https://www.twitch.tv/scglive' target='_newtab'/> SCGLive is <img src='images/offline.png' alt='Offline' /></a>";
+    echo "<a href='http://www.twitch.tv/scglive' target='_newtab'/> SCGLive is <img src='images/offline.png' alt='Offline' /></a>";
 }
 
 ?></li>
@@ -101,9 +101,9 @@ if ($datascg['online'] == '1') {
 $resultcfb = mysqli_query($dbstreams, "SELECT * FROM Streams WHERE streamname = 'channelfireball'");
 $datacfb = mysqli_fetch_assoc($resultcfb);
 if ($datacfb['online'] == '1') {
-    echo "<a href='https://www.twitch.tv/channelfireball' target='_newtab'/> Channel Fireball is <img src='images/online.png' alt='Online' /></a>";
+    echo "<a href='http://www.twitch.tv/channelfireball' target='_newtab'/> Channel Fireball is <img src='images/online.png' alt='Online' /></a>";
 } else {
-    echo "<a href='https://www.twitch.tv/channelfireball' target='_newtab'/> Channel Fireball is <img src='images/offline.png' alt='Offline' /></a>";
+    echo "<a href='http://www.twitch.tv/channelfireball' target='_newtab'/> Channel Fireball is <img src='images/offline.png' alt='Offline' /></a>";
 }
 
 ?></li>
@@ -113,9 +113,9 @@ if ($datacfb['online'] == '1') {
 $resultggs = mysqli_query($dbstreams, "SELECT * FROM Streams WHERE streamname = 'ggslive'");
 $dataggs = mysqli_fetch_assoc($resultggs);
 if ($dataggs['online'] == '1') {
-    echo "<a href='https://www.twitch.tv/ggslive' target='_newtab'/> GGsLive is <img src='images/online.png' alt='Online' /></a>";
+    echo "<a href='http://www.twitch.tv/ggslive' target='_newtab'/> GGsLive is <img src='images/online.png' alt='Online' /></a>";
 } else {
-    echo "<a href='https://www.twitch.tv/ggslive' target='_newtab'/> GGsLive is <img src='images/offline.png' alt='Offline' /></a>";
+    echo "<a href='http://www.twitch.tv/ggslive' target='_newtab'/> GGsLive is <img src='images/offline.png' alt='Offline' /></a>";
 }
 
 ?></li>
