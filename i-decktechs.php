@@ -39,7 +39,7 @@
 		$DT_PlayerID = $rowdt['PlayerID'];
 		$DT_DeckID = $rowdt['DeckID'];
 		$DT_TournamentID = $rowdt['TournamentID'];
-
+		$DT_ExtraText = $rowdt['ExtraText'];
 
 	echo '<tr>';
 	echo '<td class="col-md-2">';
@@ -111,7 +111,6 @@
 			// Declare values from Tournament Table
 			$DT_ID = $rowddt['ID'];
 			$DT_Name = $rowddt['Name'];
-			$DT_ExtraText = $rowddt['ExtraText'];
 			echo '<a href=deck.php?id=' . $DT_ID . '>' . $DT_Name . '</a>';
 			if ($DT_ExtraText) { echo ' (' . $DT_ExtraText . ')'; }
 			echo '</td></tr>';
