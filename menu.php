@@ -1,5 +1,11 @@
 	<?php include 'header.php'; ?>
 	<?php if ($SD == '') { $SD = 3; } ?>
+	<script>
+	function donateBitcoin() {
+    var bitcoin = prompt("Bitcoin donations are accepted with this address:", "3M1UQx1RLUrDiDCdbBv41ZL3PFQ1GxrAnv");
+    }
+	}
+	</script>
    <div class="container">
 
       <!-- Static navbar -->
@@ -120,8 +126,6 @@ if ($dataggs['online'] == '1') {
 
 ?></li>
 	  </ul>
-
-
               <li class="dropdown active">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Contact <span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
@@ -130,7 +134,7 @@ if ($dataggs['online'] == '1') {
                   <li><a href="https://www.reddit.com/message/compose/?to=MTGCoverage" target="_newtab">Reddit PM</a></li>
                   <li><a href="https://github.com/ideocl4st/mtgcoverage-v2-heroku" target="_newtab">Github Repo</a></li>
                   <li><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=8UP3Y4CE4W95Y" target="_newtab">Donate via Paypal</a></li>
-
+									<li><a id="donateBitcoin" title="Donate Bitcoin" href="#" onclick="donateBitcoin();return false;">Donate Bitcoin</a></li>
                  </ul>
               </li>
 			       </ul>
