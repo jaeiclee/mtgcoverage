@@ -4,7 +4,6 @@
 	function donateBitcoin() {
     var bitcoin = prompt("Bitcoin donations are accepted with this address:", "3M1UQx1RLUrDiDCdbBv41ZL3PFQ1GxrAnv");
     }
-	}
 	</script>
    <div class="container">
 
