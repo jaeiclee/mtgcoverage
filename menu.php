@@ -17,7 +17,7 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <?php echo '<a href ="index.php?SD='.$SD.'"><img src="logo-sq.png" height="50px" width="50px"></a>'; ?>
+            <?php echo '<a href ="index.php?SD='.$SD.'"><img src="images/logo-sq.svg" height="50px" width="50px"></a>'; ?>
           </div>
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
