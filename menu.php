@@ -24,7 +24,6 @@
               <li class="active"><?php echo '<a href ="index.php?SD='.$SD.'">Home</a>'; ?></li>
               <li class="active">
                 <?php echo '<a href ="calendar.php?SD='.$SD.'">Calendar</a>'; ?>
-              <li class="active"><?php echo '<a href="search.php?SD='.$SD.'">Search</a></li>'; ?>
 			  <li class="dropdown active">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                 	<?php if ($SD == '0') { echo 'Spoilers OFF'; } ?>
@@ -136,6 +135,13 @@ if ($dataggs['online'] == '1') {
 									<li><a id="donateBitcoin" title="Donate Bitcoin" href="#" onclick="donateBitcoin();return false;">Donate Bitcoin</a></li>
                  </ul>
               </li>
+							<li class="active">
+								<form class="form" role="form" action="search2.php" method="GET">
+										<input type="submit" value="Search" style="float: middle" />
+										<div style="overflow: hidden; padding-middle: .5em;">
+										   <input type="text" name="player" style="width: 80%;" />
+										</div>​
+									</form>
 			       </ul>
 		       </div><!--/.nav-collapse -->
         </div><!--/.container-fluid -->

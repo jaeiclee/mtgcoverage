@@ -50,7 +50,7 @@
 	<div class="jumbotron" style="padding-bottom: 20px">
 	<div class="row">
 
-		<div class="col-md-4">
+		<div class="col-md-3">
 			<div class="cliente" style="border: none;">
 				<h2><?php echo $rowdeck['Name']; ?></h2>
 				<br>
