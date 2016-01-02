@@ -135,8 +135,8 @@ if ($dataggs['online'] == '1') {
 									<li><a id="donateBitcoin" title="Donate Bitcoin" href="#" onclick="donateBitcoin();return false;">Donate Bitcoin</a></li>
                  </ul>
               </li>
-							<li>
-							<form class="form" role="form" action="search.php" method="GET" style="height: 37px; margin-top: 13px;">
+							<li class=menubar>
+							<form class="form" role="form" action="search.php" method="GET" style="margin-top: 13px;">
 									<input type="submit" value="Search" style="float: right" />
 									<div style="overflow: hidden; padding-right: .5em;">
 										 <input type="text" value=<?php echo '"'.$_GET['searchquery'].'"' ?> placeholder="Deck/Player/Tournament" name="searchquery" style="width: 100%;" />

@@ -21,6 +21,6 @@ body {
   border: none;
 }
 
-li:last-child {
+.menubar li:last-child {
   float:right;
 }
