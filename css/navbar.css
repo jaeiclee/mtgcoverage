@@ -8,7 +8,19 @@ body {
   margin-bottom: 20px;
 }
 
-.navbar img { 
+.navbar img {
 
-  vertical-align: middle; 
+  vertical-align: middle;
+}
+
+.nav {
+
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+  border: none;
+}
+
+li:last-child {
+  float:right;
 }
