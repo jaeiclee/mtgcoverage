@@ -106,10 +106,10 @@
 
 
 
-	$query = 'SELECT Matches.VOD, Matches.Format, Matches.PlayerIDA, Matches.PlayerIDB, Matches.DeckIDA, Matches.DeckIDB, Matches.TournamentID, Tournament.Name, Tournament.ID FROM Matches
+	$query = 'SELECT Matches.VOD, Matches.Format, Matches.PlayerIDA, Matches.PlayerIDB, Matches.DeckIDA, Matches.DeckIDB, Matches.TournamentID, Tournament.EndDate, Tournament.Name, Tournament.ID FROM Matches
 			  INNER JOIN Tournament ON Matches.TournamentID=Tournament.ID
 			  WHERE DeckIDA = "' . $id . '" OR DeckIDB = "' . $id . '"
-			  ORDER BY Matches.Format DESC';
+			  ORDER BY Matches.Format, Tournament.EndDate DESC';
 
     try
     {
@@ -142,6 +142,7 @@
 		$M_DeckIDB = $row['DeckIDB'];
 		$M_Format = $row['Format'];
 		$M_TournamentID = $row['TournamentID'];
+    $M_EndDate = $row['EndDate'];
 
 		if (strpos($row['VOD'], 'youtu') !== false) { echo '<img src="images/youtube.png"> '; }
 		elseif (strpos($row['VOD'], 'twitch') !== false) { echo '<img src="images/twitch.png"> '; }
@@ -285,6 +286,7 @@
 			$D_NameB = $row4B['Name'];
 
 			echo ' (<a href=deck.php?id=' . $D_IDB . '>' . $D_NameB . '</a>)';
+      echo ' [' . $M_EndDate . ']';
 			?>
 
 			<?php endforeach; ?>

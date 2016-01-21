@@ -116,10 +116,10 @@
 	echo '<div class="row">';
 
 
-	$query = 'SELECT Matches.VOD, Matches.Format, Matches.PlayerIDA, Matches.PlayerIDB, Matches.DeckIDA, Matches.DeckIDB, Matches.TournamentID, Tournament.Name, Tournament.ID FROM Matches
+	$query = 'SELECT Matches.VOD, Matches.Format, Matches.PlayerIDA, Matches.PlayerIDB, Matches.DeckIDA, Matches.DeckIDB, Matches.TournamentID, Tournament.EndDate, Tournament.Name, Tournament.ID FROM Matches
 			  INNER JOIN Tournament ON Matches.TournamentID=Tournament.ID
 			  WHERE PlayerIDA = "' . $id . '" OR PlayerIDB = "' . $id . '"
-			  ORDER BY Matches.Format DESC';
+			  ORDER BY Matches.Format, Tournament.EndDate DESC';
 
     try
     {
@@ -152,6 +152,7 @@
 		$M_DeckIDB = $row['DeckIDB'];
 		$M_Format = $row['Format'];
 		$M_TournamentID = $row['TournamentID'];
+    $M_EndDate = $row['EndDate'];
 
 
 
@@ -223,7 +224,7 @@
 			// Declare values from Tournament Table
 			$P_IDA = $row3A['ID'];
 			$P_NameA = $row3A['Name'];
-
+      $P_NameA = $row3A['Name'];
 
 
 
@@ -371,6 +372,7 @@
 
 				// Show Player B
 				echo ' (<a href=player.php?id=' . $P_IDB . '>' . $P_NameB . '</a>)';
+        echo ' [' . $M_EndDate . ']';
 				echo '</div>';
 
 				endforeach;
@@ -399,17 +401,14 @@
 				$P_NameA = $row3A['Name'];
 
 				echo ' (<a href=player.php?id=' . $P_IDA . '>' . $P_NameA . '</a>)';
+        echo ' [' . $M_EndDate . ']';
 				echo '</div>';
 				endforeach;
 
 			}
 			?>
 
-
-
-
-		<br>
-
+    <br>
 
 	<?php endforeach; ?>
 				</div>
