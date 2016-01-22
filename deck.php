@@ -108,7 +108,7 @@
 			</div>
 		</div>
 
-		<div class="col-md-8">
+		<div class="col-md-9">
 			<div class="cliente" style="border: none;">
 				<h2>Games:</h2>
 
