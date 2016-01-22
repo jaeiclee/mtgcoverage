@@ -24,6 +24,17 @@
   <body>
     <?php include 'menu.php'; ?>
 
+    <?php
+		$overviewformattypestandard == 0;
+		$overviewformattypemodern == 0;
+		$overviewformattypelegacy == 0;
+		$overviewformattypevintage == 0;
+		$overviewformattypeblock == 0;
+		$overviewformattypelimited == 0;
+		$overviewformattypeunknown == 0;
+		$overviewformattypeunifiedstandard == 0;
+		?>
+
 	<?php
 	$mainquery = 'SELECT * FROM Decks WHERE ID ="' . $id . '"';
 
@@ -135,7 +146,7 @@
 	// Declare values from Matches Table
 		$M_ID = $row['ID'];
 		$M_VOD = $row['VOD'];
-		$M_RoundName = $row['RoundName'];
+		// $M_RoundName = $row['RoundName'];
 		$M_PlayerIDA = $row['PlayerIDA'];
 		$M_PlayerIDB = $row['PlayerIDB'];
 		$M_DeckIDA = $row['DeckIDA'];
@@ -143,6 +154,38 @@
 		$M_Format = $row['Format'];
 		$M_TournamentID = $row['TournamentID'];
     $M_EndDate = $row['EndDate'];
+
+    if ($row['Format'] == 'Standard' && $overviewformattypestandard == 0) {
+      echo "<br><h3 class='indentformatheader'>Standard:</h3><br>";
+      $overviewformattypestandard = 1; }
+
+    if ($row['Format'] == 'Modern' && $overviewformattypemodern == 0) {
+      echo "<br><h3 class='indentformatheader'>Modern:</h3><br>";
+      $overviewformattypemodern = 1; }
+
+    if ($row['Format'] == 'Legacy' && $overviewformattypelegacy == 0) {
+      echo "<br><h3 class='indentformatheader'>Legacy:</h3><br>";
+      $overviewformattypelegacy = 1; }
+
+    if ($row['Format'] == 'Vintage' && $overviewformattypevintage == 0) {
+      echo "<br><h3 class='indentformatheader'>Vintage:</h3><br>";
+      $overviewformattypevintage = 1; }
+
+    if ($row['Format'] == 'Block' && $overviewformattypeblock == 0) {
+      echo "<br><h3 class='indentformatheader'>Block:</h3><br>";
+      $overviewformattypeblock = 1; }
+
+    if ($row['Format'] == 'Limited' && $overviewformattypelimited == 0) {
+      echo "<br><h3 class='indentformatheader'>Limited:</h3><br>";
+      $overviewformattypelimited = 1; }
+
+    if ($row['Format'] == 'Team Unified Standard' && $overviewformattypeunifiedstandard == 0) {
+      echo "<br><h3 class='indentformatheader'>Team Unified Standard:</h3><br>";
+      $overviewformattypeunifiedstandard = 1; }
+
+    if ($row['Format'] == 'Mixed' && $overviewformattypeunknown == 0) {
+      echo "<br><h3 class='indentformatheader'>Unknown:</h3><br>";
+      $overviewformattypeunknown = 1; }
 
 		if (strpos($row['VOD'], 'youtu') !== false) { echo '<img src="images/youtube.png"> '; }
 		elseif (strpos($row['VOD'], 'twitch') !== false) { echo '<img src="images/twitch.png"> '; }

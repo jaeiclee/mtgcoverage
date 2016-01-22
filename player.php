@@ -145,7 +145,7 @@
 	// Declare values from Matches Table
 		$M_ID = $row['ID'];
 		$M_VOD = $row['VOD'];
-		$M_RoundName = $row['RoundName'];
+    // $M_RoundName = $row['RoundName'];
 		$M_PlayerIDA = $row['PlayerIDA'];
 		$M_PlayerIDB = $row['PlayerIDB'];
 		$M_DeckIDA = $row['DeckIDA'];
