@@ -2,7 +2,7 @@
 	<?php if ($SD == '') { $SD = 3; } ?>
 	<script>
 	function donateBitcoin() {
-    var bitcoin = prompt("Bitcoin donations are accepted through this address:", "1CgY58DxUKtdv4KdtLDzv6MYyZGuAA9MS9");
+    var bitcoin = prompt("Bitcoin donations are accepted through this address:", "18sfZscSSbzpqFjbfpvuymzBme3rD7pKNT");
     }
 	</script>
    <div class="container">

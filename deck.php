@@ -349,7 +349,9 @@
 
 	// GET Decktechs
 
-	$decktechquery = 'SELECT * FROM Decktechs WHERE DeckID ="' . $id . '"';
+	$decktechquery = 'SELECT Decktechs.ID, Decktechs.VOD, Decktechs.PlayerID, Decktechs.DeckID, Decktechs.TournamentID, Tournament.EndDate FROM Decktechs
+	                  INNER JOIN Tournament ON Decktechs.TournamentID=Tournament.ID
+	                  WHERE DeckID = "' . $id . '"';
 
     try
     {
@@ -379,6 +381,7 @@
 		$DT_PlayerID = $rowdecktech['PlayerID'];
 		$DT_DeckID = $rowdecktech['DeckID'];
 		$DT_TournamentID = $rowdecktech['TournamentID'];
+    $DT_EndDate = $rowdecktech['EndDate'];
 
 		if (strpos($DT_VOD, 'youtu') !== false) { echo '<img src="images/youtube.png"> '; }
 		elseif (strpos($DT_VOD, 'twitch') !== false) { echo '<img src="images/twitch.png"> '; }
@@ -434,7 +437,7 @@
 		echo " at " . $DTtournament['Name'];
 		}
 
-    echo ' [' . $M_EndDate . ']' . "<br>";
+    echo ' [' . $DT_EndDate . ']' . "<br>";
 
 		endforeach;
 	?>
