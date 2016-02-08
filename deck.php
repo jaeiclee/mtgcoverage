@@ -351,7 +351,8 @@
 
 	$decktechquery = 'SELECT Decktechs.ID, Decktechs.VOD, Decktechs.PlayerID, Decktechs.DeckID, Decktechs.TournamentID, Tournament.EndDate FROM Decktechs
 	                  INNER JOIN Tournament ON Decktechs.TournamentID=Tournament.ID
-	                  WHERE DeckID = "' . $id . '"';
+	                  WHERE DeckID = "' . $id . '"
+                    ORDER BY Tournament.EndDate DESC';
 
     try
     {
